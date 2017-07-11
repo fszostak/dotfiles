@@ -52,6 +52,9 @@ antigen bundle tonietto/purity
 # Tell antigen that you're done.
 antigen apply
 
+# Change EDITOR
+export EDITOR='vim'
+
 # User configuration
 export PATH="/usr/local/heroku/bin:/Library/Frameworks/Python.framework/Versions/3.4/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/bin:/usr/games"
 
