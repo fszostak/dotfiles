@@ -1,0 +1,26 @@
+# editorconfig: part of the 4U6U57/dotfiles project
+# Root file for setting editor configurations for various file types
+# Check out http://EditorConfig.org for documentation
+# TODO: If you modify this file to suit your own needs, you MUST modify
+# the following line or the VimrcUpdate script will revert your changes
+# OVERWRITE: true
+
+# If this is not your ~ directory, delete the following line
+root = true
+
+# Unix-style newlines with a newline ending every file
+[{*,.*}]
+end_of_line = lf
+insert_final_newline = true
+indent_style = space
+indent_size = 2
+max_line_length = 80
+
+[{Makefile,makefile,*.mk}]
+indent_style = tab
+
+[*.md]
+indent_size = 4
+
+[*.sh]
+max_line_length = 0
