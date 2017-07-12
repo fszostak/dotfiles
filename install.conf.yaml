@@ -2,5 +2,6 @@
 - link:
     ~/.gitconfig:
     ~/.zshrc:
+    ~/.Xresources:
     ~/.tmux.conf:
     ~/.vimrc:
