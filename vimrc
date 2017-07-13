@@ -21,7 +21,7 @@ Plug 'tpope/vim-sensible'
 Plug 'vim-airline/vim-airline'
 Plug 'majutsushi/tagbar'
 Plug 'tpope/vim-fugitive'
-Plug 'ryanoasis/vim-devicons'
+" Plug 'ryanoasis/vim-devicons'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'junegunn/vim-emoji'
 Plug 'fholgado/minibufexpl.vim'
@@ -267,6 +267,9 @@ function! AutoHighlightToggle()
     return 1
   endif
 endfunction
+
+" Allow saving of files as sudo when I forgot to start vim using sudo.
+cmap w!! w !sudo tee > /dev/null %
 
 " COLOR SCHEME
 set t_Co=256

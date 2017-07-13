@@ -38,16 +38,16 @@ antigen bundles <<EOBUNDLES
   web-search
   tonietto/show-version
   tonietto/aliases
-  https://tonietto@bitbucket.org/tonietto/aliases.git
-  https://tonietto@bitbucket.org/tonietto/tiny-care-terminal.git
+  /home/gustavo/aliases
+  /home/gustavo/tiny-care-terminal
 EOBUNDLES
 
 # Syntax highlighting bundle.
 antigen bundle zsh-users/zsh-syntax-highlighting
 
 # Load the theme.
-# antigen theme fwalch
-antigen bundle tonietto/purity
+antigen theme fwalch
+# antigen bundle tonietto/purity
 
 # Tell antigen that you're done.
 antigen apply
@@ -56,7 +56,7 @@ antigen apply
 export EDITOR='vim'
 
 # User configuration
-export PATH="/usr/local/heroku/bin:/Library/Frameworks/Python.framework/Versions/3.4/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/bin:/usr/games"
+export PATH="/usr/local/heroku/bin:/Library/Frameworks/Python.framework/Versions/3.4/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/bin:/usr/games:`yarn global bin`"
 
 # nodengine and show-version
 cd () { builtin cd "$@" && chpwd; }
@@ -75,7 +75,8 @@ chpwd () {
   fi
 }
 
-export N_PREFIX="$HOME/n"; [[ :$PATH: == *":$N_PREFIX/bin:"* ]] || PATH+=":$N_PREFIX/bin"  # Added by n-install (see http://git.io/n-install-repo).
 
 # spinner
 revolver stop
+
+export N_PREFIX="$HOME/n"; [[ :$PATH: == *":$N_PREFIX/bin:"* ]] || PATH+=":$N_PREFIX/bin"  # Added by n-install (see http://git.io/n-install-repo).
