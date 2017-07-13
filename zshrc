@@ -38,8 +38,8 @@ antigen bundles <<EOBUNDLES
   web-search
   tonietto/show-version
   tonietto/aliases
-  /home/gustavo/aliases
-  /home/gustavo/tiny-care-terminal
+  https://tonietto@bitbucket.org/tonietto/aliases.git
+  https://tonietto@bitbucket.org/tonietto/tiny-care-terminal.git
 EOBUNDLES
 
 # Syntax highlighting bundle.
