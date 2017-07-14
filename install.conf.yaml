@@ -5,6 +5,7 @@
     ~/.Xresources:
     ~/.tmux.conf:
     ~/.vimrc:
+    ~/.Xmodmap:
 
 - shell:
   - [git submodule update --init --recursive, Installing submodules]
