@@ -245,6 +245,9 @@ set updatetime=1000
 " Emoji autocomplete
 set completefunc=emoji#complete
 
+" Disable scracth preview window on autocomplete
+set completeopt-=preview
+
 " Highlight all instances of word under cursor, when idle.
 " Useful when studying strange source code.
 " Type z/ to toggle highlighting on/off.
