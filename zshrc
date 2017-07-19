@@ -75,6 +75,7 @@ chpwd () {
   fi
 }
 
+function gi() { curl -L -s https://www.gitignore.io/api/$@ ; }
 
 # spinner
 revolver stop
