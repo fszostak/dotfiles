@@ -46,8 +46,8 @@ EOBUNDLES
 antigen bundle zsh-users/zsh-syntax-highlighting
 
 # Load the theme.
-antigen theme fwalch
-# antigen bundle tonietto/purity
+# antigen theme fwalch
+antigen bundle tonietto/purity
 
 # Tell antigen that you're done.
 antigen apply
