@@ -1,0 +1,18 @@
+# ./install -p dotbot-yaourt/yaourt.py -c packages.conf.yaml
+- yaourt: 
+  - zsh 
+  - yarn 
+  - tmux 
+  - vim 
+  - htop 
+  - ranger 
+  - rxvt-unicode 
+  - numix-gtk-theme 
+  - figlet 
+  - lolcat 
+  - cowsay 
+  - fortune-mod 
+  - gitkraken 
+  - ttf-hack 
+  - i3 
+  - dmenu 
