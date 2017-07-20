@@ -1,11 +1,17 @@
 - clean: ['~']
+
+- defaults:
+    link:
+      create: true
+      relink: true
+
 - link:
     ~/.gitconfig:
     ~/.zshrc:
     ~/.Xresources:
     ~/.tmux.conf:
     ~/.vimrc:
-    ~/.Xmodmap:
+    ~/.i3/config: i3/config
 
 - shell:
   - [git submodule update --init --recursive, Installing submodules]
