@@ -36,7 +36,8 @@ URxvt.scrollStyle:	        rxvt
 URxvt.scrollBar:                false
 
 ! Font
-URxvt.font:			xft:hack:size=12
+URxvt.font:			xft:hack:pixelsize=15
+URxvt.letterSpace:	        -1
 
 ! Cursor
 URxvt.cursorBlink:	        true
