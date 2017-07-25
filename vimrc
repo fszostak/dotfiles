@@ -60,7 +60,7 @@ Plug 'leafgarland/typescript-vim'
 Plug 'lepture/vim-jinja'
 Plug 'mitermayer/vim-prettier', { 
   \ 'do': 'yarn install', 
-  \ 'for': ['javascript', 'typescript', 'css', 'less', 'scss'] } 
+  \ 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql'] }
 
 " Color schemes
 Plug 'dracula/vim'
@@ -196,7 +196,7 @@ let g:airline#extensions#ale#enabled = 1
 
 " prettier
 let g:prettier#autoformat = 0
-autocmd BufWritePre *.js,*.css,*.scss,*.less PrettierAsync
+autocmd BufWritePre *.js,*.graphql,*.css,*.scss,*.less PrettierAsync
 
 " LANGUAGE STUFF
 
@@ -215,6 +215,7 @@ let g:jsx_ext_required = 0
 
 " JSON
 let g:vim_json_syntax_conceal = 0
+let g:vim_json_warnings=0
 
 " JsDoc
 let g:jsdoc_enable_es6=1
