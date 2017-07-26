@@ -192,7 +192,11 @@ nmap <silent> <C-k> <Plug>(ale_previous_wrap)
 nmap <silent> <C-j> <Plug>(ale_next_wrap)
 
 
+" map ctrl-l to toggle MiniBufferExplorer
 nmap <silent> <C-l> :MBEToggle<CR>
+
+" map ctrl-k to trigger Prettier
+nmap <silent> <C-k> :Prettier<CR>
 
 " show ALE in airline
 let g:airline#extensions#ale#enabled = 1
