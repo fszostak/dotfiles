@@ -43,9 +43,7 @@ bindsym $mod+Return exec urxvt
 bindsym $mod+Shift+q kill
 
 # start dmenu (a program launcher)
-set $bg-color #000000
-set $text-color #ffffff
-bindsym $mod+d exec rofi -show run -lines 6 -eh 2 -width 100 -padding 50 -opacity "85" -bw 0 -bc "#000000" -bg "#000000" -fg "#ffffff" -hlbg "#000000" -font "hack 18"
+bindsym $mod+d exec rofi -show 
 
 # change focus
 bindsym $mod+$left focus left
