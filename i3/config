@@ -209,5 +209,8 @@ exec_always twmnd
 # set wallpaper
 exec_always feh --bg-scale /home/gustavo/dotfiles/wallpaper.jpg
 
+# disable bell
+exec xset -b
+
 # lock screen
 bindsym $mod+shift+x exec i3lock -elf
