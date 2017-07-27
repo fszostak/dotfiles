@@ -1,6 +1,6 @@
 # ./install -p dotbot-yaourt/yaourt.py -c packages.conf.yaml
 - yaourt: 
-  - zsh 
+  - zsh
   - yarn 
   - tmux 
   - vim 
@@ -15,3 +15,20 @@
   - ttf-hack 
   - i3 
   - dmenu 
+  - vim-youcompleteme-git
+  - docker-git
+  - docker-compose-bin
+  - urxvt-fullscreen
+  - urxvt-resize-font-git
+  - slack-desktop
+  - paper-icon-theme-git
+  - gitkraken
+  - feh
+  - twmn-git
+  - libcaca
+  - atool
+  - highlight
+  - fontawesome.sty
+  - postman-bin
+  - lxappearance
+  - gtk-theme-arc-git
