@@ -41,7 +41,6 @@ URxvt.letterSpace:	        -1
 
 ! Cursor
 URxvt.cursorBlink:	        true
-URxvt.cursorColor:		#657b83
 URxvt.cursorUnderline:	        false
 
 ! Pointer
@@ -87,6 +86,8 @@ URxvt.keysym.M-s:               perl:keyboard-select:search
 *.color14:			#9AEDFE
 *.color7:			#BFBFBF
 *.color15:			#E6E6E6
+
+*.cursorColor:			#F1FA8C
 
 ! ------------------------------------------------------------------------------
 ! ROFI Color theme
