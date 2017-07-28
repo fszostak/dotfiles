@@ -109,7 +109,7 @@ set $w4 4
 set $w5 5
 set $w6 6
 set $w7 7
-set $w8 8
+set $w8 8
 set $w9 9
 set $w10 10
 
@@ -143,6 +143,7 @@ assign [class="Chromium"] $w2
 assign [class="Firefox"] $w2
 assign [class="Postman"] $w3
 assign [class="GitKraken"] $w4
+assign [class="Steam"] $w8
 assign [class="Slack"] $w10
 
 # automatically starting applications on startup
