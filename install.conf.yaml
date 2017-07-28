@@ -12,8 +12,9 @@
     ~/.tmux.conf:
     ~/.vimrc:
     ~/.i3/config: i3/config
+    ~/.i3/i3blocks.conf: i3/i3blocks.conf
     ~/.config/twmn/twmn.conf: twmn.conf
-    ~/.config/ranger/rc.conf: config/ranger/rc.conf
+    ~/.config/ranger/rc.conf: ranger.conf
 
 - shell:
   - [git submodule update --init --recursive, Installing submodules]
