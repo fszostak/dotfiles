@@ -105,12 +105,12 @@ bindsym $mod+minus scratchpad show
 set $w1 1
 set $w2 2
 set $w3 3
-set $w4 4
-set $w5 5
+set $w4 4
+set $w5 5
 set $w6 6
-set $w7 7
+set $w7 7
 set $w8 8
-set $w9 9
+set $w9 9
 set $w10 10
 
 # switch to workspace
@@ -234,7 +234,7 @@ exec_always --no-startup-id feh --bg-scale /home/gustavo/dotfiles/wallpaper.jpg
 # disable bell
 exec xset -b
 
-# set right ?? as compose key
+# set right alt as compose key
 exec --no-startup-id setxkbmap -option compose:ralt
 
 # lock screen
@@ -243,4 +243,3 @@ bindsym $mod+shift+x exec i3lock -elf
 # screensaver
 exec --no-startup-id xset 180 300
 exec --no-startup-id xss-lock -n /usr/share/doc/xss-lock/dim-screen.sh -- i3lock -n
-
