@@ -248,3 +248,6 @@ bindsym $mod+shift+x exec /home/gustavo/dotfiles/scripts/i3lock.sh
 
 # autolock
 exec_always --no-startup-id xautolock -time 5 -locker /home/gustavo/dotfiles/scripts/i3lock.sh
+
+# no touchpad while typing
+exec --no-startup-id syndaemon
