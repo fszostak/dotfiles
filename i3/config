@@ -151,6 +151,10 @@ exec urxvt
 exec chromium
 exec slack
 
+# floating
+for_window [class="Pavucontrol"] floating enable
+for_window [class="Lxappearance"] floating enable
+
 # set right alt as compose key
 exec setxkbmap -option compose:ralt
 
@@ -190,6 +194,11 @@ mode "resize" {
 # resize
 bindsym $mod+r mode "resize"
 
+# gaps
+gaps outer 2
+gaps inner 4
+smart_gaps on
+
 # colors
 set $bg-color 	         #2f343f
 set $inactive-bg-color   #2f343f
@@ -222,9 +231,6 @@ new_window none
 # sticky window (?)
 bindsym $mod+Shift+s sticky toggle
 
-# floating
-for_window [class="Pavucontrol"] floating enable
-
 # start notification application
 exec_always --no-startup-id twmnd
 
@@ -238,8 +244,7 @@ exec xset -b
 exec --no-startup-id setxkbmap -option compose:ralt
 
 # lock screen
-bindsym $mod+shift+x exec i3lock -elf
+bindsym $mod+shift+x exec /home/gustavo/dotfiles/scripts/i3lock.sh
 
-# screensaver
-exec --no-startup-id xset 180 300
-exec --no-startup-id xss-lock -n /usr/share/doc/xss-lock/dim-screen.sh -- i3lock -n
+# autolock
+exec_always --no-startup-id xautolock -time 5 -locker /home/gustavo/dotfiles/scripts/i3lock.sh

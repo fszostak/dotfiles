@@ -15,6 +15,7 @@
     ~/.i3/i3blocks.conf: i3/i3blocks.conf
     ~/.config/twmn/twmn.conf: twmn.conf
     ~/.config/ranger/rc.conf: ranger.conf
+    ~/.config/neofetch/config: neofetch.conf
 
 - shell:
   - [git submodule update --init --recursive, Installing submodules]
