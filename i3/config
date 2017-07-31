@@ -104,9 +104,9 @@ bindsym $mod+minus scratchpad show
 
 set $w1 1
 set $w2 2
-set $w3 3
-set $w4 4
-set $w5 5
+set $w3 3
+set $w4 4
+set $w5 5
 set $w6 6
 set $w7 7
 set $w8 8
@@ -141,8 +141,8 @@ bindsym $mod+Shift+0 move container to workspace $w10
 assign [class="URxvt"] $w1
 assign [class="Chromium"] $w2
 assign [class="Firefox"] $w2
-assign [class="Postman"] $w3
-assign [class="GitKraken"] $w4
+assign [class="Postman"] $w4
+assign [class="GitKraken"] $w5
 assign [class="Steam"] $w8
 assign [class="Spotify"] $w9
 assign [class="Slack"] $w10
@@ -240,6 +240,12 @@ bindsym $mod+Shift+s sticky toggle
 
 # start notification application
 exec_always --no-startup-id twmnd
+
+# twmn shortcuts
+bindsym ctrl+shift+j exec twmnc --remote next
+bindsym ctrl+shift+k exec twmnc --remote previous
+bindsym ctrl+shift+l exec twmnc --remote activate
+bindsym ctrl+shift+h exec twmnc --remote hide
 
 # set wallpaper
 exec_always --no-startup-id feh --bg-scale /home/gustavo/dotfiles/wallpaper.jpg
