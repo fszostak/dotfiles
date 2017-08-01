@@ -17,6 +17,7 @@
     ~/.config/ranger/rc.conf: ranger.conf
     ~/.config/neofetch/config: neofetch.conf
     ~/.config/polybar/config: polybar.conf
+    ~/.config/polybar/launch.sh: scripts/polybar.sh
 
 - shell:
   - [git submodule update --init --recursive, Installing submodules]

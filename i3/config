@@ -214,23 +214,8 @@ set $inactive-text-color #4D4D4D
 set $urgent-bg-color     #FF5555
 set $separator		 #757575
 
-# Start i3bar to display a workspace bar (plus the system information i3status
-# finds out, if available)
-bar {
-	position top
-	status_command i3blocks -c /home/gustavo/.i3/i3blocks.conf
-        # status_command i3status
-	font pango:hack 8
-	strip_workspace_numbers yes
-	colors {
-		background $bg-color
-	    	separator  $separator 
-		#                  border             background         text
-		focused_workspace  $bg-color          $bg-color          $text-color
-		inactive_workspace $inactive-bg-color $inactive-bg-color $inactive-text-color
-		urgent_workspace   $urgent-bg-color   $urgent-bg-color   $text-color
-	}
-}
+# bar
+exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 
 # disable all window borders
 new_window none
@@ -248,7 +233,7 @@ bindsym ctrl+shift+l exec twmnc --remote activate
 bindsym ctrl+shift+h exec twmnc --remote hide
 
 # set wallpaper
-exec_always --no-startup-id feh --bg-scale /home/gustavo/dotfiles/wallpaper.jpg
+exec_always --no-startup-id feh --bg-scale $HOME/dotfiles/wallpaper.jpg
 
 # disable bell
 exec xset -b
@@ -257,10 +242,10 @@ exec xset -b
 exec --no-startup-id setxkbmap -option compose:ralt
 
 # lock screen
-bindsym $mod+shift+x exec /home/gustavo/dotfiles/scripts/i3lock.sh
+bindsym $mod+shift+x exec $HOME/dotfiles/scripts/i3lock.sh
 
 # autolock
-exec_always --no-startup-id xautolock -time 5 -locker /home/gustavo/dotfiles/scripts/i3lock.sh
+exec_always --no-startup-id xautolock -time 5 -locker $HOME/dotfiles/scripts/i3lock.sh
 
 # no touchpad while typing
 exec --no-startup-id syndaemon -i 0.5
