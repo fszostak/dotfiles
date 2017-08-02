@@ -18,6 +18,7 @@
     ~/.config/neofetch/config: neofetch.conf
     ~/.config/polybar/config: polybar.conf
     ~/.config/polybar/launch.sh: scripts/polybar.sh
+    ~/.config/polybar/mpris.sh: scripts/mpris.sh
 
 - shell:
   - [git submodule update --init --recursive, Installing submodules]
