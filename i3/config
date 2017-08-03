@@ -148,7 +148,6 @@ assign [class="Spotify"] $w9
 assign [class="Slack"] $w10
 
 # automatically starting applications on startup
-exec urxvt
 exec chromium
 exec slack
 
