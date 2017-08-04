@@ -18,6 +18,7 @@ Plug 'w0rp/ale'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-sensible'
+Plug 'tpope/vim-obsession' " session management with :Obsses <file> and :Obsses!
 Plug 'vim-airline/vim-airline'
 Plug 'majutsushi/tagbar'
 Plug 'tpope/vim-fugitive'
@@ -35,7 +36,7 @@ Plug 'honza/vim-snippets'
 Plug 'mattn/emmet-vim'
 Plug 'jiangmiao/auto-pairs'
 Plug 'tpope/vim-surround'
-Plug 'tpope/vim-unimpaired' 
+Plug 'tpope/vim-unimpaired'
 Plug 'tpope/vim-vinegar'
 Plug 'joegesualdo/jsdoc.vim'
 
@@ -58,8 +59,8 @@ Plug 'suan/vim-instant-markdown'
 Plug 'wavded/vim-stylus'
 Plug 'leafgarland/typescript-vim'
 Plug 'lepture/vim-jinja'
-Plug 'mitermayer/vim-prettier', { 
-  \ 'do': 'yarn install', 
+Plug 'mitermayer/vim-prettier', {
+  \ 'do': 'yarn install',
   \ 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql'] }
 
 " Color schemes
@@ -68,10 +69,10 @@ Plug 'dracula/vim'
 call plug#end()
 
 
-" " " " " " " " " " " " " " " " " " " " " " " " 
+" " " " " " " " " " " " " " " " " " " " " " " "
 " editor
 "
-" " " " " " " " " " " " " " " " " " " " " " " " " 
+" " " " " " " " " " " " " " " " " " " " " " " " "
 
 " Buffers
 set hidden
@@ -187,10 +188,9 @@ let g:user_emmet_leader_key='<C-E>' " c-e-,
 let g:ale_linters = {'javascript': ['eslint']}
 let g:ale_sign_column_always = 1
 
-" use ctrl-k and ctrl-j for navigating between errors 
+" use ctrl-k and ctrl-j for navigating between errors
 nmap <silent> <C-k> <Plug>(ale_previous_wrap)
 nmap <silent> <C-j> <Plug>(ale_next_wrap)
-
 
 " map ctrl-l to toggle MiniBufferExplorer
 nmap <silent> <C-l> :MBEToggle<CR>
