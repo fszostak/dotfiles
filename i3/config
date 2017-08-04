@@ -102,16 +102,16 @@ bindsym $mod+Shift+minus move scratchpad
 # If there are multiple scratchpad windows, this command cycles through them.
 bindsym $mod+minus scratchpad show
 
-set $w1 1
-set $w2 2
-set $w3 3
-set $w4 4
-set $w5 5
-set $w6 6
-set $w7 7
-set $w8 8
-set $w9 9
-set $w10 10
+set $w1 1
+set $w2 2
+set $w3 3
+set $w4 4
+set $w5 5
+set $w6 6
+set $w7 7
+set $w8 8
+set $w9 9
+set $w10 10
 
 # switch to workspace
 bindsym $mod+1 workspace $w1
@@ -148,7 +148,6 @@ assign [class="Spotify"] $w9
 assign [class="Slack"] $w10
 
 # automatically starting applications on startup
-exec urxvt
 exec chromium
 exec slack
 
