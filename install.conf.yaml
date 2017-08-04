@@ -25,4 +25,6 @@
 - shell:
   - [git submodule update --init --recursive, Installing submodules]
   - [ranger --copy-config=scope, Configurating ranger]
+  # Configure before uncommenting
   # - [sudo mv ~/dotfiles/gnome-shell-theme.gresource /usr/share/gnome-shell, Copying GDM theme]
+  # - [sudo mv ~/dotfiles/keychain.sh ~/.keychain, Copying .keychain.sh]
