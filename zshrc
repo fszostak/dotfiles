@@ -81,4 +81,10 @@ function gi() { curl -L -s https://www.gitignore.io/api/$@ ; }
 # spinner
 revolver stop
 
+# keychain
+if [ -f ".keychain.sh" ]; then
+  source .keychain.sh
+else echo "no keychain config found"
+fi
+
 export N_PREFIX="$HOME/n"; [[ :$PATH: == *":$N_PREFIX/bin:"* ]] || PATH+=":$N_PREFIX/bin"  # Added by n-install (see http://git.io/n-install-repo).
