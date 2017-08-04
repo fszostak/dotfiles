@@ -232,7 +232,7 @@ bindsym ctrl+shift+l exec twmnc --remote activate
 bindsym ctrl+shift+h exec twmnc --remote hide
 
 # set wallpaper
-exec_always --no-startup-id feh --bg-scale $HOME/dotfiles/wallpaper.jpg
+exec_always --no-startup-id feh --bg-scale $HOME/wallpaper.jpg
 
 # disable bell
 exec xset -b
@@ -241,10 +241,10 @@ exec xset -b
 exec --no-startup-id setxkbmap -option compose:ralt
 
 # lock screen
-bindsym $mod+shift+x exec $HOME/dotfiles/scripts/i3lock.sh
+bindsym $mod+shift+x exec $HOME/.scripts/i3lock.sh
 
 # autolock
-exec_always --no-startup-id xautolock -time 5 -locker $HOME/dotfiles/scripts/i3lock.sh
+exec_always --no-startup-id xautolock -time 5 -locker $HOME/.scripts/i3lock.sh
 
 # no touchpad while typing
 exec --no-startup-id syndaemon -i 0.5
