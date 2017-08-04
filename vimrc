@@ -221,8 +221,8 @@ let g:vim_markdown_frontmatter = 1
 let g:jsx_ext_required = 0
 
 " JSON
-let g:vim_json_syntax_conceal = 0
-let g:vim_json_warnings=0
+let g:vim_json_syntax_conceal = 0 " disable quotes hiding
+let g:vim_json_warnings=1 " error warnings
 
 " JsDoc
 let g:jsdoc_enable_es6=1
