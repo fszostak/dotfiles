@@ -1,1 +1,1 @@
-eval $(keychain --eval --quiet akey idrsa anotherkey)
+eval $(keychain --eval --quiet id_rsa)
