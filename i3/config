@@ -231,6 +231,9 @@ bindsym ctrl+shift+k exec twmnc --remote previous
 bindsym ctrl+shift+l exec twmnc --remote activate
 bindsym ctrl+shift+h exec twmnc --remote hide
 
+# shortcut to shutdown
+bindsym $mod+shift+BackSpace exec $HOME/dotfiles/scripts/i3lock.sh && sleep 0.1 && systemctl suspend
+
 # shortcut to set keymap to abnt2 br
 bindsym $mod+Shift+b exec setxkbmap -model abnt2 -layout br -model abnt2
 
@@ -254,4 +257,3 @@ exec --no-startup-id syndaemon -i 0.5
 
 # set keymap to us
 exec --no-startup-id setxkbmap -layout us
-
