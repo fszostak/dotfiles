@@ -257,3 +257,6 @@ exec --no-startup-id syndaemon -i 0.5
 
 # set keymap to us
 exec --no-startup-id setxkbmap -layout us
+
+# start conky
+exec --no-startup-id conky
