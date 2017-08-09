@@ -237,6 +237,9 @@ bindsym $mod+shift+BackSpace exec $HOME/dotfiles/scripts/i3lock.sh && sleep 0.1 
 # shortcut to set keymap to abnt2 br
 bindsym $mod+Shift+b exec setxkbmap -model abnt2 -layout br -model abnt2
 
+# shortcut to set keymap to us
+bindsym $mod+Shift+u exec setxkbmap -layout us -option compose:ralt 
+
 # set wallpaper
 exec_always --no-startup-id feh --bg-scale $HOME/wallpaper.jpg
 
@@ -256,7 +259,7 @@ exec_always --no-startup-id xautolock -time 5 -locker $HOME/.scripts/i3lock.sh
 exec --no-startup-id syndaemon -i 0.5
 
 # set keymap to us
-exec --no-startup-id setxkbmap -layout us
+exec --no-startup-id setxkbmap --layout us -option compose:ralt
 
 # start conky
 exec --no-startup-id conky
