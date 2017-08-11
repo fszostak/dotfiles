@@ -140,7 +140,7 @@ bindsym $mod+Shift+0 move container to workspace $w10
 # assign clients to workspaces
 assign [class="URxvt"] $w1
 assign [class="Chromium"] $w2
-assign [class="Firefox"] $w2
+assign [class="Firefox"] $w3
 assign [class="Postman"] $w4
 assign [class="GitKraken"] $w5
 assign [class="Steam"] $w8
@@ -261,8 +261,12 @@ exec --no-startup-id syndaemon -i 0.5
 # set keymap to us
 exec --no-startup-id setxkbmap --layout us -option compose:ralt
 
-# start conky
+# start and stop conky
 exec --no-startup-id conky
+bindsym $mod+control+shift+c exec killall conky
+bindsym $mod+control+c exec conky
 
-# start compton
+# start and stop compton
 exec --no-startup-id compton -b --config $HOME/.config/compton.conf
+bindsym $mod+control+shift+k exec killall compton
+bindsym $mod+control+k exec compton -b --config $HOME/.config/compton.conf
