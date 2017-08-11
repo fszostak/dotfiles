@@ -263,3 +263,6 @@ exec --no-startup-id setxkbmap --layout us -option compose:ralt
 
 # start conky
 exec --no-startup-id conky
+
+# start compton
+exec --no-startup-id compton -b --config $HOME/.config/compton.conf
