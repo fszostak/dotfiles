@@ -13,6 +13,7 @@
     ~/.tmux.conf:
     ~/.vimrc:
     ~/.scripts:
+    ~/.neo-ascii:
     ~/wallpaper.jpg: wallpaper.jpg
     ~/.i3/i3blocks.conf: i3/i3blocks.conf
     ~/.config/twmn/twmn.conf: twmn.conf
