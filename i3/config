@@ -144,8 +144,9 @@ assign [class="Firefox"] $w3
 assign [class="Postman"] $w4
 assign [class="GitKraken"] $w5
 assign [class="Steam"] $w8
-assign [class="Spotify"] $w9
+assign [title="(?i)spotify"] $w9
 assign [class="Slack"] $w10
+assign [class="$"] $w6
 
 # automatically starting applications on startup
 exec chromium
