@@ -4,13 +4,13 @@ B='#00000000'  # blank
 C='#ffffff22'  # clear ish
 D='#50fa7bff'  # default
 T=$D	       # text
-W='f8f8f2ff'  # wrong
-V='#f1faf8ff'  # verifying
+W='#ff5555ff'  # wrong
+V='#282a36ff'  # verifying
 
 i3lock -ef            \
 \
 --insidevercolor=$C   \
---ringvercolor=$V     \
+--ringvercolor=$D     \
 \
 --insidewrongcolor=$C \
 --ringwrongcolor=$W   \
@@ -23,11 +23,11 @@ i3lock -ef            \
 --textcolor=$T        \
 --timecolor=$T        \
 --datecolor=$T        \
---keyhlcolor=$W       \
+--keyhlcolor=$V       \
 --bshlcolor=$W        \
 \
 --screen 0            \
---blur 5              \
+--blur 10             \
 --clock               \
 --indicator           \
 --timestr="%H:%M:%S"  \
