@@ -270,3 +270,12 @@ bindsym $mod+control+c exec conky
 exec --no-startup-id compton -b --config $HOME/.config/compton.conf
 bindsym $mod+control+shift+k exec killall compton
 bindsym $mod+control+k exec compton -b --config $HOME/.config/compton.conf
+
+# volume controls
+bindsym XF86AudioRaiseVolume exec pamixer -i 5
+bindsym XF86AudioLowerVolume exec pamixer -d 5
+bindsym XF86AudioMute exec pamixer -t
+
+# brightness controls
+bindsym XF86MonBrightnessUp exec light -A 5 # increase screen brightness
+bindsym XF86MonBrightnessDown exec light -U 5 # decrease screen brightness
