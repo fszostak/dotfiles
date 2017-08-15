@@ -17,11 +17,9 @@ Plug 'w0rp/ale'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-sensible'
-Plug 'tpope/vim-obsession' " session management with :Obsses <file> and :Obsses!
 Plug 'vim-airline/vim-airline'
 Plug 'majutsushi/tagbar'
 Plug 'tpope/vim-fugitive'
-" Plug 'ryanoasis/vim-devicons'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'junegunn/vim-emoji'
 Plug 'fholgado/minibufexpl.vim'
@@ -153,7 +151,7 @@ filetype plugin on
 set completefunc=emoji#complete
 " }}}
 
-" UI {{{
+" UX {{{
 " Vim Devicons
 set encoding=utf-8
 " required if using https://github.com/bling/vim-airline
