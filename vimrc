@@ -1,7 +1,6 @@
-" Based on https://gist.github.com/amonks/95fe76e4f843c2355736
-
 set nocompatible
 
+" Plugins {{{
 call plug#begin('~/.vim/bundle')
 
 " Vim UX
@@ -26,6 +25,7 @@ Plug 'tpope/vim-fugitive'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'junegunn/vim-emoji'
 Plug 'fholgado/minibufexpl.vim'
+Plug 'sjl/gundo.vim'
 
 " tmux UX
 Plug 'edkolev/tmuxline.vim'
@@ -68,71 +68,33 @@ Plug 'dracula/vim'
 
 call plug#end()
 
+" }}}
 
-" " " " " " " " " " " " " " " " " " " " " " " "
-" editor
-"
-" " " " " " " " " " " " " " " " " " " " " " " " "
-
+" Misc {{{
 " Buffers
 set hidden
 
-" Vim Devicons
-set encoding=utf-8
-" required if using https://github.com/bling/vim-airline
-let g:airline_powerline_fonts=1
+" Use dot (.) with visual mode
+vnoremap . :norm.<CR>
 
-" indent line
-let g:indentLine_color_term = 239
+" redraw only when we need to.
+set lazyredraw
 
-" default leader key (e.g. vim-easymotion)
+" Search
+set incsearch " search as characters are entered
+set hlsearch " highlight matches"
+
+" turn off search highlight
+nnoremap <leader><space> :nohlsearch<CR>
+
+" default leader key
 let mapleader = ","
 
 " enable scrolling
 set mouse=a
 
-" highlight the selected line
-set cursorline
-
-" show line numbers
-set number
-set relativenumber
-
-" show vertical line
-set colorcolumn=100
-
 " be more verbose about stuff generally
 set showcmd
-
-" briefly highlight matching brackets on close/open
-set showmatch
-
-" no wrapping
-set nowrap
-
-" Allow scrolling past the bottom of the document
-set scrolloff=1
-
-" tabs!
-nnoremap th  :tabfirst<CR>
-nnoremap tk  :tabnext<CR>
-nnoremap tj  :tabprev<CR>
-nnoremap tl  :tablast<CR>
-nnoremap tt  :tabedit<Space>
-nnoremap tn  :tabnext<Space>
-nnoremap tm  :tabm<Space>
-nnoremap td  :tabclose<CR>
-nnoremap te  :tabedit<Space>%<CR>
-
-" set color for folded text, see chart
-" https://upload.wikimedia.org/wikipedia/en/1/15/Xterm_256color_chart.svg
-hi Folded ctermbg=236
-
-" give us 256 color schemes!
-set term=screen-256color
-
-" make vim use zsh
-set shell=zsh
 
 " change default directories
 set backupdir=~/.vim/backup//
@@ -143,18 +105,11 @@ set undodir=~/.vim/undo//
 set shiftwidth=2
 set softtabstop=2
 
-" don't break mid word
-set linebreak
-
 " autoload vimrc changes
 augroup myvimrc
   au!
   au BufWritePost .vimrc,_vimrc,vimrc,.gvimrc,_gvimrc,gvimrc so $MYVIMRC | if has('gui_running') | so $MYGVIMRC | endif
 augroup END
-
-" Use control-\ to toggle the sidebar
-map <C-\> :NERDTreeToggle<CR>
-map <C-> :NERDTreeMirror<CR>
 
 " Allow saving of files as sudo when I forgot to start vim using sudo.
 cmap w!! w !sudo tee > /dev/null %
@@ -163,50 +118,15 @@ cmap w!! w !sudo tee > /dev/null %
 nnoremap ; :
 vnoremap ; :
 
-" use gitignore for ctrlp
-let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files -co --exclude-standard']
+" Disable scracth preview window on autocomplete
+set completeopt-=preview
 
-" EASYCLIP CLIPBOARD MANAGER
-" let g:EasyClipUsePasteToggleDefaults = 0
-let g:EasyClipShareYanksFile = '.easyclip'
+" Modelines are special comments somewhere in a file that can can declare
+" certain Vim settings to be used only for that file. 
+set modelines=1
+" }}}
 
-" ALLOW PASTE OUTSIDE NORMAL MODE
-imap <c-v> <plug>EasyClipInsertModePaste
-cmap <c-v> <plug>EasyClipCommandModePaste
-
-" ULTISNIPS SNIPPETS
-
-" Use ctrl-j to insert a snippet
-let g:UltiSnipsExpandTrigger="<c-j>"
-let g:UltiSnipsEditSplit="vertical"
-
-" EMMET
-let g:user_emmet_leader_key='<C-E>' " c-e-,
-
-" ALE linter
-
-let g:ale_linters = {'javascript': ['eslint']}
-let g:ale_sign_column_always = 1
-
-" use ctrl-k and ctrl-j for navigating between errors
-nmap <silent> <C-k> <Plug>(ale_previous_wrap)
-nmap <silent> <C-j> <Plug>(ale_next_wrap)
-
-" map ctrl-l to toggle MiniBufferExplorer
-nmap <silent> <C-l> :MBEToggle<CR>
-
-" map ctrl-k to trigger Prettier
-nmap <silent> <C-k> :Prettier<CR>
-
-" show ALE in airline
-let g:airline#extensions#ale#enabled = 1
-
-" prettier
-let g:prettier#autoformat = 0
-autocmd BufWritePre *.js,*.graphql,*.css,*.scss,*.less PrettierAsync
-
-" LANGUAGE STUFF
-
+" Languages {{{
 " Markdown
 
 " disable annoying code folding with vim-markdown
@@ -229,33 +149,93 @@ let g:jsdoc_enable_es6=1
 
 " For Markdown preview
 filetype plugin on
-
-" NERDTree
-
-" Highlight Everything
-let g:NERDTreeFileExtensionHighlightFullName = 1
-let g:NERDTreeExactMatchHighlightFullName = 1
-let g:NERDTreePatternMatchHighlightFullName = 1
-
-" Show hidden files
-let NERDTreeShowHidden=1
-
-" enable line numbers
-let NERDTreeShowLineNumbers=1
-" make sure relative line numbers are used
-autocmd FileType nerdtree setlocal relativenumber
-
-" GitGutter
-let g:gitgutter_realtime=1
-let g:gitgutter_eager=1
-set updatetime=1000
-
 " Emoji autocomplete
 set completefunc=emoji#complete
+" }}}
 
-" Disable scracth preview window on autocomplete
-set completeopt-=preview
+" UI {{{
+" Vim Devicons
+set encoding=utf-8
+" required if using https://github.com/bling/vim-airline
+let g:airline_powerline_fonts=1
+" highlight the selected line
+set cursorline
 
+" show line numbers
+set number
+set relativenumber
+
+" show vertical line
+set colorcolumn=100
+
+" indent line
+let g:indentLine_color_term = 239
+
+" briefly highlight matching brackets on close/open
+set showmatch
+
+" no wrapping
+set nowrap
+
+" Allow scrolling past the bottom of the document
+set scrolloff=1
+ 
+" tabs!
+nnoremap th  :tabfirst<CR>
+nnoremap tk  :tabnext<CR>
+nnoremap tj  :tabprev<CR>
+nnoremap tl  :tablast<CR>
+nnoremap tt  :tabedit<Space>
+nnoremap tn  :tabnext<Space>
+nnoremap tm  :tabm<Space>
+nnoremap td  :tabclose<CR>
+nnoremap te  :tabedit<Space>%<CR>
+
+" set color for folded text, see chart
+" https://upload.wikimedia.org/wikipedia/en/1/15/Xterm_256color_chart.svg
+hi Folded ctermbg=236
+
+" give us 256 color schemes!
+set term=screen-256color
+
+" make vim use zsh
+set shell=zsh
+
+" don't break mid word
+set linebreak
+" }}}
+
+"Colors {{{
+set t_Co=256
+let g:airline_theme="dracula"
+let g:enable_bold_font = 1
+syntax enable
+set background:dark
+colorscheme dracula
+" }}}
+
+" Ale linter {{{
+let g:ale_linters = {'javascript': ['eslint']}
+let g:ale_sign_column_always = 1
+
+" use ctrl-k and ctrl-j for navigating between errors
+nmap <silent> <C-k> <Plug>(ale_previous_wrap)
+nmap <silent> <C-j> <Plug>(ale_next_wrap)
+
+" show ALE in airline
+let g:airline#extensions#ale#enabled = 1
+" }}}
+
+" CtrlP {{{
+" use gitignore for ctrlp
+let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files -co --exclude-standard']
+"}}}
+
+" Emmet {{{
+let g:user_emmet_leader_key='<C-E>' " c-e-,
+" }}}
+
+" IdleHighlight {{{
 " Highlight all instances of word under cursor, when idle.
 " Useful when studying strange source code.
 " Type z/ to toggle highlighting on/off.
@@ -278,14 +258,57 @@ function! AutoHighlightToggle()
     return 1
   endif
 endfunction
+" }}}
 
-" Allow saving of files as sudo when I forgot to start vim using sudo.
-cmap w!! w !sudo tee > /dev/null %
+" Gundo {{{
+" toggle gundo
+nnoremap <leader>u :GundoToggle<CR>
+" }}}
 
-" COLOR SCHEME
-set t_Co=256
-let g:airline_theme="dracula"
-let g:enable_bold_font = 1
-syntax enable
-set background:dark
-colorscheme dracula
+" MiniBufferExplorer {{{
+" map ctrl-l to toggle MiniBufferExplorer
+nmap <silent> <C-l> :MBEToggle<CR>
+" }}}
+
+" NERDTree {{{
+" Highlight Everything
+let g:NERDTreeFileExtensionHighlightFullName = 1
+let g:NERDTreeExactMatchHighlightFullName = 1
+let g:NERDTreePatternMatchHighlightFullName = 1
+
+" Show hidden files
+let NERDTreeShowHidden=1
+
+" enable line numbers
+let NERDTreeShowLineNumbers=1
+" make sure relative line numbers are used
+autocmd FileType nerdtree setlocal relativenumber
+
+" GitGutter
+let g:gitgutter_realtime=1
+let g:gitgutter_eager=1
+set updatetime=1000
+" }}}
+
+" Prettier {{{
+" map ctrl-k to trigger Prettier
+nmap <silent> <C-k> :Prettier<CR>
+
+" prettier
+let g:prettier#autoformat = 0
+autocmd BufWritePre *.js,*.graphql,*.css,*.scss,*.less PrettierAsync
+" }}}
+
+" Sidebar {{{
+" Use control-\ to toggle the sidebar
+map <C-\> :NERDTreeToggle<CR>
+map <C-> :NERDTreeMirror<CR>
+" }}}
+
+" UtilSnippets {{{
+" Use ctrl-j to insert a snippet
+let g:UltiSnipsExpandTrigger="<c-j>"
+let g:UltiSnipsEditSplit="vertical"
+" }}}
+
+" vim:foldmethod=marker:foldlevel=0
