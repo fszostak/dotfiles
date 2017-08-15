@@ -275,8 +275,8 @@ bindsym $mod+control+shift+k exec killall compton
 bindsym $mod+control+k exec compton -b --config $HOME/.config/compton.conf
 
 # volume controls
-bindsym XF86AudioRaiseVolume exec pamixer -i 5
-bindsym XF86AudioLowerVolume exec pamixer -d 5
+bindsym XF86AudioRaiseVolume exec pamixer -i 10
+bindsym XF86AudioLowerVolume exec pamixer -d 10
 bindsym XF86AudioMute exec pamixer -t
 
 # brightness controls
