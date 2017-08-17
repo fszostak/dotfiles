@@ -27,6 +27,7 @@
     ~/.config/polybar/mpris.sh: scripts/mpris.sh
     ~/.config/conky/conky.conf: conky.conf
     ~/.config/compton.conf: compton.conf
+    ~/.config/redshift.conf: redshift.conf
 
 - shell:
   - [git submodule update --init --recursive, Installing submodules]
