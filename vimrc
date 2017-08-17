@@ -218,7 +218,7 @@ colorscheme dracula
 hi Visual term=reverse cterm=reverse guibg=Grey
 
 " Search selection colors
-hi Search ctermbg=NONE ctermfg=NONE cterm=italic
+hi Search ctermbg=darkgray ctermfg=white 
 " }}}
 
 " Ale linter {{{
