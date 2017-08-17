@@ -83,7 +83,8 @@ set incsearch " search as characters are entered
 set hlsearch " highlight matches"
 
 " turn off search highlight
-nnoremap <leader><space> :nohlsearch<CR>
+nnoremap s\ :set hlsearch<CR>
+nnoremap s/ :nohlsearch<CR>
 
 " default leader key
 let mapleader = ","
