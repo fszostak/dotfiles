@@ -1,6 +1,6 @@
+" Plugins {{{
 set nocompatible
 
-" Plugins {{{
 call plug#begin('~/.vim/bundle')
 
 " Vim UX
