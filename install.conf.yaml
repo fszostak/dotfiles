@@ -17,6 +17,8 @@
     ~/wallpaper.jpg: wallpaper.jpg
     ~/.i3/i3blocks.conf: i3/i3blocks.conf
     ~/.config/twmn/twmn.conf: twmn.conf
+    ~/.config/termite/config: termite.conf
+    ~/.config/gtk-3.0/gtk.css: gtk.css
     ~/.config/ranger/rc.conf: ranger.conf
     ~/.config/ranger/scope.sh: scripts/scope.sh
     ~/.config/neofetch/config: neofetch.conf
