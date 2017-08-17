@@ -205,12 +205,20 @@ set linebreak
 " }}}
 
 "Colors {{{
+syntax enable
+
 set t_Co=256
+
 let g:airline_theme="dracula"
 let g:enable_bold_font = 1
-syntax enable
 set background:dark
 colorscheme dracula
+
+" Visual selection colors
+hi Visual term=reverse cterm=reverse guibg=Grey
+
+" Search selection colors
+hi Search ctermbg=NONE ctermfg=NONE cterm=italic
 " }}}
 
 " Ale linter {{{
