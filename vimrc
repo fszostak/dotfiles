@@ -163,9 +163,6 @@ let g:airline_powerline_fonts=1
 " highlight the selected line
 set cursorline
 
-" set font
-set guifont = Knack\ Nerd\ Font\
-
 " show line numbers
 set number
 set relativenumber
