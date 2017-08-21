@@ -1,6 +1,8 @@
-" Plugins {{{
+" Starting config {{{
 set nocompatible
+" }}}
 
+" Plugins {{{
 call plug#begin('~/.vim/bundle')
 
 " Vim UX
@@ -24,6 +26,7 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'junegunn/vim-emoji'
 Plug 'fholgado/minibufexpl.vim'
 Plug 'sjl/gundo.vim'
+Plug 'ryanoasis/vim-devicons'
 
 " tmux UX
 Plug 'edkolev/tmuxline.vim'
@@ -159,6 +162,9 @@ set encoding=utf-8
 let g:airline_powerline_fonts=1
 " highlight the selected line
 set cursorline
+
+" set font
+set guifont = Knack\ Nerd\ Font\
 
 " show line numbers
 set number
