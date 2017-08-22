@@ -294,3 +294,6 @@ bindsym $mod+Shift+p exec rm ~/.pomodoro_session
 
 # start/reset a pomodoro
 bindsym $mod+p exec echo 60 5 > ~/.pomodoro_session
+
+# set custom outputs
+exec --no-startup-id source ~/.config/i3/outputs.sh
