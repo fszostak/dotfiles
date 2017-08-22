@@ -32,6 +32,8 @@
 - shell:
   - [git submodule update --init --recursive, Installing submodules]
   - [ranger --copy-config=scope, Configurating ranger]
+  - command: echo Note
+    description: --> Edit and copy the files under custom directory, or polybar will not work!
   # Configure before uncommenting
   # - [sudo cp ~/dotfiles/gnome-shell-theme.gresource /usr/share/gnome-shell, Copying GDM theme]
   # - [sudo cp ~/dotfiles/keychain.sh ~/.keychain.sh, Copying .keychain.sh]
