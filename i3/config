@@ -286,3 +286,9 @@ bindsym XF86MonBrightnessDown exec xbacklight -dec 10 # decrease screen brightne
 
 # start redshit
 exec --no-startup-id redshift -c $HOME/.config/redshift.conf
+
+# stop a pomodoro
+bindsym $mod+Shift+p exec rm ~/.pomodoro_session
+
+# start/reset a pomodoro
+bindsym $mod+p exec echo 60 5 > ~/.pomodoro_session
