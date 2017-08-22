@@ -305,8 +305,8 @@ set updatetime=1000
 nmap <silent> <C-k> :Prettier<CR>
 
 " prettier
-let g:prettier#autoformat = 0
-autocmd BufWritePre *.js,*.graphql,*.css,*.scss,*.less PrettierAsync
+" let g:prettier#autoformat = 0
+" autocmd BufWritePre *.js,*.graphql,*.css,*.scss,*.less PrettierAsync
 " }}}
 
 " Sidebar {{{

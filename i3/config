@@ -82,6 +82,7 @@ bindsym $mod+f fullscreen toggle
 bindsym $mod+s layout stacking
 bindsym $mod+w layout tabbed
 bindsym $mod+e layout toggle split
+set layout default splith
 
 # toggle tiling / floating
 bindsym $mod+Shift+space floating toggle
@@ -158,6 +159,7 @@ exec slack
 # floating
 for_window [class="Pavucontrol"] floating enable
 for_window [class="Lxappearance"] floating enable
+for_window [class="Steam"] floating enable
 
 # keybindings
 bindsym XF86AudioPlay exec playerctl play-pause
