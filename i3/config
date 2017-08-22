@@ -158,6 +158,7 @@ exec slack
 # floating
 for_window [class="Pavucontrol"] floating enable
 for_window [class="Lxappearance"] floating enable
+for_window [class="Steam"] floating enable
 
 # keybindings
 bindsym XF86AudioPlay exec playerctl play-pause
