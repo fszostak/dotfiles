@@ -149,6 +149,9 @@ assign [class="Steam"] $w6
 assign [class="Slack"] $w9
 assign [title="(?i)spotify"] $w10
 
+# for multiple monitors
+# workspace $w9 output eDP
+
 # assign all other clients to default workspace
 assign [class="$"] $w7
 
@@ -294,6 +297,3 @@ bindsym $mod+Shift+p exec rm ~/.pomodoro_session
 
 # start/reset a pomodoro
 bindsym $mod+p exec echo 60 5 > ~/.pomodoro_session
-
-# set custom outputs
-exec --no-startup-id source ~/.config/i3/outputs.sh
