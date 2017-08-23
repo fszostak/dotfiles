@@ -150,7 +150,9 @@ assign [class="Slack"] $w9
 assign [title="(?i)spotify"] $w10
 
 # for multiple monitors
+# workspace $w8 output eDP
 # workspace $w9 output eDP
+# workspace $w10 output eDP
 
 # assign all other clients to default workspace
 assign [class="$"] $w7
