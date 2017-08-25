@@ -12,3 +12,4 @@ i3-msg workspace $w9 output DisplayPort-0
 i3-msg workspace $w10 output DisplayPort-0
 
 
+xrandr --output eDP --auto --right-of DisplayPort-0
