@@ -297,5 +297,9 @@ exec --no-startup-id redshift -c $HOME/.config/redshift.conf
 # stop a pomodoro
 bindsym $mod+Shift+p exec rm ~/.pomodoro_session
 
+# change pomodoro time
+bindsym $mod+control+p exec echo "$((`cut .pomodoro_session -d ' ' -f 1`+5)) 5" > .pomodoro_session
+bindsym $mod+control+shift+p exec echo "$((`cut .pomodoro_session -d ' ' -f 1`-5)) 5" > .pomodoro_session
+
 # start/reset a pomodoro
 bindsym $mod+p exec echo 60 5 > ~/.pomodoro_session
