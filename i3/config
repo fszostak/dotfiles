@@ -263,8 +263,9 @@ exec --no-startup-id setxkbmap -option compose:ralt
 # lock screen
 bindsym $mod+shift+x exec $HOME/.scripts/i3lock.sh
 
-# autolock
-exec_always --no-startup-id xautolock -time 5 -locker $HOME/.scripts/i3lock.sh
+# autolock and suspend
+exec_always --no-startup-id xautolock -time 10 -locker $HOME/.scripts/i3lock.sh -time 15 -locker "systemctl suspend"
+exec_always --no-startup-id xss-lock $HOME/.scripts/i3lock.sh
 
 # no touchpad while typing
 exec --no-startup-id syndaemon -i 0.5
