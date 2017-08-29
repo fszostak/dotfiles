@@ -1,29 +1,12 @@
 # i3 config file (v4)
 #
 # Please see http://i3wm.org/docs/userguide.html for a complete reference!
-#
-# This config file uses keycodes (bindsym) and was written for the QWERTY
-# layout.
-#
-# To get a config file with the same key positions, but for your current
-# layout, use the i3-config-wizard
-#
 
-# Font for window titles. Will also be used by the bar unless a different font
-# is used in the bar {} block below.
+# Font {{{
 font pango:hack 8
+# }}}
 
-# This font is widely installed, provides lots of unicode glyphs, right-to-left
-# text rendering and scalability on retina/hidpi displays (thanks to pango).
-#font pango:DejaVu Sans Mono 8
-
-# Before i3 v4.8, we used to recommend this one as the default:
-# font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
-# The font above is very space-efficient, that is, it looks good, sharp and
-# clear in small sizes. However, its unicode glyph coverage is limited, the old
-# X core fonts rendering does not support right-to-left and this being a bitmap
-# font, it doesn’t scale on retina/hidpi displays.
-
+# Variables {{{
 # use these keys for focus, movement, and resize directions when reaching for
 # the arrows is not convenient
 set $up k
@@ -32,19 +15,92 @@ set $left h
 set $right l
 
 set $mod Mod4
+# }}}
 
-# use Mouse+$mod to drag floating windows to their wanted position
-floating_modifier $mod
 
-# start a terminal
-bindsym $mod+Return exec termite
 
-# kill focused window
-bindsym $mod+Shift+q kill
+# Applications {{{
+# automatically starting applications on startup
+exec chromium
+exec slack
+# }}}
 
+# Brightness, Music and Volume {{{
+# Music keybindings
+bindsym XF86AudioPlay exec playerctl play-pause
+bindsym XF86AudioPause exec playerctl play-pause
+bindsym XF86AudioNext exec playerctl next
+bindsym XF86AudioPrev exec playerctl previous
+
+# volume controls
+bindsym XF86AudioRaiseVolume exec pamixer -i 10
+bindsym XF86AudioLowerVolume exec pamixer -d 10
+bindsym XF86AudioMute exec pamixer -t
+
+# brightness controls
+bindsym XF86MonBrightnessUp exec xbacklight -inc 10 # increase screen brightness
+bindsym XF86MonBrightnessDown exec xbacklight -dec 10 # decrease screen brightness
+# }}}
+
+# Compton {{{
+# start and stop compton
+exec --no-startup-id compton -b --config $HOME/.config/compton.conf
+bindsym $mod+control+shift+k exec killall compton
+bindsym $mod+control+k exec compton -b --config $HOME/.config/compton.conf
+# }}}
+
+# Conky {{{
+# start and stop conky
+exec --no-startup-id conky
+bindsym $mod+control+shift+c exec killall conky
+bindsym $mod+control+c exec conky
+# }}}
+
+# Configuration File commands {{{
+# reload the configuration file
+bindsym $mod+Shift+c reload
+
+# restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
+bindsym $mod+Shift+r restart
+# }}}
+
+# Container Layouts {{{
+# enter fullscreen mode for the focused container
+bindsym $mod+f fullscreen toggle
+
+# change container layout (stacked, tabbed, toggle split)
+bindsym $mod+s layout stacking
+bindsym $mod+w layout tabbed
+bindsym $mod+e layout toggle split
+set layout default splith
+# }}}
+
+# Dmenu {{{
 # start dmenu (a program launcher)
 bindsym $mod+d exec rofi -show 
+# }}}
 
+# Drag Floats {{{
+# use Mouse+$mod to drag floating windows to their wanted position
+floating_modifier $mod
+# }}}
+
+# Exit, Lock and Suspend {{{
+# exit i3 (logs you out of your X session)
+bindsym $mod+Shift+e exec "i3-nagbar -t warning -f hack -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
+# lock screen
+bindsym $mod+shift+x exec $HOME/.scripts/i3lock.sh
+
+# suspend
+bindsym $mod+shift+BackSpace exec $HOME/.scripts/i3lock.sh && sleep 0.1 && systemctl suspend
+
+# autolock and suspend
+exec_always --no-startup-id xautolock -time 10 -locker $HOME/.scripts/i3lock.sh 
+exec_always --no-startup-id xautolock -time 15 -locker "systemctl suspend"
+exec_always --no-startup-id xss-lock $HOME/.scripts/i3lock.sh
+# }}}
+
+# Focus {{{
 # change focus
 bindsym $mod+$left focus left
 bindsym $mod+$down focus down
@@ -69,24 +125,6 @@ bindsym $mod+Shift+Down move down
 bindsym $mod+Shift+Up move up
 bindsym $mod+Shift+Right move right
 
-# split in horizontal orientation
-bindsym $mod+control+h split h
-
-# split in vertical orientation
-bindsym $mod+control+v split v
-
-# enter fullscreen mode for the focused container
-bindsym $mod+f fullscreen toggle
-
-# change container layout (stacked, tabbed, toggle split)
-bindsym $mod+s layout stacking
-bindsym $mod+w layout tabbed
-bindsym $mod+e layout toggle split
-set layout default splith
-
-# toggle tiling / floating
-bindsym $mod+Shift+space floating toggle
-
 # change focus between tiling / floating windows
 bindsym $mod+space focus mode_toggle
 
@@ -94,15 +132,134 @@ bindsym $mod+space focus mode_toggle
 bindsym $mod+a focus parent
 
 # focus the child container
-#bindsym $mod+d focus child
+bindsym $mod+c focus child
+# }}}
 
+# Keyboard Layout {{{
+# shortcut to set keymap to abnt2 br
+bindsym $mod+Shift+b exec setxkbmap -model abnt2 -layout br -model abnt2
+
+# shortcut to set keymap to us
+bindsym $mod+Shift+u exec setxkbmap -layout us -option compose:ralt 
+
+# set keymap to us
+exec --no-startup-id setxkbmap --layout us -option compose:ralt
+
+# set right alt as compose key
+exec --no-startup-id setxkbmap -option compose:ralt
+# }}}
+
+# Kill Focused Window {{{
+bindsym $mod+Shift+q kill
+# }}}
+
+# Notifications {{{
+# disable bell
+exec xset -b
+
+# start notification application
+exec_always --no-startup-id twmnd
+
+# twmn shortcuts
+bindsym ctrl+shift+j exec twmnc --remote next
+bindsym ctrl+shift+k exec twmnc --remote previous
+bindsym ctrl+shift+l exec twmnc --remote activate
+bindsym ctrl+shift+h exec twmnc --remote hide
+# }}}
+
+# Pomodoro {{{
+# stop a pomodoro
+bindsym $mod+Shift+p exec rm ~/.pomodoro_session
+
+# change pomodoro time
+bindsym $mod+control+p exec echo "$((`cut .pomodoro_session -d ' ' -f 1`+5)) 5" > .pomodoro_session
+bindsym $mod+control+shift+p exec echo "$((`cut .pomodoro_session -d ' ' -f 1`-5)) 5" > .pomodoro_session
+
+# start/reset a pomodoro
+bindsym $mod+p exec echo 60 5 > ~/.pomodoro_session
+# }}}
+
+# Redshift {{{
+# start redshit
+exec --no-startup-id redshift -c $HOME/.config/redshift.conf
+# }}}
+
+# Scratchpad {{{
 # move the currently focused window to the scratchpad
 bindsym $mod+Shift+minus move scratchpad
 
 # Show the next scratchpad window or hide the focused scratchpad window.
 # If there are multiple scratchpad windows, this command cycles through them.
 bindsym $mod+minus scratchpad show
+# }}}
 
+# Splits {{{
+# split in horizontal orientation
+bindsym $mod+control+h split h
+
+# split in vertical orientation
+bindsym $mod+control+v split v
+# }}}
+
+# Start a Terminal {{{
+bindsym $mod+Return exec termite
+# }}}
+
+# Touchpad {{{
+# no touchpad while typing
+exec --no-startup-id syndaemon -i 0.5
+# }}}
+
+# UI {{{
+# resize window (you can also use the mouse for that)
+mode "resize" {
+        # These bindings trigger as soon as you enter the resize mode
+
+        # Pressing left will shrink the window’s width.
+        # Pressing right will grow the window’s width.
+        # Pressing up will shrink the window’s height.
+        # Pressing down will grow the window’s height.
+        bindsym $left       resize shrink width 10 px or 10 ppt
+        bindsym $down       resize grow height 10 px or 10 ppt
+        bindsym $up         resize shrink height 10 px or 10 ppt
+        bindsym $right      resize grow width 10 px or 10 ppt
+
+        # same bindings, but for the arrow keys
+        bindsym Left        resize shrink width 10 px or 10 ppt
+        bindsym Down        resize grow height 10 px or 10 ppt
+        bindsym Up          resize shrink height 10 px or 10 ppt
+        bindsym Right       resize grow width 10 px or 10 ppt
+
+        # back to normal: Enter or Escape
+        bindsym Return mode "default"
+        bindsym Escape mode "default"
+}
+
+# resize
+bindsym $mod+r mode "resize"
+
+# gaps
+gaps outer 2
+gaps inner 4
+smart_gaps on
+
+# colors
+set $bg-color 	         #2f343f
+set $inactive-bg-color   #2f343f
+set $text-color          #f8f8f2
+set $inactive-text-color #4D4D4D
+set $urgent-bg-color     #FF5555
+set $separator		 #757575
+
+# bar
+exec_always --no-startup-id $HOME/.config/polybar/launch.sh
+
+# disable all window and float borders
+new_window none
+new_float none
+# }}}
+
+# Workspaces {{{
 set $w1 1
 set $w2 2
 set $w3 3
@@ -149,158 +306,25 @@ assign [class="Steam"] $w6
 assign [class="Slack"] $w9
 assign [title="(?i)spotify"] $w10
 
-# for multiple monitors
-# workspace $w8 output eDP
-# workspace $w9 output eDP
-# workspace $w10 output eDP
-
 # assign all other clients to default workspace
 assign [class="$"] $w7
+# }}}
 
-# automatically starting applications on startup
-exec chromium
-exec slack
+# Window layouts {{{
+# toggle tiling / floating
+bindsym $mod+Shift+space floating toggle
+# sticky window
+bindsym $mod+Shift+s sticky toggle
 
 # floating
 for_window [class="Pavucontrol"] floating enable
 for_window [class="Lxappearance"] floating enable
 for_window [class="Steam"] floating enable
+# }}}
 
-# keybindings
-bindsym XF86AudioPlay exec playerctl play-pause
-bindsym XF86AudioPause exec playerctl play-pause
-bindsym XF86AudioNext exec playerctl next
-bindsym XF86AudioPrev exec playerctl previous
-
-# set right alt as compose key
-exec setxkbmap -option compose:ralt
-
-# reload the configuration file
-bindsym $mod+Shift+c reload
-
-# restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
-bindsym $mod+Shift+r restart
-
-# exit i3 (logs you out of your X session)
-bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
-
-# resize window (you can also use the mouse for that)
-mode "resize" {
-        # These bindings trigger as soon as you enter the resize mode
-
-        # Pressing left will shrink the window’s width.
-        # Pressing right will grow the window’s width.
-        # Pressing up will shrink the window’s height.
-        # Pressing down will grow the window’s height.
-        bindsym $left       resize shrink width 10 px or 10 ppt
-        bindsym $down       resize grow height 10 px or 10 ppt
-        bindsym $up         resize shrink height 10 px or 10 ppt
-        bindsym $right      resize grow width 10 px or 10 ppt
-
-        # same bindings, but for the arrow keys
-        bindsym Left        resize shrink width 10 px or 10 ppt
-        bindsym Down        resize grow height 10 px or 10 ppt
-        bindsym Up          resize shrink height 10 px or 10 ppt
-        bindsym Right       resize grow width 10 px or 10 ppt
-
-        # back to normal: Enter or Escape
-        bindsym Return mode "default"
-        bindsym Escape mode "default"
-}
-
-# resize
-bindsym $mod+r mode "resize"
-
-# gaps
-gaps outer 2
-gaps inner 4
-smart_gaps on
-
-# colors
-set $bg-color 	         #2f343f
-set $inactive-bg-color   #2f343f
-set $text-color          #f8f8f2
-set $inactive-text-color #4D4D4D
-set $urgent-bg-color     #FF5555
-set $separator		 #757575
-
-# bar
-exec_always --no-startup-id $HOME/.config/polybar/launch.sh
-
-# disable all window borders
-new_window none
-
-# sticky window (?)
-bindsym $mod+Shift+s sticky toggle
-
-# start notification application
-exec_always --no-startup-id twmnd
-
-# twmn shortcuts
-bindsym ctrl+shift+j exec twmnc --remote next
-bindsym ctrl+shift+k exec twmnc --remote previous
-bindsym ctrl+shift+l exec twmnc --remote activate
-bindsym ctrl+shift+h exec twmnc --remote hide
-
-# shortcut to shutdown
-bindsym $mod+shift+BackSpace exec $HOME/.scripts/i3lock.sh && sleep 0.1 && systemctl suspend
-
-# shortcut to set keymap to abnt2 br
-bindsym $mod+Shift+b exec setxkbmap -model abnt2 -layout br -model abnt2
-
-# shortcut to set keymap to us
-bindsym $mod+Shift+u exec setxkbmap -layout us -option compose:ralt 
-
+# Wallpaper {{{
 # set wallpaper
 exec_always --no-startup-id feh --bg-scale $HOME/wallpaper.jpg
+# }}}
 
-# disable bell
-exec xset -b
-
-# set right alt as compose key
-exec --no-startup-id setxkbmap -option compose:ralt
-
-# lock screen
-bindsym $mod+shift+x exec $HOME/.scripts/i3lock.sh
-
-# autolock and suspend
-exec_always --no-startup-id xautolock -time 10 -locker $HOME/.scripts/i3lock.sh -time 15 -locker "systemctl suspend"
-exec_always --no-startup-id xss-lock $HOME/.scripts/i3lock.sh
-
-# no touchpad while typing
-exec --no-startup-id syndaemon -i 0.5
-
-# set keymap to us
-exec --no-startup-id setxkbmap --layout us -option compose:ralt
-
-# start and stop conky
-exec --no-startup-id conky
-bindsym $mod+control+shift+c exec killall conky
-bindsym $mod+control+c exec conky
-
-# start and stop compton
-exec --no-startup-id compton -b --config $HOME/.config/compton.conf
-bindsym $mod+control+shift+k exec killall compton
-bindsym $mod+control+k exec compton -b --config $HOME/.config/compton.conf
-
-# volume controls
-bindsym XF86AudioRaiseVolume exec pamixer -i 10
-bindsym XF86AudioLowerVolume exec pamixer -d 10
-bindsym XF86AudioMute exec pamixer -t
-
-# brightness controls
-bindsym XF86MonBrightnessUp exec xbacklight -inc 10 # increase screen brightness
-bindsym XF86MonBrightnessDown exec xbacklight -dec 10 # decrease screen brightness
-
-# start redshit
-exec --no-startup-id redshift -c $HOME/.config/redshift.conf
-
-# stop a pomodoro
-bindsym $mod+Shift+p exec rm ~/.pomodoro_session
-
-# change pomodoro time
-bindsym $mod+control+p exec echo "$((`cut .pomodoro_session -d ' ' -f 1`+5)) 5" > .pomodoro_session
-bindsym $mod+control+shift+p exec echo "$((`cut .pomodoro_session -d ' ' -f 1`-5)) 5" > .pomodoro_session
-
-# start/reset a pomodoro
-bindsym $mod+p exec echo 60 5 > ~/.pomodoro_session
+# vim:foldmethod=marker:foldlevel=0
