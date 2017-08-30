@@ -83,6 +83,7 @@ set lazyredraw
 
 " Search
 set incsearch " search as characters are entered
+set ignorecase " search ignores case
 set hlsearch " highlight matches"
 
 " turn off search highlight
