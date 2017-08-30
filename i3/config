@@ -176,7 +176,7 @@ bindsym $mod+control+p exec echo "$((`cut .pomodoro_session -d ' ' -f 1`+5)) 5" 
 bindsym $mod+control+shift+p exec echo "$((`cut .pomodoro_session -d ' ' -f 1`-5)) 5" > .pomodoro_session
 
 # start/reset a pomodoro
-bindsym $mod+p exec echo 60 5 > ~/.pomodoro_session
+bindsym $mod+p exec echo 55 5 > ~/.pomodoro_session
 # }}}
 
 # Redshift {{{
