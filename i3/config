@@ -97,7 +97,7 @@ bindsym $mod+shift+BackSpace exec $HOME/.scripts/i3lock.sh && sleep 0.1 && syste
 # autolock and suspend
 exec_always --no-startup-id xautolock -time 10 -locker $HOME/.scripts/i3lock.sh 
 exec_always --no-startup-id xautolock -time 15 -locker "systemctl suspend"
-exec_always --no-startup-id xss-lock $HOME/.scripts/i3lock.sh
+exec --no-startup-id xss-lock $HOME/.scripts/i3lock.sh
 # }}}
 
 # Focus {{{
