@@ -28,6 +28,7 @@
     ~/.config/conky/conky.conf: conky.conf
     ~/.config/compton.conf: compton.conf
     ~/.config/redshift.conf: redshift.conf
+    ~/code/.tern-project: tern-project.js
 
 - shell:
   - [git submodule update --init --recursive, Installing submodules]
