@@ -19,7 +19,7 @@
     ~/.config/twmn/twmn.conf: twmn.conf
     ~/.config/termite/config: termite.conf
     ~/.config/gtk-3.0/gtk.css: gtk.css
-    ~/.config/ranger/rc.conf: ranger.conf
+    ~/.config/ranger/rc.conf: ranger/rc.conf
     ~/.config/ranger/scope.sh: scripts/scope.sh
     ~/.config/neofetch/config: neofetch.conf
     ~/.config/polybar/config: polybar.conf
