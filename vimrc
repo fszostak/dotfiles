@@ -320,6 +320,10 @@ nnoremap <leader>r :<C-U>RangerChooser<CR>
 nnoremap <leader>u :GundoToggle<CR>
 " }}}
 
+" Macros {{{
+let @r="3j0wy$3kP"
+" }}}
+
 " MiniBufferExplorer {{{
 " map ctrl-l to toggle MiniBufferExplorer
 nmap <silent> <C-l> :MBEToggle<CR>
