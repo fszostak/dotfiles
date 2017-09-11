@@ -324,7 +324,7 @@ for_window [class="Steam"] floating enable
 
 # Wallpaper {{{
 # set wallpaper
-exec_always --no-startup-id feh --bg-scale $HOME/wallpaper.jpg
+exec_always --no-startup-id feh --bg-scale $HOME/.wallpaper.jpg
 # }}}
 
 # vim:foldmethod=marker:foldlevel=0

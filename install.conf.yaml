@@ -14,7 +14,7 @@
     ~/.vimrc:
     ~/.scripts:
     ~/.neo-ascii:
-    ~/wallpaper.jpg: wallpaper.jpg
+    ~/.wallpaper.jpg:
     ~/.i3/i3blocks.conf: i3/i3blocks.conf
     ~/.config/twmn/twmn.conf: twmn.conf
     ~/.config/termite/config: termite.conf
