@@ -143,9 +143,6 @@ bindsym $mod+Shift+u exec setxkbmap -layout us -option compose:ralt
 
 # set keymap to us
 exec --no-startup-id setxkbmap --layout us -option compose:ralt
-
-# set right alt as compose key
-exec --no-startup-id setxkbmap -option compose:ralt
 # }}}
 
 # Kill Focused Window {{{
