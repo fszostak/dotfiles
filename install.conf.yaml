@@ -25,7 +25,7 @@
     ~/.config/polybar/config: polybar.conf
     ~/.config/polybar/launch.sh: scripts/polybar.sh
     ~/.config/polybar/mpris.sh: scripts/mpris.sh
-    ~/.config/conky/conky.conf: conky.conf
+    ~/.config/conky/conky.conf: conky/conky.conf
     ~/.config/compton.conf: compton.conf
     ~/.config/redshift.conf: redshift.conf
     ~/code/.tern-project: tern-project.js
