@@ -38,8 +38,8 @@ antigen bundles <<EOBUNDLES
   web-search
   tonietto/show-version
   tonietto/aliases
-  /home/gustavo/aliases
-  /home/gustavo/tiny-care-terminal
+  $HOME/aliases
+  $HOME/tiny-care-terminal
 EOBUNDLES
 
 # Syntax highlighting bundle.
