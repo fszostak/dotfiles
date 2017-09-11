@@ -197,6 +197,10 @@ bindsym $mod+control+h split h
 bindsym $mod+control+v split v
 # }}}
 
+# Start a qutebrowser {{{
+bindsym $mod+shift+Return exec qutebrowser
+# }}}
+
 # Start a Terminal {{{
 bindsym $mod+Return exec termite
 # }}}
