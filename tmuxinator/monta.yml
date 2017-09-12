@@ -1,0 +1,10 @@
+# ~/.tmuxinator/monta.yml
+
+name: monta
+root: ~/code/montacasa
+
+windows:
+  - monta:
+      layout: main-vertical
+      panes:
+        - c

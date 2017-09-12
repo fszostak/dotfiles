@@ -1,0 +1,16 @@
+# ~/.tmuxinator/pad.yml
+
+name: pad
+root: ~/
+
+windows:
+  - notes:
+      panes:
+        - notes:
+          - cn
+  - dotfiles:
+      panes:
+        - dot:
+          - z dotfiles
+          - c
+

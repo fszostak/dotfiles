@@ -11,6 +11,7 @@
     ~/.zshrc:
     ~/.Xresources:
     ~/.tmux.conf:
+    ~/.tmuxinator:
     ~/.vimrc:
     ~/.scripts:
     ~/.neo-ascii:
