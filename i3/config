@@ -22,7 +22,6 @@ set $mod Mod4
 # Applications {{{
 # automatically starting applications on startup
 exec chromium
-exec slack
 # }}}
 
 # Brightness, Music and Volume {{{
