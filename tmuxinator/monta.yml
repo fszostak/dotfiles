@@ -4,7 +4,7 @@ name: monta
 root: ~/code/montacasa
 
 windows:
-  - monta:
+  - montacasa:
       layout: main-vertical
       panes:
         - c

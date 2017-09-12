@@ -14,5 +14,4 @@ windows:
           - c
           - g tree
         - console:
-          - c
-          - cs
+          - cs && figlet crawler
