@@ -1,0 +1,18 @@
+# ~/.tmuxinator/graphql.yml
+
+name: graphql
+root: ~/code/montacasa/graphql
+
+windows:
+  - graphql:
+      layout: 3235,211x56,0,0{165x56,0,0,27,45x56,166,0[45x28,166,0,28,45x27,166,29,29]}
+      panes:
+        - editor:
+          - c
+          - vi
+        - docker:
+          - c
+          - g tree
+        - console:
+          - c
+          - cs
