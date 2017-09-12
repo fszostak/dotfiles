@@ -6,30 +6,30 @@
       relink: true
 
 - link:
-    ~/.gitconfig:
     ~/.bashrc:
-    ~/.zshrc:
-    ~/.Xresources:
-    ~/.tmux.conf:
-    ~/.tmuxinator:
-    ~/.vimrc:
-    ~/.scripts:
-    ~/.neo-ascii:
-    ~/.wallpaper.jpg:
-    ~/.i3/i3blocks.conf: i3/i3blocks.conf
-    ~/.config/twmn/twmn.conf: twmn.conf
-    ~/.config/termite/config: termite.conf
+    ~/code/.tern-project: tern-project.js
+    ~/.config/compton.conf: compton.conf
+    ~/.config/conky/conky.conf: conky/conky.conf
     ~/.config/gtk-3.0/gtk.css: gtk.css
-    ~/.config/ranger/rc.conf: ranger/rc.conf
-    ~/.config/ranger/scope.sh: scripts/scope.sh
     ~/.config/neofetch/config: neofetch.conf
     ~/.config/polybar/config: polybar.conf
     ~/.config/polybar/launch.sh: scripts/polybar.sh
     ~/.config/polybar/mpris.sh: scripts/mpris.sh
-    ~/.config/conky/conky.conf: conky/conky.conf
-    ~/.config/compton.conf: compton.conf
+    ~/.config/ranger/rc.conf: ranger/rc.conf
+    ~/.config/ranger/scope.sh: scripts/scope.sh
     ~/.config/redshift.conf: redshift.conf
-    ~/code/.tern-project: tern-project.js
+    ~/.config/termite/config: termite.conf
+    ~/.config/twmn/twmn.conf: twmn.conf
+    ~/.gitconfig:
+    ~/.i3/i3blocks.conf: i3/i3blocks.conf
+    ~/.neo-ascii:
+    ~/.scripts:
+    ~/.tmux.conf:
+    ~/.tmuxinator:
+    ~/.vimrc:
+    ~/.wallpaper.jpg:
+    ~/.Xresources:
+    ~/.zshrc:
 
 - shell:
   - [git submodule update --init --recursive, Installing submodules]
