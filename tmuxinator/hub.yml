@@ -10,8 +10,8 @@ windows:
         - editor:
           - c
           - vi
-        - docker:
+        - build:
           - c
-          - g tree
+          - docker-compose up
         - console:
           - cs && figlet hub

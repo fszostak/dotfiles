@@ -1,7 +1,7 @@
-# ~/.tmuxinator/graphql.yml
+# ~/.tmuxinator/graphql.informa.yml
 
-name: graphql
-root: ~/code/montacasa/graphql
+name: graphql futurecom
+root: ~/code/informa/graphql-api
 
 windows:
   - graphql:
@@ -10,8 +10,8 @@ windows:
         - editor:
           - c
           - vi
-        - docker:
+        - build:
           - c
-          - g tree
+          - yarn start
         - console:
           - cs && figlet graphql

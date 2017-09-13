@@ -1,0 +1,10 @@
+# ~/.tmuxinator/informa.yml
+
+name: informa
+root: ~/code/informa
+
+windows:
+  - informa:
+      layout: main-vertical
+      panes:
+        - c
