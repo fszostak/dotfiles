@@ -22,6 +22,7 @@
     ~/.config/twmn/twmn.conf: twmn.conf
     ~/.gitconfig:
     ~/.i3/i3blocks.conf: i3/i3blocks.conf
+    ~/.monitor:
     ~/.neo-ascii:
     ~/.scripts:
     ~/.tmux.conf:
