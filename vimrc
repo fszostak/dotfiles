@@ -213,10 +213,16 @@ syntax enable
 
 set t_Co=256
 
+" Color scheme
 let g:airline_theme="dracula"
 let g:enable_bold_font = 1
 set background:dark
 colorscheme dracula
+
+" Italic comments
+set t_ZH=[3m
+set t_ZR=[23m
+highlight Comment cterm=italic
 
 " Visual selection colors
 hi Visual term=reverse cterm=reverse guibg=Grey
