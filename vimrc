@@ -172,7 +172,7 @@ set cursorline
 set number
 set relativenumber
 
-" turn off search highlight
+" toggle line numbers
 nnoremap n\ :set number relativenumber<CR>
 nnoremap n/ :set nonumber norelativenumber<CR>
 
