@@ -168,6 +168,10 @@ set cursorline
 set number
 set relativenumber
 
+" turn off search highlight
+nnoremap n\ :set number relativenumber<CR>
+nnoremap n/ :set nonumber norelativenumbeset nonumber norelativenumber<CR>
+
 " show vertical line
 set colorcolumn=100
 
