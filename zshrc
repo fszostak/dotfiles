@@ -79,8 +79,8 @@ chpwd () {
 # gitignore.io
 function gi() { curl -L -s https://www.gitignore.io/api/$@ ; }
 
-# spinner
-revolver stop
+# fix term variable type not accepted in ssh servers
+echo "export TERM=xterm-256color" >> ~/.bashrc
 
 # keychain
 if [ -f ".keychain.sh" ]; then
@@ -89,3 +89,6 @@ else echo "no keychain config found"
 fi
 
 export N_PREFIX="$HOME/n"; [[ :$PATH: == *":$N_PREFIX/bin:"* ]] || PATH+=":$N_PREFIX/bin"  # Added by n-install (see http://git.io/n-install-repo).
+
+# spinner
+revolver stop
