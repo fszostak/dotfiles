@@ -80,7 +80,7 @@ chpwd () {
 function gi() { curl -L -s https://www.gitignore.io/api/$@ ; }
 
 # fix term variable type not accepted in ssh servers
-echo "export TERM=xterm-256color" >> ~/.bashrc
+export TERM=xterm-256color
 
 # keychain
 if [ -f ".keychain.sh" ]; then
