@@ -90,6 +90,10 @@ set hlsearch " highlight matches"
 nnoremap s\ :set hlsearch<CR>
 nnoremap s/ :nohlsearch<CR>
 
+" toggle paste
+nnoremap p\ :set paste<CR>
+nnoremap p/ :set nopaste<CR>
+
 " default leader key
 let mapleader = ","
 
