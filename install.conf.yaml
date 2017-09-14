@@ -11,6 +11,7 @@
     ~/.config/compton.conf: compton.conf
     ~/.config/conky/conky.conf: conky/conky.conf
     ~/.config/gtk-3.0/gtk.css: gtk.css
+    ~/.config/htop/htoprc: htoprc
     ~/.config/neofetch/config: neofetch.conf
     ~/.config/polybar/config: polybar.conf
     ~/.config/polybar/launch.sh: scripts/polybar.sh
