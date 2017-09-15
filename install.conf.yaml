@@ -24,7 +24,7 @@
     ~/.gitconfig:
     ~/.i3/i3blocks.conf: i3/i3blocks.conf
     ~/.monitor:
-    ~/.neo-ascii:
+    ~/.rainbow_config.json:
     ~/.scripts:
     ~/.tmux.conf:
     ~/.tmuxinator:
