@@ -14,4 +14,4 @@ windows:
           - c
           - docker-compose up
         - console:
-          - c && figlet blog
+          - cs && figlet blog
