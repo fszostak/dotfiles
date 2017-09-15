@@ -1,7 +1,7 @@
 {
     "HEARTBEAT_TIMEOUT": 120,
     "IMAGE_ON_TERM": true,
-    "IMAGE_RESIZE_TO_FIT": true,
+    "IMAGE_RESIZE_TO_FIT": false,
     "THEME": "larapaste",
     "ASCII_ART": true,
     "HIDE_PROMPT": true,
