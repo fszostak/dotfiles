@@ -227,6 +227,10 @@ let g:enable_bold_font = 1
 set background:dark
 colorscheme dracula
 
+" Powerline
+" set the CN (column number) symbol:
+let g:airline_section_z = airline#section#create(["\uE0A1" . '%{line(".")}' . "\uE0A3" . '%{col(".")}'])
+
 " Italic comments
 set t_ZH=[3m
 set t_ZR=[23m
