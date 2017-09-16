@@ -77,6 +77,7 @@ bindsym $mod+e layout toggle split
 # Dmenu {{{
 # start dmenu (a program launcher)
 bindsym $mod+d exec rofi -show 
+bindsym $mod+Tab exec rofi -modi window -show 
 # }}}
 
 # Drag Floats {{{
