@@ -13,8 +13,8 @@
     ~/.config/gtk-3.0/gtk.css: gtk.css
     ~/.config/htop/htoprc: htoprc
     ~/.config/neofetch/config: neofetch.conf
-    ~/.config/polybar/config: polybar.conf
-    ~/.config/polybar/launch.sh: scripts/polybar.sh
+    ~/.config/polybar/config: polybar/polybar.conf
+    ~/.config/polybar/launch.sh: polybar/launch.sh
     ~/.config/polybar/mpris.sh: scripts/mpris.sh
     ~/.config/ranger/rc.conf: ranger/rc.conf
     ~/.config/ranger/scope.sh: scripts/scope.sh
@@ -24,7 +24,7 @@
     ~/.gitconfig:
     ~/.i3/i3blocks.conf: i3/i3blocks.conf
     ~/.monitor:
-    ~/.neo-ascii:
+    ~/.rainbow_config.json:
     ~/.scripts:
     ~/.tmux.conf:
     ~/.tmuxinator:
@@ -37,7 +37,7 @@
   - [git submodule update --init --recursive, Installing submodules]
   - [ranger --copy-config=scope, Configurating ranger]
   - command: echo Note
-    description: --> Edit and copy the files under custom directory, or polybar will not work!
+    description: --> Edit and copy the file bars.sh under polybar/ directory to ~/.config/polybar/, or polybar will not work!
   # Configure before uncommenting
   # - [sudo cp ~/dotfiles/gnome-shell-theme.gresource /usr/share/gnome-shell, Copying GDM theme]
   # - [sudo cp ~/dotfiles/keychain.sh ~/.keychain.sh, Copying .keychain.sh]
