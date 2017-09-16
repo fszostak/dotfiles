@@ -18,7 +18,8 @@
     ~/.config/polybar/mpris.sh: scripts/mpris.sh
     ~/.config/ranger/rc.conf: ranger/rc.conf
     ~/.config/ranger/scope.sh: scripts/scope.sh
-    ~/.config/redshift.conf: redshift.conf
+    ~/.config/redshift.conf: redshift/redshift.conf
+    ~/.config/redshift/hooks/brightness.sh: redshift/brightness.sh
     ~/.config/termite/config: termite.conf
     ~/.config/twmn/twmn.conf: twmn.conf
     ~/.gitconfig:
