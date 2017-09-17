@@ -6,7 +6,7 @@
 # Range from 1 to 100 is valid
 brightness_day="100"
 brightness_transition="90"
-brightness_night="70"
+brightness_night="65"
 # Set fade time for changes to one minute
 fade_time=60000
 
