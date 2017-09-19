@@ -4,14 +4,12 @@ name: bridge
 root: ~/code/informa/bridge
 
 windows:
-  - bridge:
+  - code:
       layout: e4ca,149x40,0,0{94x40,0,0,8,54x40,95,0[54x20,95,0,9,54x19,95,21,10]}
       panes:
         - editor:
-          - c
-          - vi
+          - c && vi
         - build:
-          - c
-          - adonis serve --dev
+          - c && adonis serve --dev
         - console:
-          - cs && figlet bridge
+          - cs && figlet bridge | lolcat

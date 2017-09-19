@@ -4,12 +4,12 @@ name: crawler-xml-filters
 root: ~/code/montacasa/crawler-xml-filters
 
 windows:
-  - editor:
+  - code:
       layout: 3235,211x56,0,0{165x56,0,0,27,45x56,166,0[45x28,166,0,28,45x27,166,29,29]}
       panes:
         - editor:
           - c && vi
         - tests:
-          - c && yarn test
+          - c && yarn test --watch
         - console:
-          - cs && figlet filters
+          - cs && figlet filters | lolcat

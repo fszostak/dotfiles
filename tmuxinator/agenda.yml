@@ -4,14 +4,12 @@ name: agenda
 root: ~/code/informa/agenda
 
 windows:
-  - agenda:
+  - code:
       layout: e4ca,149x40,0,0{94x40,0,0,8,54x40,95,0[54x20,95,0,9,54x19,95,21,10]}
       panes:
         - editor:
-          - c
-          - vi
+          - c && vi
         - docker:
-          - c
-          - meteor
+          - c && meteor
         - console:
-          - c && figlet agenda
+          - c && figlet agenda | lolcat

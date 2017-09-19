@@ -1,7 +1,7 @@
-# ~/.tmuxinator/blog.yml
+# ~/.tmuxinator/magento.yml
 
-name: blog
-root: ~/code/montacasa/blog
+name: magento
+root: ~/code/montacasa/magento
 
 windows:
   - code:
@@ -12,4 +12,4 @@ windows:
         - docker:
           - c && docker-compose up
         - console:
-          - cs && figlet blog | lolcat
+          - c && figlet magento | lolcat

@@ -11,6 +11,5 @@ windows:
   - dotfiles:
       panes:
         - dot:
-          - z dotfiles
-          - c
+          - z dotfiles && c
 
