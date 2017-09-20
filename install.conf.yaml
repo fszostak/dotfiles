@@ -17,7 +17,7 @@
     ~/.config/polybar/launch.sh: polybar/launch.sh
     ~/.config/polybar/mpris.sh: scripts/mpris.sh
     ~/.config/ranger/rc.conf: ranger/rc.conf
-    ~/.config/ranger/scope.sh: scripts/scope.sh
+    ~/.config/ranger/scope.sh: ranger/scope.sh
     ~/.config/redshift.conf: redshift/redshift.conf
     ~/.config/redshift/hooks/brightness.sh: redshift/brightness.sh
     ~/.config/termite/config: termite.conf
