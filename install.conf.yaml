@@ -25,6 +25,8 @@
     ~/.config/termite/config: termite.conf
     ~/.config/twmn/twmn.conf: twmn.conf
     ~/.gitconfig:
+    ~/.i3/config: i3/config
+    ~/.i3/i3lock.sh: i3/i3lock.sh
     ~/.monitor:
     ~/.rainbow_config.json:
     ~/.tmux.conf:
