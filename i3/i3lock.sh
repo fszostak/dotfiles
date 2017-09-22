@@ -38,7 +38,7 @@ i3lock -ef                \
 \
 --veriftext="Wait for it" \
 \
---wrongtext="Duh!"        \
+--wrongtext="Doh!"        \
 \
 --textsize=30		  \
 \
