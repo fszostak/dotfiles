@@ -24,6 +24,10 @@
     ~/.config/redshift.conf: redshift/redshift.conf
     ~/.config/redshift/hooks/brightness.sh: redshift/brightness.sh
     ~/.config/termite/config: termite.conf
+    ~/.config/qutebrowser/keys.conf: qutebrowser/keys.conf
+    ~/.config/qutebrowser/qutebrowser.conf: qutebrowser/qutebrowser.conf
+    ~/.config/qutebrowser/quickmarks: qutebrowser/quickmarks
+    ~/.config/qutebrowser/bookmarks: qutebrowser/bookmarks
     ~/.config/twmn/twmn.conf: twmn.conf
     ~/.gitconfig:
     ~/.i3/config: i3/config
