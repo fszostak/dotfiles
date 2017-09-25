@@ -3,7 +3,7 @@
     "IMAGE_ON_TERM": false,
     "IMAGE_RESIZE_TO_FIT": false,
     "THEME": "larapaste",
-    "ASCII_ART": true,
+    "ASCII_ART": false,
     "HIDE_PROMPT": true,
     "PREFIX": "#owner#place#me#keyword",
     "SEARCH_TYPE": "mixed",
