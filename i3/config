@@ -17,8 +17,6 @@ set $right l
 set $mod Mod4
 # }}}
 
-
-
 # Applications {{{
 # automatically starting applications on startup
 exec chromium
@@ -299,8 +297,8 @@ bindsym $mod+Shift+0 move container to workspace $w10
 # assign clients to workspaces
 assign [class="URxvt"] $w1
 assign [class="Termite"] $w1
-assign [class="qutebrowser"] $w3
-assign [class="Chromium"] $w2
+assign [class="qutebrowser"] $w2
+assign [class="Chromium"] $w3
 assign [class="Firefox"] $w3
 assign [class="Postman"] $w4
 assign [class="GitKraken"] $w5
