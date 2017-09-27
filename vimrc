@@ -132,6 +132,10 @@ set completeopt-=preview
 " Modelines are special comments somewhere in a file that can can declare
 " certain Vim settings to be used only for that file. 
 set modelines=1
+
+" Map space to toggle fold
+nnoremap <Space> za
+
 " }}}
 
 " Languages {{{
