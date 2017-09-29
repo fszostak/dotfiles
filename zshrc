@@ -19,9 +19,7 @@ antigen bundles <<EOBUNDLES
   laravel5
   composer
   heroku
-  # npm
   node
-  meteor
   command-not-found
   supercrabtree/k
   zsh-users/zsh-autosuggestions
