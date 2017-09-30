@@ -7,7 +7,6 @@
 
 - link:
     ~/.bashrc:
-    ~/.taskrc:
     ~/code/.tern-project: tern-project.js
     ~/.config/compton.conf: compton.conf
     ~/.config/conky/conky.conf: conky/conky.conf
@@ -19,22 +18,24 @@
     ~/.config/polybar/mpris.sh: polybar/mpris.sh
     ~/.config/polybar/pkg.sh: polybar/pkg.sh
     ~/.config/polybar/redshift.sh: polybar/redshift.sh
+    ~/.config/qutebrowser/bookmarks: qutebrowser/bookmarks
+    ~/.config/qutebrowser/keys.conf: qutebrowser/keys.conf
+    ~/.config/qutebrowser/quickmarks: qutebrowser/quickmarks
+    ~/.config/qutebrowser/qutebrowser.conf: qutebrowser/qutebrowser.conf
     ~/.config/ranger/rc.conf: ranger/rc.conf
-    ~/.config/ranger/scope.sh: ranger/scope.sh
     ~/.config/ranger/rifle.conf: ranger/rifle.conf
+    ~/.config/ranger/scope.sh: ranger/scope.sh
     ~/.config/redshift.conf: redshift/redshift.conf
     ~/.config/redshift/hooks/brightness.sh: redshift/brightness.sh
     ~/.config/termite/config: termite.conf
-    ~/.config/qutebrowser/keys.conf: qutebrowser/keys.conf
-    ~/.config/qutebrowser/qutebrowser.conf: qutebrowser/qutebrowser.conf
-    ~/.config/qutebrowser/quickmarks: qutebrowser/quickmarks
-    ~/.config/qutebrowser/bookmarks: qutebrowser/bookmarks
     ~/.config/twmn/twmn.conf: twmn.conf
     ~/.gitconfig:
     ~/.i3/config: i3/config
     ~/.i3/i3lock.sh: i3/i3lock.sh
     ~/.monitor:
     ~/.rainbow_config.json:
+    ~/.taskrc:
+    ~/.tigrc:
     ~/.tmux.conf:
     ~/.vimrc:
     ~/.wallpaper.jpg:
