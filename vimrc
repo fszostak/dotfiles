@@ -41,6 +41,7 @@ Plug 'tpope/vim-surround'
 Plug 'tpope/vim-unimpaired'
 Plug 'tpope/vim-vinegar'
 Plug 'joegesualdo/jsdoc.vim'
+Plug 'heavenshell/vim-jsdoc'
 
 " Dependencies support
 Plug 'editorconfig/editorconfig-vim'
@@ -292,6 +293,14 @@ function! AutoHighlightToggle()
     return 1
   endif
 endfunction
+" }}}
+
+" JsDoc{{{
+let g:jsdoc_allow_input_prompt = 1
+let g:jsdoc_input_description = 1
+let g:jsdoc_returno = 1
+let g:jsdoc_return_type = 1
+let g:jsdoc_enable_es6 = 1
 " }}}
 
 " Ranger {{{
