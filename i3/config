@@ -304,6 +304,7 @@ assign [class="Postman"] $w4
 assign [class="GitKraken"] $w5
 assign [class="Steam"] $w6
 assign [class="Minecraft"] $w6
+assign [title="(?i)rambox"] $w8
 assign [class="Slack"] $w9
 assign [title="(?i)spotify"] $w10
 
