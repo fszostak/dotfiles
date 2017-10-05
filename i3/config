@@ -203,6 +203,10 @@ bindsym $mod+shift+Return exec qutebrowser
 bindsym $mod+Return exec termite
 # }}}
 
+# Start a Urxvt {{{
+bindsym $mod+control+Return exec urxvt
+# }}}
+
 # Touchpad {{{
 # no touchpad while typing
 bindsym $mod+control+t exec syndaemon -i 0.5
@@ -295,8 +299,8 @@ bindsym $mod+Shift+9 move container to workspace $w9
 bindsym $mod+Shift+0 move container to workspace $w10
 
 # assign clients to workspaces
-assign [class="URxvt"] $w1
 assign [class="Termite"] $w1
+assign [class="cool-retro-term"] $w1
 assign [class="qutebrowser"] $w2
 assign [class="Chromium"] $w3
 assign [class="Firefox"] $w3
@@ -307,6 +311,7 @@ assign [class="Minecraft"] $w6
 assign [title="(?i)rambox"] $w8
 assign [class="Slack"] $w9
 assign [title="(?i)spotify"] $w10
+assign [class="URxvt"] $w10
 
 # assign all other clients to default workspace
 assign [class="$"] $w7
