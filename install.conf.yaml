@@ -8,6 +8,7 @@
 - link:
     ~/.bashrc:
     ~/code/.tern-project: tern-project.js
+    ~/.config/cava/config: cava
     ~/.config/compton.conf: compton.conf
     ~/.config/conky/conky.conf: conky/conky.conf
     ~/.config/gtk-3.0/gtk.css: gtk.css
