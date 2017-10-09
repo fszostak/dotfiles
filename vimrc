@@ -62,6 +62,7 @@ Plug 'suan/vim-instant-markdown'
 Plug 'wavded/vim-stylus'
 Plug 'leafgarland/typescript-vim'
 Plug 'lepture/vim-jinja'
+Plug 'ledger/vim-ledger'
 Plug 'mitermayer/vim-prettier', {
   \ 'do': 'yarn install',
   \ 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql'] }
