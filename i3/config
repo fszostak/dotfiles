@@ -262,6 +262,10 @@ new_window none
 new_float none
 # }}}
 
+# xbanish (hide cursor while typing) {{{
+exec --no-startup-id xbanish
+# }}}
+
 # Workspaces {{{
 set $w1 1
 set $w2 2
