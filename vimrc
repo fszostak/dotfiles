@@ -296,12 +296,59 @@ function! AutoHighlightToggle()
 endfunction
 " }}}
 
+" Gundo {{{
+" toggle gundo
+nnoremap <leader>u :GundoToggle<CR>
+" }}}
+
 " JsDoc{{{
 let g:jsdoc_allow_input_prompt = 1
 let g:jsdoc_input_description = 1
 let g:jsdoc_returno = 1
 let g:jsdoc_return_type = 1
 let g:jsdoc_enable_es6 = 1
+" }}}
+
+" Ledger{{{
+let g:ledger_fold_blanks = 1
+" }}}
+
+" Macros {{{
+let @r="3j0wy$3kP"
+" }}}
+
+" MiniBufferExplorer {{{
+" map ctrl-l to toggle MiniBufferExplorer
+nmap <silent> <C-l> :MBEToggle<CR>
+" }}}
+
+" NERDTree {{{
+" Highlight Everything
+let g:NERDTreeFileExtensionHighlightFullName = 1
+let g:NERDTreeExactMatchHighlightFullName = 1
+let g:NERDTreePatternMatchHighlightFullName = 1
+
+" Show hidden files
+let NERDTreeShowHidden=1
+
+" enable line numbers
+let NERDTreeShowLineNumbers=1
+" make sure relative line numbers are used
+autocmd FileType nerdtree setlocal relativenumber
+
+" GitGutter
+let g:gitgutter_realtime=1
+let g:gitgutter_eager=1
+set updatetime=1000
+" }}}
+
+" Prettier {{{
+" map ctrl-k to trigger Prettier
+nmap <silent> <C-k> :Prettier<CR>
+
+" prettier
+" let g:prettier#autoformat = 0
+" autocmd BufWritePre *.js,*.graphql,*.css,*.scss,*.less PrettierAsync
 " }}}
 
 " Ranger {{{
@@ -346,49 +393,6 @@ function! RangeChooser()
 endfunction
 command! -bar RangerChooser call RangeChooser()
 nnoremap <leader>r :<C-U>RangerChooser<CR>
-" }}}
-
-" Gundo {{{
-" toggle gundo
-nnoremap <leader>u :GundoToggle<CR>
-" }}}
-
-" Macros {{{
-let @r="3j0wy$3kP"
-" }}}
-
-" MiniBufferExplorer {{{
-" map ctrl-l to toggle MiniBufferExplorer
-nmap <silent> <C-l> :MBEToggle<CR>
-" }}}
-
-" NERDTree {{{
-" Highlight Everything
-let g:NERDTreeFileExtensionHighlightFullName = 1
-let g:NERDTreeExactMatchHighlightFullName = 1
-let g:NERDTreePatternMatchHighlightFullName = 1
-
-" Show hidden files
-let NERDTreeShowHidden=1
-
-" enable line numbers
-let NERDTreeShowLineNumbers=1
-" make sure relative line numbers are used
-autocmd FileType nerdtree setlocal relativenumber
-
-" GitGutter
-let g:gitgutter_realtime=1
-let g:gitgutter_eager=1
-set updatetime=1000
-" }}}
-
-" Prettier {{{
-" map ctrl-k to trigger Prettier
-nmap <silent> <C-k> :Prettier<CR>
-
-" prettier
-" let g:prettier#autoformat = 0
-" autocmd BufWritePre *.js,*.graphql,*.css,*.scss,*.less PrettierAsync
 " }}}
 
 " Sidebar {{{
