@@ -311,6 +311,8 @@ let g:jsdoc_enable_es6 = 1
 
 " Ledger{{{
 let g:ledger_fold_blanks = 1
+let g:ledger_decimal_sep = ','
+au FileType ledger nnoremap <Tab> :call ledger#align_amount_at_cursor()<CR>
 " }}}
 
 " Macros {{{
