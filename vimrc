@@ -315,8 +315,8 @@ let g:ledger_fold_blanks = 1
 
 " Macros {{{
 let @r="3j0wy$3kP"
-let @s="I[Ship] "
-let @t="I:rocket: "
+let @s="I[Ship] "
+let @t="I:rocket: "
 " }}}
 
 " MiniBufferExplorer {{{
