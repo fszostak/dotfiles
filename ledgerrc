@@ -1,3 +1,4 @@
+--date-format %d/%m/%y
 --sort date
 --effective
 --real
