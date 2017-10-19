@@ -73,9 +73,10 @@ bindsym $mod+e layout toggle split
 # }}}
 
 # Dmenu {{{
-# start dmenu (a program launcher)
+# start rofi as a dmenu replacement
 bindsym $mod+d exec rofi -show 
 bindsym $mod+Tab exec rofi -modi window -show 
+bindsym $mod+x exec rofi-pass
 # }}}
 
 # Drag Floats {{{
