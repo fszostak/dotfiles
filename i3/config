@@ -17,11 +17,6 @@ set $right l
 set $mod Mod4
 # }}}
 
-# Applications {{{
-# automatically starting applications on startup
-exec chromium
-# }}}
-
 # Brightness, Music and Volume {{{
 # Music keybindings
 bindsym XF86AudioPlay exec playerctl play-pause
