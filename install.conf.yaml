@@ -13,7 +13,7 @@
     ~/.config/conky/conky.conf: conky/conky.conf
     ~/.config/gtk-3.0/gtk.css: gtk.css
     ~/.config/htop/htoprc: htoprc
-    ~/.config/neofetch/config: neofetch.conf
+    ~/.config/neofetch/config.conf: neofetch.conf
     ~/.config/polybar/config: polybar/polybar.conf
     ~/.config/polybar/launch.sh: polybar/launch.sh
     ~/.config/polybar/mpris.sh: polybar/mpris.sh
