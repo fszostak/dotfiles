@@ -139,6 +139,9 @@ set modelines=1
 " Map space to toggle fold
 nnoremap <Space> za
 
+" Map Esc to jk
+inoremap jk <Esc>
+
 " }}}
 
 " Languages {{{
@@ -410,6 +413,15 @@ map <C-> :NERDTreeMirror<CR>
 " Use ctrl-j to insert a snippet
 let g:UltiSnipsExpandTrigger="<c-j>"
 let g:UltiSnipsEditSplit="vertical"
+" }}}
+
+" YouCompleteMe {{{
+" Use ycm in comments
+let g:ycm_complete_in_comments = 1
+" Get words from comments and strings
+let g:ycm_collect_identifiers_from_comments_and_strings = 1
+" Go to
+nnoremap <leader>jd :YcmCompleter GoTo<CR>
 " }}}
 
 " vim:foldmethod=marker:foldlevel=0
