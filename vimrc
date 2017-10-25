@@ -348,6 +348,9 @@ autocmd FileType nerdtree setlocal relativenumber
 let g:gitgutter_realtime=1
 let g:gitgutter_eager=1
 set updatetime=1000
+
+" Close vim if the only window left open is a NERDTree
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 " }}}
 
 " Prettier {{{
