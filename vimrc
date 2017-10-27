@@ -64,6 +64,7 @@ Plug 'leafgarland/typescript-vim'
 Plug 'lepture/vim-jinja'
 Plug 'ledger/vim-ledger'
 Plug 'posva/vim-vue'
+Plug 'xuhdev/vim-latex-live-preview'
 Plug 'mitermayer/vim-prettier', {
   \ 'do': 'yarn install',
   \ 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql'] }
