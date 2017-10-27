@@ -338,6 +338,7 @@ bindsym $mod+Shift+0 move container to workspace $w10
 
 # assign clients to workspaces
 assign [class="Termite"] $w1
+assign [class="Evince"] $w1
 assign [class="cool-retro-term"] $w1
 assign [class="qutebrowser"] $w2
 assign [class="Chromium"] $w3
