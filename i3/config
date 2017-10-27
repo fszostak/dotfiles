@@ -37,15 +37,15 @@ bindsym XF86MonBrightnessDown exec xbacklight -dec 10 # decrease screen brightne
 # Compton {{{
 # start and stop compton
 exec --no-startup-id compton -b --config $HOME/.config/compton.conf
-bindsym $mod+control+shift+k exec killall compton
-bindsym $mod+control+k exec compton -b --config $HOME/.config/compton.conf
+bindsym $mod+control+shift+c exec killall compton
+bindsym $mod+control+c exec compton -b --config $HOME/.config/compton.conf
 # }}}
 
 # Conky {{{
 # start and stop conky
 exec --no-startup-id conky
-bindsym $mod+control+shift+c exec killall conky
-bindsym $mod+control+c exec conky
+bindsym $mod+control+shift+k exec killall conky
+bindsym $mod+control+k exec conky
 # }}}
 
 # Configuration File commands {{{
