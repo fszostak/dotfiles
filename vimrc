@@ -112,7 +112,7 @@ set showcmd
 set backupdir=~/.vim/backup//
 set directory=~/.vim/swap//
 set undodir=~/.vim/undo//
-set tags=~/.vim/tags/
+set tags=~/.vim/tags//
 
 " use spaces
 set shiftwidth=2
