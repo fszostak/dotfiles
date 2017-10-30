@@ -20,7 +20,6 @@ Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-sensible'
 Plug 'vim-airline/vim-airline'
-Plug 'majutsushi/tagbar'
 Plug 'tpope/vim-fugitive'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'junegunn/vim-emoji'
@@ -112,7 +111,6 @@ set showcmd
 set backupdir=~/.vim/backup//
 set directory=~/.vim/swap//
 set undodir=~/.vim/undo//
-set tags=~/.vim/tags//
 
 " use spaces
 set shiftwidth=2
