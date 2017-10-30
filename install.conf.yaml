@@ -49,8 +49,8 @@
 - shell:
   - [git submodule update --init --recursive, Installing submodules]
   - [ranger --copy-config=scope, Configurating ranger]
+  - [sudo cp ~/dotfiles/gnome-shell-theme.gresource /usr/share/gnome-shell, Configuring GDM theme]
   - command: echo Note
     description: --> Edit and copy the file bars.sh under polybar/ directory to ~/.config/polybar/, or polybar will not work!
   # Configure before uncommenting
-  # - [sudo cp ~/dotfiles/gnome-shell-theme.gresource /usr/share/gnome-shell, Copying GDM theme]
   # - [sudo cp ~/dotfiles/keychain.sh ~/.keychain.sh, Copying .keychain.sh]
