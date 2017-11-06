@@ -1,5 +1,2 @@
 --date-format %d/%m/%Y
---sort date
---effective
---real
 --file ~/ledger/journal.ledger
