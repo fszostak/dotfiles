@@ -36,7 +36,6 @@
     ~/.i3/config: i3/config
     ~/.i3/i3lock.sh: i3/i3lock.sh
     ~/.ledgerrc:
-    ~/.monitor:
     ~/.rainbow_config.json:
     ~/.taskrc:
     ~/.tigrc:
