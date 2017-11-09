@@ -11,6 +11,7 @@
     ~/.config/cava/config: cava
     ~/.config/compton.conf: compton.conf
     ~/.config/conky/conky.conf: conky/conky.conf
+    ~/.config/dunst/dunstrc: dunstrc
     ~/.config/gtk-3.0/gtk.css: gtk.css
     ~/.config/htop/htoprc: htoprc
     ~/.config/neofetch/config.conf: neofetch.conf
@@ -30,7 +31,6 @@
     ~/.config/redshift.conf: redshift/redshift.conf
     ~/.config/redshift/hooks/brightness.sh: redshift/brightness.sh
     ~/.config/termite/config: termite.conf
-    ~/.config/twmn/twmn.conf: twmn.conf
     ~/.gitconfig:
     ~/.gnupg/gpg-agent.conf: gpg-agent.conf
     ~/.i3/config: i3/config

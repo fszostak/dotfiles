@@ -149,13 +149,7 @@ bindsym $mod+Shift+q kill
 exec xset -b
 
 # start notification application
-exec_always --no-startup-id twmnd
-
-# twmn shortcuts
-bindsym ctrl+shift+j exec twmnc --remote next
-bindsym ctrl+shift+k exec twmnc --remote previous
-bindsym ctrl+shift+l exec twmnc --remote activate
-bindsym ctrl+shift+h exec twmnc --remote hide
+exec_always --no-startup-id dunst
 # }}}
 
 # Pomodoro {{{
