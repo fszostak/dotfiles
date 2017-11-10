@@ -251,7 +251,7 @@ highlight Comment cterm=italic
 hi Visual term=reverse cterm=reverse guibg=Grey
 
 " Search selection colors
-hi Search ctermbg=DarkGrey ctermfg=white
+hi Search ctermbg=214 ctermfg=black
 " }}}
 
 " Ale linter {{{
