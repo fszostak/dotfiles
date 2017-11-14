@@ -30,6 +30,7 @@
     ~/.config/ranger/scope.sh: ranger/scope.sh
     ~/.config/redshift.conf: redshift/redshift.conf
     ~/.config/redshift/hooks/brightness.sh: redshift/brightness.sh
+    ~/.config/rtv/rtv.cfg: rtv
     ~/.config/termite/config: termite.conf
     ~/.gitconfig:
     ~/.gnupg/gpg-agent.conf: gpg-agent.conf
