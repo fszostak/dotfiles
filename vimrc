@@ -55,7 +55,7 @@ Plug 'jparise/vim-graphql'
 Plug 'elzr/vim-json'
 Plug 'moby/moby' " Docker syntax
 Plug 'ap/vim-css-color'
-Plug 'evanmiller/nginx-vim-syntax'
+" Plug 'evanmiller/nginx-vim-syntax'
 Plug 'heavenshell/vim-jsdoc'
 Plug 'suan/vim-instant-markdown'
 Plug 'wavded/vim-stylus'
