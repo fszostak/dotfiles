@@ -188,7 +188,7 @@ nnoremap n\ :set number relativenumber<CR>
 nnoremap n/ :set nonumber norelativenumber<CR>
 
 " show vertical line
-set colorcolumn=100
+set colorcolumn=120
 
 " indent line
 let g:indentLine_color_term = 239
