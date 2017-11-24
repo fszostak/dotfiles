@@ -27,6 +27,7 @@ Plug 'fholgado/minibufexpl.vim'
 Plug 'sjl/gundo.vim'
 Plug 'ryanoasis/vim-devicons'
 Plug 'kshenoy/vim-signature'
+Plug 'junegunn/goyo.vim'
 
 " tmux UX
 Plug 'edkolev/tmuxline.vim'
