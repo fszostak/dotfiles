@@ -3,4 +3,6 @@
 --effective
 --sort date
 --strict
+--pedantic
+--tail 50
 --file ~/ledger/journal.ledger
