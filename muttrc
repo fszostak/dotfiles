@@ -38,6 +38,9 @@ bind index,pager \CO sidebar-open # Ctrl-Shift-O - Open Highlighted Mailbox
 # Sorting
 set sort = reverse-date
 
+# Macros
+macro index,pager A "<save-message>=mutt<enter>" "Archive Message"
+
 # COLORS
 #Amber Text on Black Background
 color hdrdefault yellow black
@@ -46,3 +49,9 @@ color signature yellow black
 color status black yellow
 color indicator black yellow
 color normal yellow black
+
+# Aliases
+set alias_file= ~/.mutt/aliases
+set sort_alias= alias
+set reverse_alias=yes
+source $alias_file 
