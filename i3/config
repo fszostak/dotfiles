@@ -90,8 +90,8 @@ bindsym $mod+shift+x exec $HOME/.i3/i3lock.sh
 bindsym $mod+shift+BackSpace exec $HOME/.i3/i3lock.sh && sleep 0.1 && systemctl suspend
 
 # autolock and suspend
-exec_always --no-startup-id xautolock -time 10 -locker $HOME/.i3/i3lock.sh 
-exec_always --no-startup-id xautolock -time 15 -locker "systemctl suspend"
+exec_always --no-startup-id xautolock -time 15 -locker $HOME/.i3/i3lock.sh 
+exec_always --no-startup-id xautolock -time 30 -locker "systemctl suspend"
 # }}}
 
 # Focus {{{
