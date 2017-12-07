@@ -255,6 +255,8 @@ hi Visual term=reverse cterm=reverse guibg=Grey
 hi Search ctermbg=214 ctermfg=black
 " }}}
 
+" General stuff
+
 " Ale linter {{{
 let g:ale_linters = {'javascript': ['eslint']}
 let g:ale_sign_column_always = 1
@@ -270,6 +272,19 @@ let g:airline#extensions#ale#enabled = 1
 " CtrlP {{{
 " use gitignore for ctrlp
 let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files -co --exclude-standard']
+"}}}
+
+" Copy to clipboard {{{
+function! ClipboardYank()
+  call system('xclip -i -selection clipboard', @@)
+endfunction
+function! ClipboardPaste()
+  let @@ = system('xclip -o -selection clipboard')
+endfunction
+
+vnoremap <silent> y y:call ClipboardYank()<cr>
+vnoremap <silent> d d:call ClipboardYank()<cr>
+nnoremap <silent> p :call ClipboardPaste()<cr>p
 "}}}
 
 " Emmet {{{
