@@ -90,4 +90,16 @@ fi
 # spinner
 revolver stop
 
+# vi controls in command line
+set -o vi
+set noerrorbells
+set showmatch
+set matchtime=8
+set tabstop=8
+set shiftwidth=4
+set nowrapscan
+set ignorecase
+set autoindent
+set cindent
+
 export N_PREFIX="$HOME/n"; [[ :$PATH: == *":$N_PREFIX/bin:"* ]] || PATH+=":$N_PREFIX/bin"  # Added by n-install (see http://git.io/n-install-repo).
