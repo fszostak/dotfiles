@@ -92,7 +92,7 @@ bindsym $mod+shift+x exec xautolock -locknow
 bindsym $mod+shift+BackSpace exec $HOME/.i3/i3lock.sh && sleep 0.1 && systemctl suspend
 
 # autolock 
-exec_always --no-startup-id xautolock -time 10 -locker $HOME/.i3/i3lock.sh -notify 30 -notifier "notify-send -u critical -t 10000 -- 'Locking screen in 30 seconds'" -killtime 10 -killer "systemctl suspend"
+exec_always --no-startup-id xautolock -time 5 -locker $HOME/.i3/i3lock.sh -notify 30 -notifier "notify-send -u critical -t 5000 -- 'Locking screen in 30 seconds'" -killtime 15 -killer "systemctl suspend"
 # }}}
 
 # Focus {{{
