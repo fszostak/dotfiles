@@ -1,11 +1,10 @@
-" Starting config {{{
+" General {{{
 set nocompatible
-" }}}
 
-" Plugins {{{
+" Plugins  {{{
 call plug#begin('~/.vim/bundle')
 
-" Vim UX
+" Vim UX {{{
 Plug 'SirVer/ultisnips'
 Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'scrooloose/nerdtree'
@@ -28,11 +27,13 @@ Plug 'sjl/gundo.vim'
 Plug 'ryanoasis/vim-devicons'
 Plug 'kshenoy/vim-signature'
 Plug 'junegunn/goyo.vim'
+" }}}
 
-" tmux UX
+" tmux UX {{{
 Plug 'edkolev/tmuxline.vim'
+" }}}
 
-" Completion
+" Completion {{{
 Plug 'Valloric/YouCompleteMe' " Follow installation instructions in github
 Plug 'honza/vim-snippets'
 Plug 'mattn/emmet-vim'
@@ -42,11 +43,13 @@ Plug 'tpope/vim-unimpaired'
 Plug 'tpope/vim-vinegar'
 Plug 'joegesualdo/jsdoc.vim'
 Plug 'heavenshell/vim-jsdoc'
+" }}}
 
-" Dependencies support
+" Dependencies support {{{
 Plug 'editorconfig/editorconfig-vim'
+" }}}
 
-" Languages and libraries support
+" Languages and libraries support {{{
 Plug 'pangloss/vim-javascript'
 Plug 'isRuslan/vim-es6'
 Plug 'mxw/vim-jsx'
@@ -56,7 +59,6 @@ Plug 'jparise/vim-graphql'
 Plug 'elzr/vim-json'
 Plug 'moby/moby' " Docker syntax
 Plug 'ap/vim-css-color'
-" Plug 'evanmiller/nginx-vim-syntax'
 Plug 'heavenshell/vim-jsdoc'
 Plug 'suan/vim-instant-markdown'
 Plug 'wavded/vim-stylus'
@@ -68,12 +70,13 @@ Plug 'xuhdev/vim-latex-live-preview'
 Plug 'mitermayer/vim-prettier', {
   \ 'do': 'yarn install',
   \ 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql'] }
+" }}}
 
-" Color schemes
+" Color schemes {{{
 Plug 'dracula/vim'
+" }}}
 
 call plug#end()
-
 " }}}
 
 " Misc {{{
@@ -255,25 +258,6 @@ hi Visual term=reverse cterm=reverse guibg=Grey
 hi Search ctermbg=214 ctermfg=black
 " }}}
 
-" General stuff
-
-" Ale linter {{{
-let g:ale_linters = {'javascript': ['eslint']}
-let g:ale_sign_column_always = 1
-
-" use ctrl-k and ctrl-j for navigating between errors
-nmap <silent> <C-k> <Plug>(ale_previous_wrap)
-nmap <silent> <C-j> <Plug>(ale_next_wrap)
-
-" show ALE in airline
-let g:airline#extensions#ale#enabled = 1
-" }}}
-
-" CtrlP {{{
-" use gitignore for ctrlp
-let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files -co --exclude-standard']
-"}}}
-
 " Copy to clipboard {{{
 function! ClipboardYank()
   call system('xclip -i -selection clipboard', @@)
@@ -284,10 +268,6 @@ endfunction
 
 vnoremap <silent> <C-y> y:call ClipboardYank()<cr>
 "}}}
-
-" Emmet {{{
-let g:user_emmet_leader_key='<C-E>' " c-e-,
-" }}}
 
 " IdleHighlight {{{
 " Highlight all instances of word under cursor, when idle.
@@ -314,67 +294,10 @@ function! AutoHighlightToggle()
 endfunction
 " }}}
 
-" Gundo {{{
-" toggle gundo
-nnoremap <leader>u :GundoToggle<CR>
-" }}}
-
-" JsDoc{{{
-let g:jsdoc_allow_input_prompt = 1
-let g:jsdoc_input_description = 1
-let g:jsdoc_returno = 1
-let g:jsdoc_return_type = 1
-let g:jsdoc_enable_es6 = 1
-" }}}
-
-" Ledger{{{
-let g:ledger_fold_blanks = 1
-let g:ledger_decimal_sep = ','
-au FileType ledger nnoremap <Tab> :call ledger#align_amount_at_cursor()<CR>
-au FileType ledger set foldmethod=syntax
-" }}}
-
 " Macros {{{
 let @r="3j0wy$3kP"
 let @s="I[Ship] "
 let @t="I:rocket: "
-" }}}
-
-" MiniBufferExplorer {{{
-" map ctrl-l to toggle MiniBufferExplorer
-nmap <silent> <C-l> :MBEToggle<CR>
-" }}}
-
-" NERDTree {{{
-" Highlight Everything
-let g:NERDTreeFileExtensionHighlightFullName = 1
-let g:NERDTreeExactMatchHighlightFullName = 1
-let g:NERDTreePatternMatchHighlightFullName = 1
-
-" Show hidden files
-let NERDTreeShowHidden=1
-
-" enable line numbers
-let NERDTreeShowLineNumbers=1
-" make sure relative line numbers are used
-autocmd FileType nerdtree setlocal relativenumber
-
-" GitGutter
-let g:gitgutter_realtime=1
-let g:gitgutter_eager=1
-set updatetime=1000
-
-" Close vim if the only window left open is a NERDTree
-autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
-" }}}
-
-" Prettier {{{
-" map ctrl-k to trigger Prettier
-nmap <silent> <C-k> :Prettier<CR>
-
-" prettier
-" let g:prettier#autoformat = 0
-" autocmd BufWritePre *.js,*.graphql,*.css,*.scss,*.less PrettierAsync
 " }}}
 
 " Ranger {{{
@@ -420,8 +343,88 @@ endfunction
 command! -bar RangerChooser call RangeChooser()
 nnoremap <leader>r :<C-U>RangerChooser<CR>
 " }}}
+" }}}
 
-" Sidebar {{{
+" Plugins options {{{
+" Ale linter {{{
+let g:ale_linters = {'javascript': ['eslint']}
+let g:ale_sign_column_always = 1
+
+" use ctrl-k and ctrl-j for navigating between errors
+nmap <silent> <C-k> <Plug>(ale_previous_wrap)
+nmap <silent> <C-j> <Plug>(ale_next_wrap)
+
+" show ALE in airline
+let g:airline#extensions#ale#enabled = 1
+" }}}
+
+" CtrlP {{{
+" use gitignore for ctrlp
+let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files -co --exclude-standard']
+"}}}
+
+" Emmet {{{
+let g:user_emmet_leader_key='<C-E>' " c-e-,
+" }}}
+
+" Gundo {{{
+" toggle gundo
+nnoremap <leader>u :GundoToggle<CR>
+" }}}
+
+" JsDoc{{{
+let g:jsdoc_allow_input_prompt = 1
+let g:jsdoc_input_description = 1
+let g:jsdoc_returno = 1
+let g:jsdoc_return_type = 1
+let g:jsdoc_enable_es6 = 1
+" }}}
+
+" Ledger{{{
+let g:ledger_fold_blanks = 1
+let g:ledger_decimal_sep = ','
+au FileType ledger nnoremap <Tab> :call ledger#align_amount_at_cursor()<CR>
+au FileType ledger set foldmethod=syntax
+" }}}
+
+" MiniBufferExplorer {{{
+" map ctrl-l to toggle MiniBufferExplorer
+nmap <silent> <C-l> :MBEToggle<CR>
+" }}}
+
+" NERDTree {{{
+" Highlight Everything
+let g:NERDTreeFileExtensionHighlightFullName = 1
+let g:NERDTreeExactMatchHighlightFullName = 1
+let g:NERDTreePatternMatchHighlightFullName = 1
+
+" Show hidden files
+let NERDTreeShowHidden=1
+
+" enable line numbers
+let NERDTreeShowLineNumbers=1
+" make sure relative line numbers are used
+autocmd FileType nerdtree setlocal relativenumber
+
+" GitGutter
+let g:gitgutter_realtime=1
+let g:gitgutter_eager=1
+set updatetime=1000
+
+" Close vim if the only window left open is a NERDTree
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+" }}}
+
+" Prettier {{{
+" map ctrl-k to trigger Prettier
+nmap <silent> <C-k> :Prettier<CR>
+
+" prettier
+" let g:prettier#autoformat = 0
+" autocmd BufWritePre *.js,*.graphql,*.css,*.scss,*.less PrettierAsync
+" }}}
+
+" Sidebar (NerdTree) {{{
 " Use control-\ to toggle the sidebar
 map <C-\> :NERDTreeToggle<CR>
 map <C-> :NERDTreeMirror<CR>
@@ -440,6 +443,8 @@ let g:ycm_complete_in_comments = 1
 let g:ycm_collect_identifiers_from_comments_and_strings = 1
 " Go to
 nnoremap <leader>jd :YcmCompleter GoTo<CR>
+" }}}
+
 " }}}
 
 " vim:foldmethod=marker:foldlevel=0
