@@ -82,18 +82,17 @@ bindsym $mod+x exec rofi-pass
 floating_modifier $mod
 # }}}
 
-# Exit, Lock and Suspend {{{
+# Exit, Lock and Suspend (xautolock, i3lock, etc) {{{
 # exit i3 (logs you out of your X session)
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -f hack -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
 # lock screen
-bindsym $mod+shift+x exec $HOME/.i3/i3lock.sh
+bindsym $mod+shift+x exec xautolock -locknow
 
-# suspend
+# lock and suspend
 bindsym $mod+shift+BackSpace exec $HOME/.i3/i3lock.sh && sleep 0.1 && systemctl suspend
 
-# autolock and suspend
-exec_always --no-startup-id xautolock -detectsleep -time 15 -locker $HOME/.i3/i3lock.sh 
-exec_always --no-startup-id xautolock -detectsleep -time 30 -locker "systemctl suspend"
+# autolock 
+exec_always --no-startup-id xautolock -time 10 -locker $HOME/.i3/i3lock.sh -notify 30 -notifier "notify-send -u critical -t 10000 -- 'Locking screen in 30 seconds'" -killtime 10 -killer "systemctl suspend"
 # }}}
 
 # Focus {{{
