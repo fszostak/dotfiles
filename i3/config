@@ -2,6 +2,7 @@
 #
 # Please see http://i3wm.org/docs/userguide.html for a complete reference!
 
+# General {{{
 # Font {{{
 font pango:hack 8
 # }}}
@@ -15,6 +16,7 @@ set $left h
 set $right l
 
 set $mod Mod4
+# }}}
 # }}}
 
 # Keyboard and key bindings {{{
@@ -311,6 +313,7 @@ new_float none
 # }}}
 
 # Workspaces {{{
+# create variables {{{
 set $w1 1
 set $w2 2
 set $w3 3
@@ -321,8 +324,9 @@ set $w7 7
 set $w8 8
 set $w9 9
 set $w10 10
+# }}}
 
-# switch to workspace
+# switch to workspace {{{
 bindsym $mod+1 workspace $w1
 bindsym $mod+2 workspace $w2
 bindsym $mod+3 workspace $w3
@@ -333,8 +337,9 @@ bindsym $mod+7 workspace $w7
 bindsym $mod+8 workspace $w8
 bindsym $mod+9 workspace $w9
 bindsym $mod+0 workspace $w10
+# }}}
 
-# move focused container to workspace
+# move focused container to workspace {{{
 bindsym $mod+Shift+1 move container to workspace $w1
 bindsym $mod+Shift+2 move container to workspace $w2
 bindsym $mod+Shift+3 move container to workspace $w3
@@ -345,8 +350,9 @@ bindsym $mod+Shift+7 move container to workspace $w7
 bindsym $mod+Shift+8 move container to workspace $w8
 bindsym $mod+Shift+9 move container to workspace $w9
 bindsym $mod+Shift+0 move container to workspace $w10
+# }}}
 
-# assign clients to workspaces
+# assign clients to workspaces{{{
 assign [class="Termite"] $w1
 assign [class="Evince"] $w1
 assign [class="cool-retro-term"] $w1
@@ -361,9 +367,11 @@ assign [title="(?i)rambox"] $w8
 assign [class="Slack"] $w9
 assign [title="(?i)spotify"] $w10
 assign [class="URxvt"] $w10
+# }}}
 
-# assign all other clients to default workspace
+# assign all other clients to default workspace {{{
 assign [class="$"] $w7
+# }}}
 # }}}
 
 # Window layouts {{{
