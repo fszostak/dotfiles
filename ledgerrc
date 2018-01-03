@@ -1,7 +1,6 @@
 --date-format %d/%m/%Y
 --effective
 --sort date
---strict
---pedantic
 --tail 50
+--pedantic
 --file ~/ledger/journal.ledger
