@@ -43,6 +43,7 @@ Plug 'tpope/vim-unimpaired'
 Plug 'tpope/vim-vinegar'
 Plug 'joegesualdo/jsdoc.vim'
 Plug 'heavenshell/vim-jsdoc'
+Plug 'vim-scripts/repmo.vim' " Repeat motion for which a count was given
 " }}}
 
 " Dependencies support {{{
