@@ -11,31 +11,25 @@ antigen use oh-my-zsh
 
 # Bundles from the default repo (robbyrussell's oh-my-zsh).
 antigen bundles <<EOBUNDLES
-  rupa/z
+  colorize
+  command-not-found
+  djui/alias-tips
+  emoji
+  felixr/docker-zsh-completion
   git
   git-extras
-  git-flow-avh
-  laravel
-  laravel5
-  composer
-  heroku
-  node
-  command-not-found
-  supercrabtree/k
-  zsh-users/zsh-autosuggestions
-  history-substring-search
-  zsh-users/zsh-syntax-highlighting
-  desyncr/vagrant-zsh-completion
-  felixr/docker-zsh-completion
   git-flow
-  ubuntu
-  djui/alias-tips
-  colorize
-  emoji
-  sublime
-  web-search
-  tonietto/show-version
+  git-flow-avh
+  heroku
+  history-substring-search
+  node
+  rupa/z
+  supercrabtree/k
   tonietto/aliases
+  tonietto/show-version
+  web-search
+  zsh-users/zsh-autosuggestions
+  zsh-users/zsh-syntax-highlighting
   $HOME/aliases
   $HOME/tiny-care-terminal
 EOBUNDLES
