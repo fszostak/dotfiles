@@ -27,6 +27,7 @@ antigen bundles <<EOBUNDLES
   supercrabtree/k
   tonietto/aliases
   tonietto/show-version
+  tonietto/show-node
   web-search
   zsh-users/zsh-autosuggestions
   zsh-users/zsh-syntax-highlighting
@@ -60,11 +61,11 @@ chpwd () {
   local PKG
 
   PKG=$PWD/package.json
-  if [ -f "$PKG" ] && [ "$NODENGINE_LAST_DIR" != "$PWD" ]; then
-    nodengine
+  if [ -f "$PKG" ] && [ "$NODE_LAST_DIR" != "$PWD" ]; then
     show-version
-    printf "\033[36m%s\033[0m \033[90m%s\033[0m\n" "nodengine" "$(node --version)"
-    NODENGINE_LAST_DIR=$PWD
+    show-node
+    printf "\033[36m%s\033[0m \033[90m%s\033[0m\n" "system node" "$(node --version)"
+    NODE_LAST_DIR=$PWD
   fi
 }
 
@@ -95,5 +96,4 @@ set nowrapscan
 set ignorecase
 set autoindent
 set cindent
-
-export N_PREFIX="$HOME/n"; [[ :$PATH: == *":$N_PREFIX/bin:"* ]] || PATH+=":$N_PREFIX/bin"  # Added by n-install (see http://git.io/n-install-repo).
+source /usr/share/nvm/init-nvm.sh
