@@ -81,10 +81,6 @@ if [ -f ".keychain.sh" ]; then
 else echo "no keychain config found"
 fi
 
-
-# spinner
-revolver stop
-
 # vi controls in command line
 set -o vi
 set noerrorbells
@@ -96,4 +92,12 @@ set nowrapscan
 set ignorecase
 set autoindent
 set cindent
+
+# added by nvm
 source /usr/share/nvm/init-nvm.sh
+
+# aliases
+alias tasks='clear && figlet TASKS | lolcat && task next'
+
+# spinner
+revolver stop
