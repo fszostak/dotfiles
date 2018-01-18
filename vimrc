@@ -177,7 +177,6 @@ set completefunc=emoji#complete
 " }}}
 
 " UX {{{
-" Vim Devicons
 set encoding=utf-8
 " required if using https://github.com/bling/vim-airline
 let g:airline_powerline_fonts=1
@@ -359,11 +358,6 @@ nmap <silent> <C-j> <Plug>(ale_next_wrap)
 let g:airline#extensions#ale#enabled = 1
 " }}}
 
-" CtrlP {{{
-" use gitignore for ctrlp
-let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files -co --exclude-standard']
-"}}}
-
 " Emmet {{{
 let g:user_emmet_leader_key='<C-E>' " c-e-,
 " }}}
@@ -393,29 +387,6 @@ au FileType ledger set foldmethod=syntax
 nmap <silent> <C-l> :MBEToggle<CR>
 " }}}
 
-" NERDTree {{{
-" Highlight Everything
-let g:NERDTreeFileExtensionHighlightFullName = 1
-let g:NERDTreeExactMatchHighlightFullName = 1
-let g:NERDTreePatternMatchHighlightFullName = 1
-
-" Show hidden files
-let NERDTreeShowHidden=1
-
-" enable line numbers
-let NERDTreeShowLineNumbers=1
-" make sure relative line numbers are used
-autocmd FileType nerdtree setlocal relativenumber
-
-" GitGutter
-let g:gitgutter_realtime=1
-let g:gitgutter_eager=1
-set updatetime=1000
-
-" Close vim if the only window left open is a NERDTree
-autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
-" }}}
-
 " Prettier {{{
 " map ctrl-k to trigger Prettier
 nmap <silent> <C-k> :Prettier<CR>
@@ -423,12 +394,6 @@ nmap <silent> <C-k> :Prettier<CR>
 " prettier
 " let g:prettier#autoformat = 0
 " autocmd BufWritePre *.js,*.graphql,*.css,*.scss,*.less PrettierAsync
-" }}}
-
-" Sidebar (NerdTree) {{{
-" Use control-\ to toggle the sidebar
-map <C-\> :NERDTreeToggle<CR>
-map <C-> :NERDTreeMirror<CR>
 " }}}
 
 " UtilSnippets {{{
