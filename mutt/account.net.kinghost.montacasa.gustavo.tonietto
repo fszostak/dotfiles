@@ -1,0 +1,24 @@
+# Configure gmail
+set from = 'gustavo.tonietto@montacasa.com.br'
+set realname = 'Gustavo Tonietto'
+set imap_user = 'gustavo.tonietto@montacasa.com.br'
+
+# Remote folders
+set folder = 'imaps://imap.kinghost.net:993'
+set spoolfile = '+INBOX'
+# set postponed ='+[Gmail]/Rascunhos'
+# set trash = '+[Gmail]/Lixeira'
+# set any_label = '+[Gmail]/any_label'
+
+# Which mailboxes to list in the sidebar
+unmailboxes *
+mailboxes =INBOX 
+
+# Local folders for cached headers and certificates
+set header_cache =~/.mutt/cache/headers
+set message_cachedir =~/.mutt/cache/bodies
+set certificate_file =~/.mutt/certificates
+
+# SMTP Settings
+set smtp_url = 'smtp://gustavo.tonietto@smtp.kinghost.net:465/'
+

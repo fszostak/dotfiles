@@ -1,25 +1,16 @@
-# Configure gmail
-set from = 'tonietto@gmail.com'
-set realname = 'Gustavo Tonietto'
-set imap_user = 'tonietto@gmail.com'
+# Folder hooks
+folder-hook 'account.com.gmail.tonietto' 'source ~/.mutt/account.com.gmail.tonietto'
+folder-hook 'account.net.kinghost.montacasa.gustavo.tonietto' 'source ~/.mutt/account.net.kinghost.montacasa.gustavo.tonietto'
 
-# Remote gmail folders 
-set folder = 'imaps://imap.gmail.com:993'  
-set spoolfile = '+INBOX'  
-set postponed ='+[Gmail]/Rascunhos'  
-set trash = '+[Gmail]/Lixeira'  
-# set any_label = '+[Gmail]/any_label'  
+# Macros for switching accounts
+macro index <f2> '<sync-mailbox><refresh><enter-command>source ~/.mutt/account.com.gmail.tonietto<enter><change-folder>!<enter>'
+macro index <f3> '<sync-mailbox><refresh><enter-command>source ~/.mutt/account.net.kinghost.montacasa.gustavo.tonietto<enter><change-folder>!<enter>'
 
-# Which mailboxes to list in the sidebar 
-mailboxes =INBOX =[Gmail]/Rascunhos =[Gmail]/Enviados =[Gmail]/'Todos os e-mails' =[Gmail]/Lixeira =[Gmail]/Spam
+# Default account
+source ~/.mutt/account.com.gmail.tonietto
 
-# Local folders for cached headers and certificates 
-set header_cache =~/.mutt/cache/headers  
-set message_cachedir =~/.mutt/cache/bodies  
-set certificate_file =~/.mutt/certificates  
-
-# SMTP Settings 
-set smtp_url = 'smtp://tonietto@smtp.gmail.com:587/'  
+# Fetch mail shortcut
+bind index G imap-fetch-mail
 
 # Security
 set move = no #Stop asking to move read messages to mbox!  
