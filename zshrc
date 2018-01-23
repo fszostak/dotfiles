@@ -64,7 +64,6 @@ chpwd () {
   if [ -f "$PKG" ] && [ "$NODE_LAST_DIR" != "$PWD" ]; then
     show-version
     show-node
-    printf "\033[36m%s\033[0m \033[90m%s\033[0m\n" "system node" "$(node --version)"
     NODE_LAST_DIR=$PWD
   fi
 }
