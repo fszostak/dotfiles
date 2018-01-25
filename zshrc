@@ -77,7 +77,6 @@ export TERM=xterm-256color
 # keychain
 if [ -f ".keychain.sh" ]; then
   source .keychain.sh
-else echo "no keychain config found"
 fi
 
 # vi controls in command line
