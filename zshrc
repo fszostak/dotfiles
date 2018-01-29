@@ -96,6 +96,7 @@ source /usr/share/nvm/init-nvm.sh
 
 # aliases
 alias tasks='clear && figlet TASKS | lolcat && task next'
+alias ts='tasks'
 
 # spinner
 revolver stop
