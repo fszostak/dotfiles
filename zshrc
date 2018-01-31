@@ -1,6 +1,3 @@
-# spinner
-revolver --style 'simpleDots' start
-
 # Path to your oh-my-zsh installation.
 export ZSH=~/.oh-my-zsh
 
@@ -97,6 +94,3 @@ source /usr/share/nvm/init-nvm.sh
 # aliases
 alias tasks='clear && figlet TASKS | lolcat && task next'
 alias ts='tasks'
-
-# spinner
-revolver stop
