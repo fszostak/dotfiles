@@ -37,12 +37,13 @@
     ~/.i3/config: i3/config
     ~/.i3/i3lock.sh: i3/i3lock.sh
     ~/.ledgerrc:
-    ~/.muttrc: mutt/muttrc
-    ~/.mutt/com.gmail.tonietto: mutt/com.gmail.tonietto
     ~/.mutt/account.com.gmail.tonietto: mutt/account.com.gmail.tonietto
-    ~/.mutt/net.kinghost.montacasa.gustavo.tonietto: mutt/net.kinghost.montacasa.gustavo.tonietto
     ~/.mutt/account.net.kinghost.montacasa.gustavo.tonietto: mutt/account.net.kinghost.montacasa.gustavo.tonietto
+    ~/.mutt/com.gmail.tonietto: mutt/com.gmail.tonietto
+    ~/.mutt/net.kinghost.montacasa.gustavo.tonietto: mutt/net.kinghost.montacasa.gustavo.tonietto
+    ~/.muttrc: mutt/muttrc
     ~/.rainbow_config.json:
+    ~/.Rprofile:
     ~/.taskrc:
     ~/.tigrc:
     ~/.tmux.conf:
