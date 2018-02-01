@@ -239,6 +239,10 @@ bindsym $mod+control+shift+t exec killall syndaemon
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 # }}}
 
+# Calcurse {{{
+exec --no-startup-id calcurse --daemon
+# }}}
+
 # Notifications (dunst) {{{
 # disable bell
 exec xset -b
