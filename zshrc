@@ -94,5 +94,5 @@ source /usr/share/nvm/init-nvm.sh
 # aliases
 alias tasks='clear && figlet TASKS | lolcat && task next'
 alias ts='tasks'
-alias cl='cd ~/.calcurse && c && figlet CALENDAR | lolcat && echo ----------------- && echo Today is $(date +%m/%d/%y) && echo ----------------- && echo "" && calcurse -r2'
+alias cl='cd ~/.calcurse && c && figlet CALENDAR | lolcat && echo ----------------- && echo Today is $(date +%m/%d/%y) && echo ----------------- && echo "" && calcurse -r3 && notify-send "Appointments for today" "$(calcurse -r1)"'
 alias R='R --quiet'
