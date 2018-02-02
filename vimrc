@@ -144,6 +144,10 @@ set modelines=1
 " Map space to toggle fold
 nnoremap <Space> za
 
+" Mappings to foldmethod
+nnoremap fms :set foldmethod=syntax<CR>
+nnoremap fmm :set foldmethod=manual<CR>
+
 " Map Esc to jk
 inoremap jk <Esc>
 
