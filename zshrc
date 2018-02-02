@@ -11,8 +11,8 @@ antigen bundles <<EOBUNDLES
   colorize
   command-not-found
   djui/alias-tips
+  docker
   emoji
-  felixr/docker-zsh-completion
   git
   git-extras
   git-flow
@@ -26,6 +26,7 @@ antigen bundles <<EOBUNDLES
   tonietto/show-version
   tonietto/show-node
   web-search
+  webyneter/docker-aliases.git
   zsh-users/zsh-autosuggestions
   zsh-users/zsh-syntax-highlighting
   $HOME/aliases
