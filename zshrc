@@ -98,6 +98,9 @@ alias ddg='w3m -o auto_image=FALSE https://duckduckgo.com'
 alias R='R --quiet'
 alias tasks='clear && figlet TASKS | lolcat && task next'
 alias ts='tasks'
+alias pu='pass unlock'
+alias pue='pass unlock && exit'
+alias pul='pass unlock && encfs -i 60 ~/.ledger ~/ledger'
 
 # notes
 n() { $EDITOR ~/notes/"$*" }
