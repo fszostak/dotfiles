@@ -94,13 +94,13 @@ source /usr/share/nvm/init-nvm.sh
 
 # aliases
 alias cl='cd ~/.calcurse && c && figlet CALENDAR | lolcat && echo ----------------- && echo Today is $(date +%m/%d/%y) && echo ----------------- && echo "" && calcurse -r3 && notify-send "Appointments for today" "$(calcurse -r1)"'
-alias ddg='w3m -o auto_image=FALSE https://duckduckgo.com'
 alias R='R --quiet'
 alias tasks='clear && figlet TASKS | lolcat && task next'
 alias ts='tasks'
 alias pu='pass unlock'
 alias pue='pass unlock && exit'
 alias pul='pass unlock && encfs -i 60 ~/.ledger ~/ledger'
+alias ddg='surfraw duckduckgo'
 
 # notes
 n() { $EDITOR ~/notes/"$*" }
