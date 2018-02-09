@@ -108,7 +108,7 @@ color 1
 nextpage_topline 0
 label_topline 0
 show_srch_str 1
-show_lnum 1
+show_lnum 0
 fold_line 0
 image_map_list 1
 imgdisplay sxiv
