@@ -28,4 +28,4 @@ c.content.developer_extras = True
 c.tabs.last_close = "close"
 c.tabs.title.format_pinned = ""
 c.tabs.title.format = "{title}"
-c.tabs.width.indicator = 2
+#c.tabs.width.indicator = 2
