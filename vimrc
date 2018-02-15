@@ -179,6 +179,10 @@ set relativenumber
 nnoremap n\ :set number relativenumber<CR>
 nnoremap n/ :set nonumber norelativenumber<CR>
 
+" toggle indent lines
+nnoremap i\ :IndentLinesEnable<CR>
+nnoremap i/ :IndentLinesDisable<CR>
+
 " show vertical line
 set colorcolumn=120
 
