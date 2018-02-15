@@ -90,15 +90,6 @@ vnoremap . :norm.<CR>
 " redraw only when we need to.
 set lazyredraw
 
-" Search
-set incsearch " search as characters are entered
-set ignorecase " search ignores case
-set hlsearch " highlight matches"
-
-" turn off search highlight
-nnoremap s\ :set hlsearch<CR>
-nnoremap s/ :nohlsearch<CR>
-
 " toggle paste
 nnoremap p\ :set paste<CR>
 nnoremap p/ :set nopaste<CR>
@@ -127,7 +118,7 @@ augroup myvimrc
   au BufWritePost .vimrc so $MYVIMRC | if has('gui_running') | so $MYGVIMRC | endif
 augroup END
 
-" Allow saving of files as sudo when I forgot to start vim using sudo.
+" Allow saving of files as sudo when forgot to start vim using sudo.
 cmap w!! w !sudo tee > /dev/null %
 
 " no shift to enter commands, use semicolon
@@ -140,13 +131,6 @@ set completeopt-=preview
 " Modelines are special comments somewhere in a file that can can declare
 " certain Vim settings to be used only for that file. 
 set modelines=1
-
-" Map space to toggle fold
-nnoremap <Space> za
-
-" Mappings to foldmethod
-nnoremap fms :set foldmethod=syntax<CR>
-nnoremap fmm :set foldmethod=manual<CR>
 
 " Map Esc to jk
 inoremap jk <Esc>
@@ -228,9 +212,6 @@ hi Folded ctermbg=236
 " give us 256 color schemes!
 set term=screen-256color
 
-" make vim use zsh
-set shell=zsh
-
 " don't break mid word
 set linebreak
 " }}}
@@ -298,6 +279,15 @@ function! AutoHighlightToggle()
 endfunction
 " }}}
 
+" Fold {{{
+" Map space to toggle fold
+nnoremap <Space> za
+
+" Mappings to foldmethod
+nnoremap fms :set foldmethod=syntax<CR>
+nnoremap fmm :set foldmethod=manual<CR>
+" }}}
+
 " Macros {{{
 let @r="3j0wy$3kP"
 let @s="I[Ship] "
@@ -346,6 +336,21 @@ function! RangeChooser()
 endfunction
 command! -bar RangerChooser call RangeChooser()
 nnoremap <leader>r :<C-U>RangerChooser<CR>
+" }}}
+
+" Search {{{
+" control search highlight
+nnoremap s\ :set hlsearch<CR>
+nnoremap s/ :nohlsearch<CR>
+
+set incsearch " search as characters are entered
+set ignorecase " search ignores case
+set hlsearch " highlight matches"
+" }}}
+
+" Shell {{{
+" make vim use zsh
+set shell=zsh
 " }}}
 " }}}
 
