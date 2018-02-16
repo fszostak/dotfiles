@@ -101,6 +101,10 @@ alias pu='pass unlock'
 alias pue='pass unlock && exit'
 alias pul='pass unlock && encfs -i 60 ~/.ledger ~/ledger'
 alias ddg='surfraw duckduckgo'
+# docker aliases
+alias dcup="docker-compose up"
+alias dcupd="docker-compose up -d"
+alias dclf="docker-compose logs -f"
 
 # docker
 function dsup() { docker-compose stop $* && docker-compose up -d $* && docker-compose logs -f --tail 300 $* }
