@@ -16,3 +16,4 @@ amazon aws s3 montacasa https://s3.console.aws.amazon.com/s3/home?region=us-east
 universal decor's repos https://bitbucket.org/universaldecor/
 aws montacasa (login) https://us-east-1.signin.aws.amazon.com/oauth?SignatureVersion=4&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAJMOATPLHVSJ563XQ&X-Amz-Date=2018-01-24T10%3A55%3A15.001Z&X-Amz-Signature=c7984ce69904e85980469868b60c16318e8bd2d668f4b103c7c0b0761478fe57&X-Amz-SignedHeaders=host&client_id=arn%3Aaws%3Aiam%3A%3A015428540659%3Auser%2Fhomepage&redirect_uri=https%3A%2F%2Fconsole.aws.amazon.com%2Fconsole%2Fhome%3Fstate%3DhashArgs%2523%26isauthcode%3Dtrue&response_type=code&state=hashArgs%23
 elastic search with docker https://www.elastic.co/guide/en/elasticsearch/reference/current/docker.html
+libxfont pacman issue https://bbs.archlinux.org/viewtopic.php?id=234361
