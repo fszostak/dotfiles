@@ -60,7 +60,7 @@ URxvt.clipboard.pastecmd:       xsel -ob
 URxvt.keysym.F11:		perl:fullscreen:switch
 
 
-URxvt.url-select.launcher:      chromium
+URxvt.url-select.launcher:      qutebrowser
 URxvt.url-select.underline:     true
 
 URxvt.keysym.M-u:               perl:url-select:select_next
@@ -88,6 +88,9 @@ URxvt.keysym.M-s:               perl:keyboard-select:search
 *.color15:			#E6E6E6
 
 *.cursorColor:			#F1FA8C
+
+*.color16:                      #444444
+*.color17:                      #2f343f
 
 ! ------------------------------------------------------------------------------
 ! ROFI Color theme
