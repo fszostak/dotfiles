@@ -8,7 +8,7 @@ call plug#begin('~/.vim/bundle')
 Plug 'SirVer/ultisnips'
 " Plug 'Xuyuanp/nerdtree-git-plugin'
 " Plug 'scrooloose/nerdtree'
-" Plug 'airblade/vim-gitgutter'
+Plug 'airblade/vim-gitgutter'
 Plug 'Yggdroot/indentLine'
 " Plug 'ctrlpvim/ctrlp.vim'
 Plug 'Mizuchi/vim-ranger'
