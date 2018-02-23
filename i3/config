@@ -178,8 +178,12 @@ bindsym $mod+Shift+b exec setxkbmap -model abnt2 -layout br -model abnt2
 # shortcut to set keymap to us
 bindsym $mod+Shift+u exec setxkbmap -layout us -option compose:ralt 
 
+# shortcut to set keymap to dvorak
+bindsym $mod+Shift+d exec setxkbmap -layout dvorak -option compose:ralt 
+
 # set keymap to us
 exec --no-startup-id setxkbmap --layout us -option compose:ralt
+
 # }}}
 
 # Kill Focused Window {{{
