@@ -126,7 +126,9 @@ nnoremap ; :
 vnoremap ; :
 
 " Disable scratch preview window on autocomplete
+set completeopt=longest,menuone,preview
 set completeopt-=preview
+set pumheight=15
 
 " Modelines are special comments somewhere in a file that can can declare
 " certain Vim settings to be used only for that file. 
@@ -134,6 +136,10 @@ set modelines=1
 
 " Map Esc to jk
 inoremap jk <Esc>
+
+" Don't split left nor above
+set splitright
+set splitbelow
 
 " }}}
 
