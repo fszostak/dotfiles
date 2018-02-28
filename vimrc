@@ -68,6 +68,7 @@ Plug 'lepture/vim-jinja'
 Plug 'ledger/vim-ledger'
 Plug 'posva/vim-vue'
 Plug 'xuhdev/vim-latex-live-preview'
+Plug 'moll/vim-node'
 Plug 'mitermayer/vim-prettier', {
   \ 'do': 'yarn install',
   \ 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql'] }
@@ -224,6 +225,9 @@ set term=screen-256color
 
 " don't break mid word
 set linebreak
+
+" hide mode since airline already shows it
+set noshowmode
 " }}}
 
 "Colors {{{
