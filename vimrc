@@ -411,8 +411,8 @@ nmap <silent> <C-l> :MBEToggle<CR>
 " }}}
 
 " Prettier {{{
-" map ctrl-p to trigger Prettier
-nmap <silent> <C-p> :Prettier<CR>
+" map ctrl-h to trigger Prettier
+nmap <silent> <C-h> :Prettier<CR>
 
 " prettier
 " let g:prettier#autoformat = 0
