@@ -2,7 +2,9 @@
 set nocompatible
 
 " Plugins  {{{
+" Start {{{
 call plug#begin('~/.vim/bundle')
+" }}}
 
 " Vim UX {{{
 Plug 'SirVer/ultisnips'
@@ -74,128 +76,127 @@ Plug 'dracula/vim'
 
 call plug#end()
 " }}}
-
 " Misc {{{
-" Buffers
+" Buffers {{{
 set hidden
-
-" Use dot (.) with visual mode
+" #}}}
+" Use dot (.) with visual mode {{{
 vnoremap . :norm.<CR>
-
-" redraw only when we need to.
+" #}}}
+" Redraw only when we need to {{{
 set lazyredraw
-
-" toggle paste
+" }}}
+" Toggle paste {{{
 nnoremap p\ :set paste<CR>
 nnoremap p/ :set nopaste<CR>
-
-" default leader key
+" }}}
+" Default leader key {{{
 let mapleader = ","
-
-" enable scrolling
+" }}}
+" Enable scrolling {{{
 set mouse=a
-
-" be more verbose about stuff generally
+" }}}
+" Be more verbose about stuff generally {{{
 set showcmd
-
-" change default directories
+" }}}
+" Change default directories {{{
 set backupdir=~/.vim/backup//
 set directory=~/.vim/swap//
 set undodir=~/.vim/undo//
-
-" use spaces
+" }}}
+" Use spaces {{{
 set shiftwidth=2
 set softtabstop=2
-
-" autoload vimrc changes
+" }}}
+" Autoload vimrc changes {{{
 augroup myvimrc
   au!
   au BufWritePost .vimrc so $MYVIMRC | if has('gui_running') | so $MYGVIMRC | endif
 augroup END
-
-" Allow saving of files as sudo when forgot to start vim using sudo.
+" }}}
+" Allow saving of files as sudo when forgot to start vim using sudo. {{{
 cmap w!! w !sudo tee > /dev/null %
-
-" no shift to enter commands, use semicolon
+" }}}
+" No shift to enter commands, use semicolon {{{
 nnoremap ; :
 vnoremap ; :
-
-" Disable scratch preview window on autocomplete
+" }}}
+" Disable scratch preview window on autocomplete {{{
 set completeopt=longest,menuone,preview
 set completeopt-=preview
 set pumheight=15
-
-" Modelines are special comments somewhere in a file that can can declare
+" }}}
+" Modelines {{{
+" Modelines are special comments somewhere in a file that can can declare 
 " certain Vim settings to be used only for that file. 
 set modelines=1
-
-" Map Esc to jk
+" }}}
+" Map Esc to jk {{{
 inoremap jk <Esc>
-
-" Don't split left nor above
+" }}}
+" Don't split left nor above {{{
 set splitright
 set splitbelow
-
 " }}}
-
+" }}}
 " Languages {{{
-" Markdown
-
+" Markdown {{{
 " disable annoying code folding with vim-markdown
 let g:vim_markdown_folding_disabled = 1
 
 " enable yaml front matter highlighting in vim-markdown
 let g:vim_markdown_frontmatter = 1
 
-" JSX
-
-" highlight jsx in regular .js files
-let g:jsx_ext_required = 0
-
-" JSON
-let g:vim_json_syntax_conceal = 0 " disable quotes hiding
-let g:vim_json_warnings=1 " error warnings
-
-" JsDoc
-let g:jsdoc_enable_es6=1
-
 " For Markdown preview
 filetype plugin on
-" Emoji autocomplete
+" }}}
+" JSX {{{
+" highlight jsx in regular .js files
+let g:jsx_ext_required = 0
+" }}}
+" JSON {{{
+let g:vim_json_syntax_conceal = 0 " disable quotes hiding
+let g:vim_json_warnings=1 " error warnings
+" }}}
+" JsDoc {{{
+let g:jsdoc_enable_es6=1
+" }}}
+" Emoji autocomplete {{{
 set completefunc=emoji#complete
 " }}}
-
+" }}}
 " UX {{{
+" General {{{
 set encoding=utf-8
 " required if using https://github.com/bling/vim-airline
 let g:airline_powerline_fonts=1
 " highlight the selected line
 set cursorline
-
-" show line numbers
+" }}}
+" Show line numbers {{{
 set number
 set relativenumber
-
-" toggle line numbers
+" }}}
+" Toggle line numbers {{{
 nnoremap n\ :set number relativenumber<CR>
 nnoremap n/ :set nonumber norelativenumber<CR>
-
-" show vertical line
+" }}}
+" Show vertical line {{{
 set colorcolumn=120
-
-" indent line
+" }}}
+" Indent line {{{
 let g:indentLine_color_term = 239
-
-" briefly highlight matching brackets on close/open
+" }}}
+" Briefly highlight matching brackets on close/open {{{
 set showmatch
-
-" no wrapping
+" }}}
+" No wrapping {{{
 set nowrap
-
-" Allow scrolling past the bottom of the document
+" }}}
+" Allow scrolling past the bottom of the document {{{
 set scrolloff=1
- 
-" tabs!
+" }}}
+" Tabs! {{{
 nnoremap th  :tabfirst<CR>
 nnoremap tk  :tabnext<CR>
 nnoremap tj  :tabprev<CR>
@@ -205,48 +206,48 @@ nnoremap tn  :tabnext<Space>
 nnoremap tm  :tabm<Space>
 nnoremap td  :tabclose<CR>
 nnoremap te  :tabedit<Space>%<CR>
-
-" set color for folded text, see chart
+" }}}
+" Set color for folded text, see chart {{{
 " https://upload.wikimedia.org/wikipedia/en/1/15/Xterm_256color_chart.svg
 hi Folded ctermbg=236
-
-" give us 256 color schemes!
+" }}}
+" Give us 256 color schemes! {{{
 set term=screen-256color
-
-" don't break mid word
+" }}}
+" Don't break mid word {{{
 set linebreak
-
-" hide mode since airline already shows it
+" }}}
+" Hide mode since airline already shows it {{{
 set noshowmode
 " }}}
-
+" }}}
 "Colors {{{
+" General {{{
 syntax enable
-
 set t_Co=256
-
-" Color scheme
+" }}}
+" Color scheme {{{
 let g:airline_theme="dracula"
 let g:enable_bold_font = 1
 set background:dark
 colorscheme dracula
-
-" Powerline
+" }}}
+" Powerline {{{
 " set the CN (column number) symbol:
 let g:airline_section_z = airline#section#create(["\uE0A1" . '%{line(".")}' . "\uE0A3" . '%{col(".")}'])
-
-" Italic comments
+" }}}
+" Italic comments {{{
 set t_ZH=[3m
 set t_ZR=[23m
 highlight Comment cterm=italic
-
-" Visual selection colors
+" }}}
+" Visual selection colors {{{
 hi Visual term=reverse cterm=reverse guibg=Grey
-
-" Search selection colors
+" }}}
+" Search selection colors {{{
 hi Search ctermbg=214 ctermfg=black
 " }}}
-
+" }}}
 " Copy to clipboard {{{
 function! ClipboardYank()
   call system('xclip -i -selection clipboard', @@)
@@ -257,7 +258,6 @@ endfunction
 
 vnoremap <silent> <C-y> y:call ClipboardYank()<cr>
 "}}}
-
 " IdleHighlight {{{
 " Highlight all instances of word under cursor, when idle.
 " Useful when studying strange source code.
@@ -282,7 +282,6 @@ function! AutoHighlightToggle()
   endif
 endfunction
 " }}}
-
 " Fold {{{
 " Map space to toggle fold
 nnoremap <Space> za
@@ -291,13 +290,11 @@ nnoremap <Space> za
 nnoremap fms :set foldmethod=syntax<CR>
 nnoremap fmm :set foldmethod=manual<CR>
 " }}}
-
 " Macros {{{
 let @r="3j0wy$3kP"
 let @s="I[Ship] "
 let @t="I:rocket: "
 " }}}
-
 " Ranger {{{
 
 " Compatible with ranger 1.4.2 through 1.7.*
@@ -341,23 +338,20 @@ endfunction
 command! -bar RangerChooser call RangeChooser()
 nnoremap <leader>r :<C-U>RangerChooser<CR>
 " }}}
-
 " Search {{{
 " control search highlight
 nnoremap s\ :set hlsearch<CR>
 nnoremap s/ :nohlsearch<CR>
 
-set incsearch " search as characters are entered
+set incsearch  " search as characters are entered
 set ignorecase " search ignores case
-set hlsearch " highlight matches"
+set hlsearch   " highlight matches"
 " }}}
-
 " Shell {{{
 " make vim use zsh
 set shell=zsh
 " }}}
 " }}}
-
 " Plugins options {{{
 " Ale linter {{{
 let g:ale_linters = {'javascript': ['eslint']}
@@ -370,16 +364,13 @@ nmap <silent> <C-j> <Plug>(ale_next_wrap)
 " show ALE in airline
 let g:airline#extensions#ale#enabled = 1
 " }}}
-
 " Emmet {{{
 let g:user_emmet_leader_key='<C-E>' " c-e-,
 " }}}
-
 " Gundo {{{
 " toggle gundo
 nnoremap <leader>u :GundoToggle<CR>
 " }}}
-
 " JsDoc{{{
 let g:jsdoc_allow_input_prompt = 1
 let g:jsdoc_input_description = 1
@@ -387,43 +378,29 @@ let g:jsdoc_returno = 1
 let g:jsdoc_return_type = 1
 let g:jsdoc_enable_es6 = 1
 " }}}
-
 " Ledger{{{
 let g:ledger_fold_blanks = 1
 let g:ledger_decimal_sep = ','
 au FileType ledger nnoremap <Tab> :call ledger#align_amount_at_cursor()<CR>
 au FileType ledger set foldmethod=syntax
 " }}}
-
 " MiniBufferExplorer {{{
 " map ctrl-l to toggle MiniBufferExplorer
 nmap <silent> <C-l> :MBEToggle<CR>
 " }}}
-
 " Prettier {{{
 " map ctrl-h to trigger Prettier
 nmap <silent> <C-h> :Prettier<CR>
-
-" prettier
-" let g:prettier#autoformat = 0
-" autocmd BufWritePre *.js,*.graphql,*.css,*.scss,*.less PrettierAsync
 " }}}
-
 " UtilSnippets {{{
 " Use ctrl-j to insert a snippet
 let g:UltiSnipsExpandTrigger="<c-j>"
 let g:UltiSnipsEditSplit="vertical"
 " }}}
-
 " YouCompleteMe {{{
-" Use ycm in comments
-let g:ycm_complete_in_comments = 1
-" Get words from comments and strings
-let g:ycm_collect_identifiers_from_comments_and_strings = 1
-" Go to
-nnoremap <leader>jd :YcmCompleter GoTo<CR>
+let g:ycm_complete_in_comments = 1                          " Use ycm in comments
+let g:ycm_collect_identifiers_from_comments_and_strings = 1 " Get words from comments and strings
 " }}}
-
 " }}}
 
 " vim:foldmethod=marker:foldlevel=0
