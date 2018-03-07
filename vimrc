@@ -6,13 +6,9 @@ call plug#begin('~/.vim/bundle')
 
 " Vim UX {{{
 Plug 'SirVer/ultisnips'
-" Plug 'Xuyuanp/nerdtree-git-plugin'
-" Plug 'scrooloose/nerdtree'
 Plug 'airblade/vim-gitgutter'
 Plug 'Yggdroot/indentLine'
-" Plug 'ctrlpvim/ctrlp.vim'
 Plug 'Mizuchi/vim-ranger'
-" Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 Plug 'flazz/vim-colorschemes'
 Plug 'w0rp/ale'
 Plug 'tpope/vim-commentary'
@@ -24,9 +20,7 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'junegunn/vim-emoji'
 Plug 'fholgado/minibufexpl.vim'
 Plug 'sjl/gundo.vim'
-" Plug 'ryanoasis/vim-devicons'
 Plug 'kshenoy/vim-signature'
-" Plug 'junegunn/goyo.vim'
 " }}}
 
 " tmux UX {{{
