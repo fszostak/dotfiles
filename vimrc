@@ -1,11 +1,11 @@
 " General {{{
+" Set as not compatible with vi {{{
 set nocompatible
-
+" }}}
 " Plugins  {{{
 " Start {{{
 call plug#begin('~/.vim/bundle')
 " }}}
-
 " Vim UX {{{
 Plug 'SirVer/ultisnips'
 Plug 'airblade/vim-gitgutter'
@@ -24,11 +24,9 @@ Plug 'fholgado/minibufexpl.vim'
 Plug 'sjl/gundo.vim'
 Plug 'kshenoy/vim-signature'
 " }}}
-
 " tmux UX {{{
 Plug 'edkolev/tmuxline.vim'
 " }}}
-
 " Completion {{{
 Plug 'Valloric/YouCompleteMe' " Follow installation instructions in github
 Plug 'honza/vim-snippets'
@@ -41,11 +39,9 @@ Plug 'joegesualdo/jsdoc.vim'
 Plug 'heavenshell/vim-jsdoc'
 Plug 'vim-scripts/repmo.vim' " Repeat motion for which a count was given
 " }}}
-
 " Dependencies support {{{
 Plug 'editorconfig/editorconfig-vim'
 " }}}
-
 " Languages and libraries support {{{
 Plug 'pangloss/vim-javascript'
 Plug 'isRuslan/vim-es6'
@@ -69,12 +65,12 @@ Plug 'mitermayer/vim-prettier', {
   \ 'do': 'yarn install',
   \ 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql'] }
 " }}}
-
 " Color schemes {{{
 Plug 'dracula/vim'
 " }}}
-
+" End  {{{
 call plug#end()
+" }}}
 " }}}
 " Misc {{{
 " Buffers {{{
@@ -195,17 +191,6 @@ set nowrap
 " }}}
 " Allow scrolling past the bottom of the document {{{
 set scrolloff=1
-" }}}
-" Tabs! {{{
-nnoremap th  :tabfirst<CR>
-nnoremap tk  :tabnext<CR>
-nnoremap tj  :tabprev<CR>
-nnoremap tl  :tablast<CR>
-nnoremap tt  :tabedit<Space>
-nnoremap tn  :tabnext<Space>
-nnoremap tm  :tabm<Space>
-nnoremap td  :tabclose<CR>
-nnoremap te  :tabedit<Space>%<CR>
 " }}}
 " Set color for folded text, see chart {{{
 " https://upload.wikimedia.org/wikipedia/en/1/15/Xterm_256color_chart.svg
