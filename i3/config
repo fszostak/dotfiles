@@ -68,8 +68,8 @@ bindsym $mod+Shift+r restart
 # Conky {{{
 # start and stop conky
 exec --no-startup-id conky
-bindsym $mod+control+shift+k exec killall conky
-bindsym $mod+control+k exec conky
+bindsym $mod+control+shift+y exec killall conky
+bindsym $mod+control+y exec conky
 # }}}
 
 # Dmenu (rofi) {{{
@@ -190,6 +190,20 @@ exec --no-startup-id setxkbmap --layout us -option compose:ralt
 bindsym $mod+Shift+q kill
 # }}}
 
+# Mouse cursor {{{
+# left and right
+bindsym $mod+shift+control+h exec xdotool mousemove_relative -- -20 0
+bindsym $mod+shift+control+l exec xdotool mousemove_relative 20 0
+
+# up and down
+bindsym $mod+shift+control+j exec xdotool mousemove_relative 0 20
+bindsym $mod+shift+control+k exec xdotool mousemove_relative -- 0 -20
+
+# clicks
+bindsym $mod+shift+control+enter exec xdotool click 1
+bindsym $mod+shift+control+space exec xdotool click 2
+# }}}
+
 # Pomodoro {{{
 # stop a pomodoro
 bindsym $mod+Shift+p exec rm ~/.pomodoro_session
@@ -261,7 +275,7 @@ exec --no-startup-id redshift -c $HOME/.config/redshift.conf
 # }}}
 
 # xbanish (hide cursor while typing) {{{
-exec --no-startup-id xbanish
+# exec --no-startup-id xbanish
 # }}}
 
 # Wallpaper (feh) {{{
