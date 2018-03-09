@@ -13,3 +13,6 @@ EDITOR=/usr/bin/nano
 # <<< END ADDED BY CNCHI INSTALLER
 
 export N_PREFIX="$HOME/n"; [[ :$PATH: == *":$N_PREFIX/bin:"* ]] || PATH+=":$N_PREFIX/bin"  # Added by n-install (see http://git.io/n-install-repo).
+
+# added by travis gem
+[ -f /home/gustavo/.travis/travis.sh ] && source /home/gustavo/.travis/travis.sh

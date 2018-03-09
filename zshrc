@@ -91,3 +91,6 @@ set cindent
 
 # added by nvm
 source /usr/share/nvm/init-nvm.sh
+
+# added by travis gem
+[ -f /home/gustavo/.travis/travis.sh ] && source /home/gustavo/.travis/travis.sh
