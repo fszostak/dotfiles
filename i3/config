@@ -191,17 +191,25 @@ bindsym $mod+Shift+q kill
 # }}}
 
 # Mouse cursor {{{
-# left and right
-bindsym $mod+shift+control+h exec xdotool mousemove_relative -- -20 0
-bindsym $mod+shift+control+l exec xdotool mousemove_relative 20 0
+# left and right more
+bindsym $mod+shift+control+h exec xdotool mousemove_relative -- -300 0
+bindsym $mod+shift+control+l exec xdotool mousemove_relative 300 0
 
-# up and down
-bindsym $mod+shift+control+j exec xdotool mousemove_relative 0 20
-bindsym $mod+shift+control+k exec xdotool mousemove_relative -- 0 -20
+# up and down more
+bindsym $mod+shift+control+j exec xdotool mousemove_relative 0 300
+bindsym $mod+shift+control+k exec xdotool mousemove_relative -- 0 -300
+
+# left and right less
+bindsym $mod+control+h exec xdotool mousemove_relative -- -20 0
+bindsym $mod+control+l exec xdotool mousemove_relative 20 0
+
+# up and down less
+bindsym $mod+control+j exec xdotool mousemove_relative 0 20
+bindsym $mod+control+k exec xdotool mousemove_relative -- 0 -20
 
 # clicks
-bindsym $mod+shift+control+enter exec xdotool click 1
-bindsym $mod+shift+control+space exec xdotool click 2
+bindsym $mod+control+Return exec xdotool click 1
+bindsym $mod+control+Space exec xdotool click 3
 # }}}
 
 # Pomodoro {{{
@@ -227,7 +235,7 @@ bindsym $mod+minus scratchpad show
 
 # Splits {{{
 # split in horizontal orientation
-bindsym $mod+control+h split h
+bindsym $mod+control+b split h
 
 # split in vertical orientation
 bindsym $mod+control+v split v
@@ -239,10 +247,6 @@ bindsym $mod+shift+Return exec qutebrowser
 
 # Start a Terminal {{{
 bindsym $mod+Return exec termite
-# }}}
-
-# Start a Urxvt {{{
-bindsym $mod+control+Return exec urxvt
 # }}}
 
 # Touchpad {{{
