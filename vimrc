@@ -157,6 +157,9 @@ let g:vim_json_warnings=1 " error warnings
 " JsDoc {{{
 let g:jsdoc_enable_es6=1
 " }}}
+" ES6 mjs {{{
+au BufNewFile,BufRead *.mjs set filetype=javascript
+" }}}
 " Emoji autocomplete {{{
 set completefunc=emoji#complete
 " }}}
