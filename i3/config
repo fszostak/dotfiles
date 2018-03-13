@@ -191,21 +191,29 @@ bindsym $mod+Shift+q kill
 # }}}
 
 # Mouse cursor {{{
-# left and right more
-bindsym $mod+shift+control+h exec xdotool mousemove_relative -- -300 0
-bindsym $mod+shift+control+l exec xdotool mousemove_relative 300 0
+# left and right max
+bindsym $mod+shift+control+h exec xdotool mousemove_relative -- -500 0
+bindsym $mod+shift+control+l exec xdotool mousemove_relative 500 0
 
-# up and down more
-bindsym $mod+shift+control+j exec xdotool mousemove_relative 0 300
-bindsym $mod+shift+control+k exec xdotool mousemove_relative -- 0 -300
+# up and down max
+bindsym $mod+shift+control+j exec xdotool mousemove_relative 0 500
+bindsym $mod+shift+control+k exec xdotool mousemove_relative -- 0 -500
 
-# left and right less
-bindsym $mod+control+h exec xdotool mousemove_relative -- -20 0
-bindsym $mod+control+l exec xdotool mousemove_relative 20 0
+# left and right medium
+bindsym $mod+control+h exec xdotool mousemove_relative -- -100 0
+bindsym $mod+control+l exec xdotool mousemove_relative 100 0
 
-# up and down less
-bindsym $mod+control+j exec xdotool mousemove_relative 0 20
-bindsym $mod+control+k exec xdotool mousemove_relative -- 0 -20
+# up and down medium
+bindsym $mod+control+j exec xdotool mousemove_relative 0 100
+bindsym $mod+control+k exec xdotool mousemove_relative -- 0 -100
+
+# left and right min
+bindsym $mod+control+mod1+h exec xdotool mousemove_relative -- -10 0
+bindsym $mod+control+mod1+l exec xdotool mousemove_relative 10 0
+
+# up and down min
+bindsym $mod+control+mod1+j exec xdotool mousemove_relative 0 10
+bindsym $mod+control+mod1+k exec xdotool mousemove_relative -- 0 -10
 
 # clicks
 bindsym $mod+control+Return exec xdotool click 1
