@@ -241,6 +241,14 @@ bindsym $mod+Shift+minus move scratchpad
 bindsym $mod+minus scratchpad show
 # }}}
 
+# Redshift {{{
+# start redshit in normal configuration
+bindsym $mod+t exec kill $(ps -A | grep 'redshift' | awk '{print $1}') && sleep 5 && redshift -c $HOME/.config/redshift.conf
+
+# start redshit in darker configuration
+bindsym $mod+shift+t exec kill $(ps -A | grep 'redshift' | awk '{print $1}') && sleep 5 && redshift -c $HOME/.config/redshift-darker.conf
+# }}}
+
 # Splits {{{
 # split in horizontal orientation
 bindsym $mod+control+b split h

@@ -29,6 +29,7 @@
     ~/.config/ranger/rifle.conf: ranger/rifle.conf
     ~/.config/ranger/scope.sh: ranger/scope.sh
     ~/.config/redshift.conf: redshift/redshift.conf
+    ~/.config/redshift-darker.conf: redshift/redshift-darker.conf
     ~/.config/redshift/hooks/brightness.sh: redshift/brightness.sh
     ~/.config/rtv/rtv.cfg: rtv
     ~/.config/surfraw/conf: surfraw
