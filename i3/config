@@ -191,6 +191,8 @@ bindsym $mod+Shift+q kill
 # }}}
 
 # Mouse cursor {{{
+#  (mod1 = alt)
+
 # left and right max
 bindsym $mod+shift+control+h exec xdotool mousemove_relative -- -500 0
 bindsym $mod+shift+control+l exec xdotool mousemove_relative 500 0
@@ -216,8 +218,17 @@ bindsym $mod+control+mod1+j exec xdotool mousemove_relative 0 10
 bindsym $mod+control+mod1+k exec xdotool mousemove_relative -- 0 -10
 
 # clicks
-bindsym $mod+control+Return exec xdotool click 1
-bindsym $mod+control+Space exec xdotool click 3
+bindsym $mod+control+Return exec xdotool click 1          # left click
+bindsym $mod+control+mod1+Return exec xdotool click 2     # middle click
+bindsym $mod+control+Space exec xdotool click 3           # right click
+
+# click and hold
+bindsym $mod+mod1+Return exec xdotool mousedown 1         # hold left click
+bindsym $mod+mod1+shift+Return exec xdotool mouseup 1     # release left click
+
+# wheel
+bindsym $mod+mod1+k exec xdotool click --clearmodifiers 4 # wheel up
+bindsym $mod+mod1+j exec xdotool click --clearmodifiers 5 # wheel down
 # }}}
 
 # Pomodoro {{{
