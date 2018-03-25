@@ -20,10 +20,8 @@
     ~/.config/polybar/mpris.sh: polybar/mpris.sh
     ~/.config/polybar/pkg.sh: polybar/pkg.sh
     ~/.config/polybar/redshift.sh: polybar/redshift.sh
-    ~/.config/qutebrowser/bookmarks: qutebrowser/bookmarks
     ~/.config/qutebrowser/config.py: qutebrowser/config.py
     ~/.config/qutebrowser/keys.conf: qutebrowser/keys.conf
-    ~/.config/qutebrowser/quickmarks: qutebrowser/quickmarks
     ~/.config/qutebrowser/qutebrowser.conf: qutebrowser/qutebrowser.conf
     ~/.config/ranger/rc.conf: ranger/rc.conf
     ~/.config/ranger/rifle.conf: ranger/rifle.conf
