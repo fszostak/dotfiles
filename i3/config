@@ -345,9 +345,9 @@ bindsym $mod+r mode "resize"
 # }}}
 
 # Gaps {{{
-gaps outer 2
-gaps inner 4
-smart_gaps on
+gaps outer 4
+gaps inner 6
+# smart_gaps on
 # }}}
 
 # Colors {{{
