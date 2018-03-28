@@ -315,7 +315,7 @@ exec_always --no-startup-id feh --bg-scale $HOME/.wallpaper.jpg
 # }}}
 # }}}
 
-# UI {{{
+# General UI {{{
 # Resize window (you can also use the mouse for that) {{{
 mode "resize" {
   # These bindings trigger as soon as you enter the resize mode
@@ -347,7 +347,6 @@ bindsym $mod+r mode "resize"
 # Gaps {{{
 gaps outer 4
 gaps inner 6
-# smart_gaps on
 # }}}
 
 # Colors {{{
