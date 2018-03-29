@@ -43,24 +43,17 @@ Plug 'vim-scripts/repmo.vim' " Repeat motion for which a count was given
 Plug 'editorconfig/editorconfig-vim'
 " }}}
 " Languages and libraries support {{{
-Plug 'pangloss/vim-javascript'
-Plug 'isRuslan/vim-es6'
-Plug 'mxw/vim-jsx'
+Plug 'sheerun/vim-polyglot'
 Plug 'othree/javascript-libraries-syntax.vim'
 Plug 'myhere/vim-nodejs-complete'
 Plug 'jparise/vim-graphql'
-Plug 'elzr/vim-json'
-Plug 'moby/moby' " Docker syntax
 Plug 'ap/vim-css-color'
 Plug 'heavenshell/vim-jsdoc'
 Plug 'suan/vim-instant-markdown'
-Plug 'wavded/vim-stylus'
-Plug 'leafgarland/typescript-vim'
 Plug 'lepture/vim-jinja'
 Plug 'ledger/vim-ledger'
-Plug 'posva/vim-vue'
 Plug 'xuhdev/vim-latex-live-preview'
-Plug 'moll/vim-node'
+" Plug 'moll/vim-node'
 Plug 'mitermayer/vim-prettier', {
   \ 'do': 'yarn install',
   \ 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql'] }
