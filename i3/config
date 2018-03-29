@@ -252,6 +252,11 @@ bindsym $mod+Shift+minus move scratchpad
 bindsym $mod+minus scratchpad show
 # }}}
 
+# Screenshots with scrot {{{
+# print active window (wait 1 secs)
+bindsym $mod+mod1+3 exec scrot -d1 -c -u -e 'mv $f ~/Pictures/scrot/' && notify-send scrot "Screenshot taken to ~/Pictures/scrot/"
+# }}}
+
 # Redshift {{{
 # start redshit in normal configuration
 bindsym $mod+t exec kill $(ps -A | grep 'redshift' | awk '{print $1}') && sleep 5 && redshift -c $HOME/.config/redshift.conf
