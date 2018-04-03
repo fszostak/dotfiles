@@ -136,6 +136,14 @@ let g:vim_markdown_folding_disabled = 1
 " enable yaml front matter highlighting in vim-markdown
 let g:vim_markdown_frontmatter = 1
 
+" disable conceal level of **bold**, *italic*, etc
+let g:vim_markdown_conceal = 0
+let g:tex_conceal = ""
+let g:vim_markdown_math = 1
+
+" disable autoindent with items new lines
+let g:vim_markdown_new_list_item_indent = 0
+
 " For Markdown preview
 filetype plugin on
 " }}}
