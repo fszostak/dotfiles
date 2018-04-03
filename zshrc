@@ -20,7 +20,6 @@ antigen bundles <<EOBUNDLES
   heroku
   history-substring-search
   node
-  rupa/z
   supercrabtree/k
   tonietto/aliases
   tonietto/show-version
