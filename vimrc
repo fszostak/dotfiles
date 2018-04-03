@@ -10,7 +10,6 @@ call plug#begin('~/.vim/bundle')
 Plug 'SirVer/ultisnips'
 Plug 'airblade/vim-gitgutter'
 Plug 'Yggdroot/indentLine'
-Plug 'Mizuchi/vim-ranger'
 Plug 'flazz/vim-colorschemes'
 Plug 'w0rp/ale'
 Plug 'tpope/vim-commentary'
