@@ -24,7 +24,6 @@ antigen bundles <<EOBUNDLES
   tonietto/aliases
   tonietto/show-version
   tonietto/show-node
-  web-search
   webyneter/docker-aliases.git
   zsh-users/zsh-autosuggestions
   zsh-users/zsh-syntax-highlighting
