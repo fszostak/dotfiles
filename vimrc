@@ -281,6 +281,7 @@ nnoremap fmm :set foldmethod=manual<CR>
 " Macros {{{
 let @r="3j0wy$3kP"
 let @s="I[Ship] "
+let @h="I[Hotfix] "
 let @t="I:rocket: "
 " }}}
 " Ranger {{{
