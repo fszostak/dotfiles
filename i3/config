@@ -283,7 +283,7 @@ bindsym $mod+Return exec termite
 
 # Touchpad {{{
 # no touchpad while typing
-bindsym $mod+control+t exec syndaemon -i 0.5
+bindsym $mod+control+t exec syndaemon -i 1
 bindsym $mod+control+shift+t exec killall syndaemon
 # }}}
 # }}}
