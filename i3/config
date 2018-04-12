@@ -51,7 +51,7 @@ bindsym $mod+e layout toggle split
 
 # Compton {{{
 # start and stop compton
-set $compton compton -b --config $HOME/.config/compton.conf --blur-kern 11x11gaussian 
+set $compton allow_rgb10_configs=false compton -b --config $HOME/.config/compton.conf --blur-kern 11x11gaussian 
 exec --no-startup-id $compton
 bindsym $mod+control+shift+c exec killall compton
 bindsym $mod+control+c exec $compton
