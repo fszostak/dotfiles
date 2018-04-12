@@ -321,6 +321,10 @@ exec_always --no-startup-id feh --bg-scale $HOME/.wallpaper.jpg
 # }}}
 
 # General UI {{{
+# Borders {{{
+for_window [class="^.*"] border pixel 2
+# }}}
+
 # Resize window (you can also use the mouse for that) {{{
 mode "resize" {
   # These bindings trigger as soon as you enter the resize mode
