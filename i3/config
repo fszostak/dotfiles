@@ -322,7 +322,7 @@ exec_always --no-startup-id feh --bg-scale $HOME/.wallpaper.jpg
 
 # General UI {{{
 # Borders {{{
-for_window [class="^.*"] border pixel 2
+for_window [class="^.*"] border pixel 1
 # }}}
 
 # Resize window (you can also use the mouse for that) {{{
@@ -359,12 +359,16 @@ gaps inner 6
 # }}}
 
 # Colors {{{
-set $bg-color 	         #2f343f
-set $inactive-bg-color   #2f343f
-set $text-color          #f8f8f2
-set $inactive-text-color #4D4D4D
-set $urgent-bg-color     #FF5555
-set $separator		 #757575
+set $inactive      #2F343F
+set $focused       #B45BCF
+set $text          #F8F8F8
+set $text-inactive #4D4D4D
+
+# class                 border    backgr.   text           indicator child_border
+client.focused          $focused  $focused  $text          $focused  $focused
+client.unfocused        $inactive $inactive $text-inactive $inactive $inactive
+client.focused_inactive $inactive $inactive $text-inactive $inactive $inactive
+client.urgent           $inactive $inactive $text          $inactive $inactive
 # }}}
 
 # Disable all window and float borders {{{
