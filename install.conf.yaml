@@ -42,8 +42,7 @@
     ~/.mutt/com.gmail.tonietto: mutt/com.gmail.tonietto
     ~/.mutt/net.kinghost.montacasa.gustavo.tonietto: mutt/net.kinghost.montacasa.gustavo.tonietto
     ~/.muttrc: mutt/muttrc
-    ~/.newsboat/config: newsboat/config
-    ~/.newsboat/urls: newsboat/urls
+    ~/.newsboat/config: newsboat
     ~/.rainbow_config.json:
     ~/.Rprofile:
     ~/.taskrc:
