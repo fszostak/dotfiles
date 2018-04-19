@@ -152,7 +152,24 @@ let g:jsx_ext_required = 0
 " }}}
 " JSON {{{
 let g:vim_json_syntax_conceal = 0 " disable quotes hiding
-let g:vim_json_warnings=1 " error warnings
+let g:vim_json_warnings=1         " error warnings
+
+" Format JSON with python json.tool
+function FormatJSON(...) 
+  let code="\"
+        \ var i = process.stdin, d = '';
+        \ i.resume();
+        \ i.setEncoding('utf8');
+        \ i.on('data', function(data) { d += data; });
+        \ i.on('end', function() {
+        \     console.log(JSON.stringify(JSON.parse(d), null, 
+        \ " . (a:0 ? a:1 ? a:1 : 2 : 2) . "));
+        \ });\""
+  execute "%! node -e " . code 
+endfunction
+
+" Map FormatJSON function to f-j
+nmap fj :<C-U>call FormatJSON(v:count)<CR>
 " }}}
 " JsDoc {{{
 let g:jsdoc_enable_es6=1
