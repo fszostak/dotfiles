@@ -80,12 +80,15 @@ set -o vi
 set noerrorbells
 set showmatch
 set matchtime=8
-set tabstop=8
-set shiftwidth=4
+set tabstop=2
+set shiftwidth=2
 set nowrapscan
 set ignorecase
 set autoindent
 set cindent
+
+bindkey -M vicmd v edit-command-line
+
 
 # added by nvm
 source /usr/share/nvm/init-nvm.sh
