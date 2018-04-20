@@ -71,9 +71,12 @@ function gi() { curl -L -s https://www.gitignore.io/api/$@ ; }
 export TERM=xterm-256color
 
 # keychain
-if [ -f ".keychain.sh" ]; then
-  source .keychain.sh
-fi
+function kiss(){
+  if [ -f ".keychain.sh" ]; then
+    pass show unlock
+    source .keychain.sh
+  fi
+}
 
 # vi controls in command line
 set -o vi
