@@ -72,10 +72,8 @@ export TERM=xterm-256color
 
 # keychain
 function kiss(){
-  if [ -f ".keychain.sh" ]; then
-    pass show unlock
-    source .keychain.sh
-  fi
+  pass show unlock
+  source ~/.keychain.sh 
 }
 
 # vi controls in command line
