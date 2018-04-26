@@ -28,7 +28,6 @@ antigen bundles <<EOBUNDLES
   zsh-users/zsh-autosuggestions
   zsh-users/zsh-syntax-highlighting
   $HOME/aliases
-  $HOME/tiny-care-terminal
 EOBUNDLES
 
 # Syntax highlighting bundle.
