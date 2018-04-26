@@ -20,7 +20,8 @@ i3lock -ef                \
 --linecolor=$B            \
 --separatorcolor=$D       \
 \
---textcolor=$T            \
+--verifcolor=$T        \
+--wrongcolor=$T        \
 --timecolor=$T            \
 --datecolor=$T            \
 --keyhlcolor=$V           \
@@ -33,13 +34,17 @@ i3lock -ef                \
 --timestr="%H:%M:%S"      \
 --datestr="%A, %m %d %Y"  \
 \
---timefont=hack           \
---datefont=hack           \
+--time-font=hack           \
+--date-font=hack           \
 \
 --veriftext="Wait for it" \
 \
 --wrongtext="Doh!"        \
 \
---textsize=30		  \
+--timesize=25             \
+--datesize=10             \
+--layoutsize=30           \
+--verifsize=25            \
+--wrongsize=25            \
 \
 --modsize=15		  \
