@@ -278,7 +278,8 @@ bindsym $mod+shift+Return exec qutebrowser
 # }}}
 
 # Start a Terminal {{{
-bindsym $mod+Return exec termite
+bindsym $mod+Return exec kitty
+# bindsym $mod+Return exec termite
 # }}}
 
 # Touchpad {{{
@@ -429,6 +430,7 @@ assign [class="qutebrowser"] $w2
 assign [class="Slack"] $w9
 assign [class="(?s)team"] $w6
 assign [class="Termite"] $w1
+assign [class="kitty"] $w1
 assign [class="URxvt"] $w1
 assign [title="(?i)rambox"] $w8
 assign [title="(?i)spotify"] $w10
