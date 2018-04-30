@@ -11,6 +11,7 @@ font_size 12.0
 
 # You can get a list of full family names available on your computer by running
 # kitty list-fonts
+# The amount the font size is changed by (in pts) when increasing/decreasing
 # The default values shown below rely on your OS to choose an appropriate monospace font family.
 # font_family      monospace
 # italic_font      auto
@@ -20,9 +21,8 @@ font_size 12.0
 # Font size (in pts)
 # font_size        11.0
 
-# The amount the font size is changed by (in pts) when increasing/decreasing
 # the font size in a running terminal.
-# font_size_delta 2
+font_size_delta 1
 
 
 # Adjust the cell dimensions.
@@ -169,17 +169,17 @@ background       #282A36
 background_opacity 0.95
 
 # The foreground for selections
-# selection_foreground #000000
+# selection_foreground #F8F8F1
 
 # The background for selections
-# selection_background #FFFACD
+# selection_background #282A36
 
 # The 16 terminal colors. There are 8 basic colors, each color has a dull and
 # bright version. You can also set the remaining colors from the 256 color table
 # as color16 to color256.
 
 # black
-color0   #282936
+color0   #626483
 color8   #626483
 
 # red
@@ -200,11 +200,11 @@ color12 #CAA9FA
 
 # magenta
 color5   #B45BCF
-color13  #fd28ff
+color13  #FD28FF
 
 # cyan
 color6   #A1EFE4
-color14  #14ffff
+color14  #14FFFF
 
 # white
 color7   #E9E9F4
