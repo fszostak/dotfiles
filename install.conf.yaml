@@ -14,6 +14,8 @@
     ~/.config/dunst/dunstrc: dunstrc
     ~/.config/gtk-3.0/gtk.css: gtk.css
     ~/.config/htop/htoprc: htoprc
+    ~/.keychain.sh:
+    ~/.config/kitty/kitty.conf: kitty
     ~/.config/neofetch/config.conf: neofetch.conf
     ~/.config/polybar/config: polybar/polybar.conf
     ~/.config/polybar/launch.sh: polybar/launch.sh

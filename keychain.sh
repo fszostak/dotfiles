@@ -1,4 +1,1 @@
-eval $(keychain --eval --quiet id_rsa)
-#eval $(keychain --eval --quiet ti@universaldecor.com.br)
-#eval $(keychain --eval --quiet ti@montacasa.com.br)
-#clear
+eval $(keychain --eval id_rsa ti@universaldecor.com.br ti@montacasa.com.br)

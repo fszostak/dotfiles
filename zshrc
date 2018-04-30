@@ -28,7 +28,6 @@ antigen bundles <<EOBUNDLES
   zsh-users/zsh-autosuggestions
   zsh-users/zsh-syntax-highlighting
   $HOME/aliases
-  $HOME/tiny-care-terminal
 EOBUNDLES
 
 # Syntax highlighting bundle.
@@ -71,21 +70,25 @@ function gi() { curl -L -s https://www.gitignore.io/api/$@ ; }
 export TERM=xterm-256color
 
 # keychain
-if [ -f ".keychain.sh" ]; then
-  source .keychain.sh
-fi
+function kiss(){
+  pass show unlock
+  source ~/.keychain.sh 
+}
 
 # vi controls in command line
 set -o vi
 set noerrorbells
 set showmatch
 set matchtime=8
-set tabstop=8
-set shiftwidth=4
+set tabstop=2
+set shiftwidth=2
 set nowrapscan
 set ignorecase
 set autoindent
 set cindent
+
+bindkey -M vicmd v edit-command-line
+
 
 # added by nvm
 source /usr/share/nvm/init-nvm.sh
