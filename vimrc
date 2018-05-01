@@ -68,6 +68,9 @@ call plug#end()
 " Buffers {{{
 set hidden
 " #}}}
+" Error bells {{{
+set noerrorbells
+" #}}}
 " Use dot (.) with visual mode {{{
 vnoremap . :norm.<CR>
 " #}}}
