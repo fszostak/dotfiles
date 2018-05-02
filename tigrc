@@ -1,9 +1,15 @@
 # taken from https://github.com/cbertoldi/dotfiles/blob/80ba11c5cf86e90cf156906a226694b309a6995d/tigrc.symlink
 # vim: set expandtab sw=4 tabstop=4:
-# *color* 'area' 'fgcolor' 'bgcolor' '[attributes]'
+
+# main view options
+set main-view-author-display = email-user
+set main-view-date-display = relative-compact
+
+# colors
+
+# color 'area'                 'fg'    'bg'       'attributes'
 
 # general
-color   default                 15      00000000
 color   cursor                  15      241
 color   title-focus             242     221
 color   title-blur              242     221
