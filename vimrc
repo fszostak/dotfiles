@@ -118,8 +118,8 @@ set completeopt-=preview
 set pumheight=15
 " }}}
 " Modelines {{{
-" Modelines are special comments somewhere in a file that can can declare 
-" certain Vim settings to be used only for that file. 
+" Modelines are special comments somewhere in a file that can can declare
+" certain Vim settings to be used only for that file.
 set modelines=1
 " }}}
 " Map Esc to jk {{{
@@ -158,17 +158,17 @@ let g:vim_json_syntax_conceal = 0 " disable quotes hiding
 let g:vim_json_warnings=1         " error warnings
 
 " Format JSON with python json.tool
-function FormatJSON(...) 
+function FormatJSON(...)
   let code="\"
         \ var i = process.stdin, d = '';
         \ i.resume();
         \ i.setEncoding('utf8');
         \ i.on('data', function(data) { d += data; });
         \ i.on('end', function() {
-        \     console.log(JSON.stringify(JSON.parse(d), null, 
+        \     console.log(JSON.stringify(JSON.parse(d), null,
         \ " . (a:0 ? a:1 ? a:1 : 2 : 2) . "));
         \ });\""
-  execute "%! node -e " . code 
+  execute "%! node -e " . code
 endfunction
 
 " Map FormatJSON function to f-j
@@ -242,7 +242,7 @@ colorscheme dracula
 " }}}
 " Powerline {{{
 " set the CN (column number) symbol:
-let g:airline_section_z = airline#section#create(["\uE0A1" . '%{line(".")}' . "\uE0A3" . '%{col(".")}'])
+let g:airline_section_z = airline#section#create(["" . '%{line(".")}' . ":" . '%{col(".")}'])
 " }}}
 " Italic comments {{{
 set t_ZH=[3m
