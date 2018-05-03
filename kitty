@@ -4,8 +4,8 @@
 font_family Fira Code Regular
 bold_font Fira Code Bold
 
-italic_font Hack Italic
-bold_italic_font Hack Italic Bold
+italic_font Fira Code Italic
+bold_italic_font Fira Code Italic Bold
 
 font_size 12.0
 
