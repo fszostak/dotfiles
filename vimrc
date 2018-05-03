@@ -235,7 +235,7 @@ syntax enable
 set t_Co=256
 " }}}
 " Color scheme {{{
-let g:airline_theme="dracula"
+let g:airline_theme="minimalist"
 let g:enable_bold_font = 1
 set background:dark
 colorscheme dracula
