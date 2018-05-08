@@ -360,6 +360,10 @@ set hlsearch   " highlight matches"
 " make vim use zsh
 set shell=zsh
 " }}}
+" Trailing space {{{
+" remove trailing space on F5
+:nnoremap <silent> <F5> :let _s=@/ <Bar> :%s/\s\+$//e <Bar> :let @/=_s <Bar> :nohl <Bar> :unlet _s <CR>
+" }}}
 " }}}
 " Plugins options {{{
 " Ale linter {{{
