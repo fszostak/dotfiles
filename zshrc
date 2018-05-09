@@ -71,7 +71,6 @@ export TERM=xterm-256color
 
 # keychain
 function kiss(){
-  pass show unlock
   source ~/.keychain.sh 
 }
 
