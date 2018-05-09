@@ -71,6 +71,10 @@ set hidden
 " Error bells {{{
 set noerrorbells
 " #}}}
+" Increate/decrease alternatives {{{
+" C-a is a tmux custom reserved shortcut
+nnoremap <C-i> <C-a>
+" #}}}
 " Use dot (.) with visual mode {{{
 vnoremap . :norm.<CR>
 " #}}}
