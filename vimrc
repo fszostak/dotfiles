@@ -172,7 +172,7 @@ function FormatJSON(...)
 endfunction
 
 " Map FormatJSON function to f-j
-nmap fj :<C-U>call FormatJSON(v:count)<CR>
+nmap <leader>fj :<C-U>call FormatJSON(v:count)<CR>
 " }}}
 " JsDoc {{{
 let g:jsdoc_enable_es6=1
