@@ -42,10 +42,10 @@ Plug 'vim-scripts/repmo.vim' " Repeat motion for which a count was given
 Plug 'editorconfig/editorconfig-vim'
 " }}}
 " Languages and libraries support {{{
+Plug 'jparise/vim-graphql'
 Plug 'sheerun/vim-polyglot'
 Plug 'othree/javascript-libraries-syntax.vim'
 Plug 'myhere/vim-nodejs-complete'
-Plug 'jparise/vim-graphql'
 Plug 'ap/vim-css-color'
 Plug 'heavenshell/vim-jsdoc'
 Plug 'suan/vim-instant-markdown'
@@ -71,7 +71,7 @@ set hidden
 " Error bells {{{
 set noerrorbells
 " #}}}
-" Increate/decrease alternatives {{{
+" Increment/decrement alternatives {{{
 " C-a is a tmux custom reserved shortcut
 nnoremap <C-i> <C-a>
 " #}}}
