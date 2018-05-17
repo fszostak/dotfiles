@@ -37,6 +37,7 @@ Plug 'tpope/vim-vinegar'
 Plug 'joegesualdo/jsdoc.vim'
 Plug 'heavenshell/vim-jsdoc'
 Plug 'vim-scripts/repmo.vim' " Repeat motion for which a count was given
+Plug 'ctrlpvim/ctrlp.vim'
 " }}}
 " Dependencies support {{{
 Plug 'editorconfig/editorconfig-vim'
@@ -365,8 +366,8 @@ set hlsearch   " highlight matches"
 set shell=zsh
 " }}}
 " Trailing space {{{
-" remove trailing space on F5
-:nnoremap <silent> <F5> :let _s=@/ <Bar> :%s/\s\+$//e <Bar> :let @/=_s <Bar> :nohl <Bar> :unlet _s <CR>
+" remove trailing space on F4
+:nnoremap <silent> <F4> :let _s=@/ <Bar> :%s/\s\+$//e <Bar> :let @/=_s <Bar> :nohl <Bar> :unlet _s <CR>
 " }}}
 " }}}
 " Plugins options {{{
@@ -380,6 +381,9 @@ nmap <silent> <C-j> <Plug>(ale_next_wrap)
 
 " show ALE in airline
 let g:airline#extensions#ale#enabled = 1
+" }}}
+" CtrlP {{{
+ let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files -co --exclude-standard']
 " }}}
 " Emmet {{{
 let g:user_emmet_leader_key='<C-E>' " c-e-,
