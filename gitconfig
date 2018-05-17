@@ -3,8 +3,6 @@
   name = Gustavo Tonietto
 [push]
   default = simple
-[merge]
-  tool = vimdiff
 [core]
   editor = vim
 [alias]
@@ -18,3 +16,8 @@
   tts = !"git tree-extended"
   ttts = !"git tree-full"
   pushup = push --set-upstream origin 
+[merge]
+  tool = vimdiff
+  conflictstyle = diff3
+[mergetool]
+  prompt = false
