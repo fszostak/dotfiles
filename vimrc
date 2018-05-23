@@ -60,6 +60,7 @@ Plug 'mitermayer/vim-prettier', {
 " }}}
 " Color schemes {{{
 Plug 'dracula/vim'
+Plug 'altercation/vim-colors-solarized'
 " }}}
 " End  {{{
 call plug#end()
