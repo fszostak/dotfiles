@@ -41,6 +41,7 @@ Plug 'ctrlpvim/ctrlp.vim'
 " }}}
 " Dependencies support {{{
 Plug 'editorconfig/editorconfig-vim'
+Plug 'flowtype/vim-flow'
 " }}}
 " Languages and libraries support {{{
 Plug 'jparise/vim-graphql'
