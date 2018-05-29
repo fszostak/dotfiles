@@ -389,6 +389,9 @@ let g:airline#extensions#ale#enabled = 1
 " Emmet {{{
 let g:user_emmet_leader_key='<C-E>' " c-e-,
 " }}}
+" Flow {{{
+let g:flow#showquickfix = 0
+" }}}
 " Gundo {{{
 " toggle gundo
 nnoremap <leader>u :GundoToggle<CR>
