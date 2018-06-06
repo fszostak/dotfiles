@@ -22,6 +22,7 @@ Plug 'junegunn/vim-emoji'
 Plug 'fholgado/minibufexpl.vim'
 Plug 'sjl/gundo.vim'
 Plug 'kshenoy/vim-signature'
+Plug 'jbgutierrez/vim-better-comments'
 " }}}
 " tmux UX {{{
 Plug 'edkolev/tmuxline.vim'
@@ -382,6 +383,10 @@ nmap <silent> <C-j> <Plug>(ale_next_wrap)
 
 " show ALE in airline
 let g:airline#extensions#ale#enabled = 1
+" }}}
+" BetterComments {{{
+hi! def link TodoBetterComments Todo
+hi! def link ErrorBetterComments Error
 " }}}
 " CtrlP {{{
  let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files -co --exclude-standard']
