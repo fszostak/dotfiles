@@ -1,9 +1,3 @@
 #!/bin/bash
-pac=$(checkupdates | wc -l)
-aur=$(cower -u | wc -l)
 
-check=$((pac + aur))
-if [[ "$check" != "0" ]]
-then
-    echo "$pac %{F#66FFFFFF}%{F-} $aur"
-fi
+echo "%{F-} $(checkupdates-aur | wc -l)"
