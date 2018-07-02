@@ -387,6 +387,7 @@ let g:airline#extensions#ale#enabled = 1
 " BetterComments {{{
 hi! def link TodoBetterComments Todo
 hi! def link ErrorBetterComments Error
+let g:bettercomments_skipped = ['html']
 " }}}
 " CtrlP {{{
  let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files -co --exclude-standard']
