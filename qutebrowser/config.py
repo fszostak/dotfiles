@@ -24,7 +24,6 @@ c.colors.tabs.selected.even.bg = "#2f343f"
 c.colors.tabs.selected.odd.bg = "#2f343f"
 c.completion.web_history_max_items = 1000
 c.confirm_quit = ["multiple-tabs"]
-c.content.developer_extras = True
 c.tabs.last_close = "close"
 c.tabs.title.format_pinned = ""
 c.tabs.title.format = "{title}"
