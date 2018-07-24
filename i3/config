@@ -18,9 +18,7 @@ set $right l
 set $mod Mod4
 # }}}
 # }}}
-
 # Keyboard and key bindings {{{
-
 # Brightness, Music and Volume (pamixer, playerctl, etc) {{{
 # Music keybindings
 bindsym XF86AudioPlay exec playerctl play-pause
@@ -37,7 +35,6 @@ bindsym XF86AudioMute exec pamixer -t
 bindsym XF86MonBrightnessUp exec xbacklight -inc 10 # increase screen brightness
 bindsym XF86MonBrightnessDown exec xbacklight -dec 10 # decrease screen brightness
 # }}}
-
 # Container Layouts {{{
 # enter fullscreen mode for the focused container
 bindsym $mod+f fullscreen toggle
@@ -48,7 +45,6 @@ bindsym $mod+w layout tabbed
 bindsym $mod+e layout toggle split
 # set layout default splith
 # }}}
-
 # Compton {{{
 # start and stop compton
 set $compton allow_rgb10_configs=false compton -b --config $HOME/.config/compton.conf --blur-kern 11x11gaussian 
@@ -56,7 +52,6 @@ exec --no-startup-id $compton
 bindsym $mod+control+shift+c exec killall compton
 bindsym $mod+control+c exec $compton
 # }}}
-
 # Configuration File commands {{{
 # reload the configuration file
 bindsym $mod+Shift+c reload
@@ -64,26 +59,22 @@ bindsym $mod+Shift+c reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $mod+Shift+r restart
 # }}}
-
 # Conky {{{
 # start and stop conky
 exec --no-startup-id conky
 bindsym $mod+control+shift+y exec killall conky
 bindsym $mod+control+y exec conky
 # }}}
-
 # Dmenu (rofi) {{{
 # start rofi as a dmenu replacement
 bindsym $mod+d exec rofi -show 
 bindsym $mod+Tab exec rofi -modi window -show 
 bindsym $mod+x exec rofi-pass
 # }}}
-
 # Drag Floats {{{
 # use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 # }}}
-
 # Exit, Lock and Suspend (xautolock, i3lock, etc) {{{
 # exit i3 (logs you out of your X session)
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -f hack -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
@@ -96,7 +87,6 @@ bindsym $mod+shift+BackSpace exec $HOME/.i3/i3lock.sh && sleep 0.1 && systemctl 
 # autolock 
 exec_always --no-startup-id xautolock -time 5 -locker $HOME/.i3/i3lock.sh -notify 30 -notifier "notify-send -t 3000 Warning 'Locking screen in 30 seconds'" -killtime 30 -killer "systemctl suspend"
 # }}}
-
 # Focus {{{
 # change focus
 bindsym $mod+$left focus left
@@ -131,7 +121,6 @@ bindsym $mod+a focus parent
 # focus the child container
 bindsym $mod+c focus child
 # }}}
-
 # Gaps control {{{
 # set $mode_gaps Gaps: (o) outer, (i) inner
 # set $mode_gaps_outer Outer Gaps: +|-|0 (local), Shift + +|-|0 (global)
@@ -170,7 +159,6 @@ bindsym $mod+c focus child
 #   bindsym Escape mode "default"
 # }
 # # }}}
-
 # Keyboard Layout {{{
 # shortcut to set keymap to abnt2 br
 bindsym $mod+Shift+b exec setxkbmap -model abnt2 -layout br -model abnt2
@@ -185,11 +173,9 @@ bindsym $mod+Shift+d exec setxkbmap -layout dvorak -option compose:ralt
 exec --no-startup-id setxkbmap --layout us -option compose:ralt
 
 # }}}
-
 # Kill Focused Window {{{
 bindsym $mod+Shift+q kill
 # }}}
-
 # Mouse cursor {{{
 #  (mod1 = alt)
 
@@ -230,7 +216,6 @@ bindsym $mod+mod1+shift+Return exec xdotool mouseup 1     # release left click
 bindsym $mod+mod1+k exec xdotool click --clearmodifiers 4 # wheel up
 bindsym $mod+mod1+j exec xdotool click --clearmodifiers 5 # wheel down
 # }}}
-
 # Pomodoro {{{
 # stop a pomodoro
 bindsym $mod+Shift+p exec rm ~/.pomodoro_session
@@ -242,7 +227,6 @@ bindsym $mod+control+shift+p exec echo "$((`cut .pomodoro_session -d ' ' -f 1`-5
 # start/reset a pomodoro
 bindsym $mod+p exec echo 25 5 > ~/.pomodoro_session
 # }}}
-
 # Scratchpad {{{
 # move the currently focused window to the scratchpad
 bindsym $mod+Shift+minus move scratchpad
@@ -251,12 +235,10 @@ bindsym $mod+Shift+minus move scratchpad
 # If there are multiple scratchpad windows, this command cycles through them.
 bindsym $mod+minus scratchpad show
 # }}}
-
 # Screenshots with scrot {{{
 # print active window (wait 1 secs)
 bindsym $mod+mod1+3 exec scrot -d1 -c -u -e 'mv $f ~/Pictures/scrot/' && notify-send scrot "Screenshot taken to ~/Pictures/scrot/"
 # }}}
-
 # Redshift {{{
 # start redshit in normal configuration
 bindsym $mod+t exec kill $(ps -A | grep 'redshift' | awk '{print $1}') && sleep 5 && redshift -c $HOME/.config/redshift.conf
@@ -264,7 +246,6 @@ bindsym $mod+t exec kill $(ps -A | grep 'redshift' | awk '{print $1}') && sleep 
 # start redshit in darker configuration
 bindsym $mod+shift+t exec kill $(ps -A | grep 'redshift' | awk '{print $1}') && sleep 5 && redshift -c $HOME/.config/redshift-darker.conf
 # }}}
-
 # Splits {{{
 # split in horizontal orientation
 bindsym $mod+control+b split h
@@ -272,32 +253,26 @@ bindsym $mod+control+b split h
 # split in vertical orientation
 bindsym $mod+control+v split v
 # }}}
-
 # Start a qutebrowser {{{
 bindsym $mod+shift+Return exec qutebrowser
 # }}}
-
 # Start a Terminal {{{
 bindsym $mod+Return exec kitty
 # bindsym $mod+Return exec termite
 # }}}
-
 # Touchpad {{{
 # no touchpad while typing
 bindsym $mod+control+t exec syndaemon -i 1
 bindsym $mod+control+shift+t exec killall syndaemon
 # }}}
 # }}}
-
 # Applications {{{
 # Bar (polybar) {{{
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 # }}}
-
 # Calcurse {{{
 exec --no-startup-id calcurse --daemon
 # }}}
-
 # Notifications (dunst) {{{
 # disable bell
 exec xset -b
@@ -305,27 +280,22 @@ exec xset -b
 # start notification application
 exec_always --no-startup-id dunst
 # }}}
-
 # Redshift {{{
 # start redshit
 exec --no-startup-id redshift -c $HOME/.config/redshift.conf
 # }}}
-
 # xbanish (hide cursor while typing) {{{
 exec --no-startup-id xbanish
 # }}}
-
 # Wallpaper (feh) {{{
 # set wallpaper
 exec_always --no-startup-id feh --bg-scale $HOME/.wallpaper.jpg
 # }}}
 # }}}
-
 # General UI {{{
 # Borders {{{
 for_window [class="^.*"] border pixel 2
 # }}}
-
 # Resize window (you can also use the mouse for that) {{{
 mode "resize" {
   # These bindings trigger as soon as you enter the resize mode
@@ -353,12 +323,10 @@ mode "resize" {
 # resize
 bindsym $mod+r mode "resize"
 # }}}
-
 # Gaps {{{
 # gaps outer 2
 # gaps inner 4
 # }}}       
-
 # Colors {{{
 set $inactive      #2F343F
 set $focused       #B45BCF
@@ -371,13 +339,11 @@ client.unfocused        $inactive $inactive $text-inactive $inactive $inactive
 client.focused_inactive $inactive $inactive $text-inactive $inactive $inactive
 client.urgent           $inactive $inactive $text          $inactive $inactive
 # }}}
-
 # Disable all window and float borders {{{
 new_window none
 new_float none
 # }}}
 # }}}
-
 # Workspaces {{{
 # create variables {{{
 set $w1 1
@@ -391,7 +357,6 @@ set $w8 8
 set $w9 9
 set $w10 10
 # }}}
-
 # switch to workspace {{{
 bindsym $mod+1 workspace $w1
 bindsym $mod+2 workspace $w2
@@ -404,7 +369,6 @@ bindsym $mod+8 workspace $w8
 bindsym $mod+9 workspace $w9
 bindsym $mod+0 workspace $w10
 # }}}
-
 # move focused container to workspace {{{
 bindsym $mod+Shift+1 move container to workspace $w1
 bindsym $mod+Shift+2 move container to workspace $w2
@@ -417,7 +381,6 @@ bindsym $mod+Shift+8 move container to workspace $w8
 bindsym $mod+Shift+9 move container to workspace $w9
 bindsym $mod+Shift+0 move container to workspace $w10
 # }}}
-
 # assign clients to workspaces{{{
 assign [class="Chromium"] $w3
 assign [class="cool-retro-term"] $w1
@@ -435,12 +398,10 @@ assign [class="URxvt"] $w1
 assign [title="(?i)rambox"] $w8
 assign [title="(?i)spotify"] $w10
 # }}}
-
 # assign all other clients to default workspace {{{
 assign [class="$"] $w7
 # }}}
 # }}}
-
 # Window layouts {{{
 # toggle tiling / floating
 bindsym $mod+Shift+space floating toggle
