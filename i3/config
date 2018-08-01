@@ -241,10 +241,10 @@ bindsym $mod+mod1+3 exec scrot -d1 -c -u -e 'mv $f ~/Pictures/scrot/' && notify-
 # }}}
 # Redshift {{{
 # start redshit in normal configuration
-bindsym $mod+t exec kill $(ps -A | grep 'redshift' | awk '{print $1}') && sleep 5 && redshift -c $HOME/.config/redshift.conf
+bindsym $mod+t exec kill $(ps -A | grep 'redshift' | awk '{print $1}') || true && sleep 5 && redshift -c $HOME/.config/redshift.conf
 
 # start redshit in darker configuration
-bindsym $mod+shift+t exec kill $(ps -A | grep 'redshift' | awk '{print $1}') && sleep 5 && redshift -c $HOME/.config/redshift-darker.conf
+bindsym $mod+shift+t exec kill $(ps -A | grep 'redshift' | awk '{print $1}') || true && sleep 5 && redshift -c $HOME/.config/redshift-darker.conf
 # }}}
 # Splits {{{
 # split in horizontal orientation
