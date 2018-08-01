@@ -61,6 +61,11 @@ Plug 'dracula/vim'
 call plug#end()
 " }}}
 " }}}
+" Autocompletion (default) {{{
+set complete=.,b,u,]               " In the above example it will pull from keywords in the current file, other buffers (closed or still open), and from the current tags file
+set wildmode=longest,list:longest  " Read https://robots.thoughtbot.com/vim-you-complete-me
+set completeopt=menu,preview       " Default menu
+"}}}
 " Misc {{{
 " Buffers {{{
 set hidden
