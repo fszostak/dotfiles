@@ -11,34 +11,29 @@ Plug 'SirVer/ultisnips'
 Plug 'airblade/vim-gitgutter'
 Plug 'Yggdroot/indentLine'
 Plug 'flazz/vim-colorschemes'
-Plug 'w0rp/ale'
-Plug 'tpope/vim-commentary'
-Plug 'tpope/vim-repeat'
-Plug 'tpope/vim-sensible'
-Plug 'vim-airline/vim-airline'
-Plug 'tpope/vim-fugitive'
-Plug 'vim-airline/vim-airline-themes'
-Plug 'junegunn/vim-emoji'
-Plug 'fholgado/minibufexpl.vim'
-Plug 'sjl/gundo.vim'
-Plug 'kshenoy/vim-signature'
-Plug 'jbgutierrez/vim-better-comments'
+Plug 'w0rp/ale'                          " Linter engine
+Plug 'tpope/vim-commentary'              " Comments shortcuts
+Plug 'tpope/vim-sensible'                " Initial vimrc configs that everyone agree on
+Plug 'vim-airline/vim-airline'           " Airline
+Plug 'vim-airline/vim-airline-themes'    " Airline themes
+Plug 'junegunn/vim-emoji'                " Support for emoji
+Plug 'fholgado/minibufexpl.vim'          " Buffer explorer
+Plug 'sjl/gundo.vim'                     " Undo tree
+Plug 'jbgutierrez/vim-better-comments'   " Better comments UI
 " }}}
 " tmux UX {{{
 Plug 'edkolev/tmuxline.vim'
 " }}}
 " Completion {{{
-Plug 'Valloric/YouCompleteMe' " Follow installation instructions in github
-Plug 'honza/vim-snippets'
-Plug 'mattn/emmet-vim'
-Plug 'jiangmiao/auto-pairs'
-Plug 'tpope/vim-surround'
-Plug 'tpope/vim-unimpaired'
-Plug 'tpope/vim-vinegar'
-Plug 'joegesualdo/jsdoc.vim'
+Plug 'Valloric/YouCompleteMe' " Autocompletion feature. Follow installation instructions in github
+Plug 'honza/vim-snippets'     " Snippets for multiple languages
+Plug 'mattn/emmet-vim'        " Emmet
+Plug 'jiangmiao/auto-pairs'   " Auto pairs
+Plug 'tpope/vim-surround'     " Shortcuts to change brackets, quotes, etc in pairs
+Plug 'tpope/vim-unimpaired'   " I use this one only for the {/} + space shortcut
 Plug 'heavenshell/vim-jsdoc'
-Plug 'vim-scripts/repmo.vim' " Repeat motion for which a count was given
-Plug 'ctrlpvim/ctrlp.vim'
+Plug 'vim-scripts/repmo.vim'  " Repeat motion for which a count was given
+Plug 'ctrlpvim/ctrlp.vim'     " Ctrl+p
 " }}}
 " Dependencies support {{{
 Plug 'editorconfig/editorconfig-vim'
@@ -55,7 +50,6 @@ Plug 'suan/vim-instant-markdown'
 Plug 'lepture/vim-jinja'
 Plug 'ledger/vim-ledger'
 Plug 'xuhdev/vim-latex-live-preview'
-" Plug 'moll/vim-node'
 Plug 'mitermayer/vim-prettier', {
   \ 'do': 'yarn install',
   \ 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql'] }
