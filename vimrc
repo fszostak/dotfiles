@@ -189,6 +189,9 @@ au BufNewFile,BufRead *.mjs set filetype=javascript
 " Emoji autocomplete {{{
 set completefunc=emoji#complete
 " }}}
+" Syntaxes for unknown file extensions {{{
+autocmd BufNewFile,BufRead *.php set syntax=php
+" }}}
 " }}}
 " UX {{{
 " General {{{
