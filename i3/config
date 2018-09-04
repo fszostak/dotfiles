@@ -329,7 +329,7 @@ gaps inner 6
 # }}}       
 # Colors {{{
 set $inactive      #2F343F
-set $focused       #B45BCF
+set $focused       #4D4D4D
 set $text          #F8F8F8
 set $text-inactive #4D4D4D
 
