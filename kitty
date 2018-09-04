@@ -166,7 +166,7 @@ foreground       #F8F8F1
 
 # The background color
 background       #282A36
-background_opacity 0.95
+background_opacity 1
 
 # The foreground for selections
 # selection_foreground #F8F8F1
