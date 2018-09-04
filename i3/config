@@ -61,7 +61,7 @@ bindsym $mod+Shift+r restart
 # }}}
 # Conky {{{
 # start and stop conky
-exec --no-startup-id conky
+# exec --no-startup-id conky
 bindsym $mod+control+shift+y exec killall conky
 bindsym $mod+control+y exec conky
 # }}}
