@@ -324,8 +324,8 @@ mode "resize" {
 bindsym $mod+r mode "resize"
 # }}}
 # Gaps {{{
-# gaps outer 2
-# gaps inner 4
+gaps outer 4
+gaps inner 6
 # }}}       
 # Colors {{{
 set $inactive      #2F343F
