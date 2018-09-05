@@ -6,7 +6,6 @@
 # Font {{{
 font pango:hack 8
 # }}}
-
 # Variables {{{
 # use these keys for focus, movement, and resize directions when reaching for
 # the arrows is not convenient
@@ -382,18 +381,18 @@ bindsym $mod+Shift+9 move container to workspace $w9
 bindsym $mod+Shift+0 move container to workspace $w10
 # }}}
 # assign clients to workspaces{{{
-assign [class="Chromium"] $w3
+assign [class="Chromium"] $w4
 assign [class="cool-retro-term"] $w1
-assign [class="Evince"] $w1
-assign [class="Firefox"] $w4
 assign [class="Dwarf_Fortress"] $w6
+assign [class="Evince"] $w1
+assign [class="Firefox"] $w3
+assign [class="kitty"] $w1
 assign [class="Minecraft"] $w6
 assign [class="Postman"] $w5
 assign [class="qutebrowser"] $w2
 assign [class="Slack"] $w9
 assign [class="(?s)team"] $w6
 assign [class="Termite"] $w1
-assign [class="kitty"] $w1
 assign [class="URxvt"] $w1
 assign [title="(?i)rambox"] $w8
 assign [title="(?i)spotify"] $w10
