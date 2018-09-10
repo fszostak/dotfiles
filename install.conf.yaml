@@ -12,7 +12,7 @@
     ~/.config/compton.conf: compton.conf
     ~/.config/conky/conky.conf: conky/conky.conf
     ~/.config/dunst/dunstrc: dunstrc
-    ~/.config/gtk-3.0/gtk.css: gtk.css
+    # ~/.config/gtk-3.0/gtk.css: gtk.css
     ~/.config/htop/htoprc: htoprc
     ~/.keychain.sh:
     ~/.config/kitty/kitty.conf: kitty
@@ -31,21 +31,21 @@
     ~/.config/redshift.conf: redshift/redshift.conf
     ~/.config/redshift-darker.conf: redshift/redshift-darker.conf
     ~/.config/redshift/hooks/brightness.sh: redshift/brightness.sh
-    ~/.config/rtv/rtv.cfg: rtv
+    # ~/.config/rtv/rtv.cfg: rtv
     ~/.config/surfraw/conf: surfraw
-    ~/.config/termite/config: termite.conf
+    # ~/.config/termite/config: termite.conf
     ~/.gitconfig:
     ~/.gnupg/gpg-agent.conf: gpg-agent.conf
     ~/.i3/config: i3/config
     ~/.i3/i3lock.sh: i3/i3lock.sh
     ~/.ledgerrc:
-    ~/.mutt/account.com.gmail.tonietto: mutt/account.com.gmail.tonietto
-    ~/.mutt/account.net.kinghost.montacasa.gustavo.tonietto: mutt/account.net.kinghost.montacasa.gustavo.tonietto
-    ~/.mutt/com.gmail.tonietto: mutt/com.gmail.tonietto
-    ~/.mutt/net.kinghost.montacasa.gustavo.tonietto: mutt/net.kinghost.montacasa.gustavo.tonietto
-    ~/.muttrc: mutt/muttrc
+    # ~/.mutt/account.com.gmail.tonietto: mutt/account.com.gmail.tonietto
+    # ~/.mutt/account.net.kinghost.montacasa.gustavo.tonietto: mutt/account.net.kinghost.montacasa.gustavo.tonietto
+    # ~/.mutt/com.gmail.tonietto: mutt/com.gmail.tonietto
+    # ~/.mutt/net.kinghost.montacasa.gustavo.tonietto: mutt/net.kinghost.montacasa.gustavo.tonietto
+    # ~/.muttrc: mutt/muttrc
     ~/.newsboat/config: newsboat
-    ~/.rainbow_config.json:
+    # ~/.rainbow_config.json:
     ~/.Rprofile:
     ~/.taskrc:
     ~/.tigrc:
@@ -59,7 +59,7 @@
 - shell:
   - [git submodule update --init --recursive, Installing submodules]
   - [ranger --copy-config=scope, Configurating ranger]
-  - [sudo cp ~/dotfiles/gnome-shell-theme.gresource /usr/share/gnome-shell, Configuring GDM theme]
+  # - [sudo cp ~/dotfiles/gnome-shell-theme.gresource /usr/share/gnome-shell, Configuring GDM theme]
   - command: echo Note
     description: --> Edit and copy the file bars.sh under polybar/ directory to ~/.config/polybar/, or polybar will not work!
   # Configure before uncommenting
