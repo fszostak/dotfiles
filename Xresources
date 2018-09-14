@@ -126,7 +126,7 @@ rofi.font:                           hack 16
 ! "Padding" Set from: Default
 rofi.padding:                        500
 ! "Terminal to use" Set from: File
-rofi.terminal:                       termite
+rofi.terminal:                       kitty
 ! "Row height (in chars)" Set from: Default
 rofi.eh:                             2
 ! "Hide scroll-bar" Set from: Default
