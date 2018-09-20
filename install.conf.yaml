@@ -12,9 +12,7 @@
     ~/.config/compton.conf: compton.conf
     ~/.config/conky/conky.conf: conky/conky.conf
     ~/.config/dunst/dunstrc: dunstrc
-    # ~/.config/gtk-3.0/gtk.css: gtk.css
     ~/.config/htop/htoprc: htoprc
-    ~/.keychain.sh:
     ~/.config/kitty/kitty.conf: kitty
     ~/.config/neofetch/config.conf: neofetch.conf
     ~/.config/polybar/config: polybar/polybar.conf
@@ -33,19 +31,13 @@
     ~/.config/redshift/hooks/brightness.sh: redshift/brightness.sh
     ~/.config/rofi-pass/config: rofi-pass.conf
     ~/.config/surfraw/conf: surfraw
-    # ~/.config/termite/config: termite.conf
     ~/.gitconfig:
     ~/.gnupg/gpg-agent.conf: gpg-agent.conf
     ~/.i3/config: i3/config
     ~/.i3/i3lock.sh: i3/i3lock.sh
+    ~/.keychain.sh:
     ~/.ledgerrc:
-    # ~/.mutt/account.com.gmail.tonietto: mutt/account.com.gmail.tonietto
-    # ~/.mutt/account.net.kinghost.montacasa.gustavo.tonietto: mutt/account.net.kinghost.montacasa.gustavo.tonietto
-    # ~/.mutt/com.gmail.tonietto: mutt/com.gmail.tonietto
-    # ~/.mutt/net.kinghost.montacasa.gustavo.tonietto: mutt/net.kinghost.montacasa.gustavo.tonietto
-    # ~/.muttrc: mutt/muttrc
     ~/.newsboat/config: newsboat
-    # ~/.rainbow_config.json:
     ~/.Rprofile:
     ~/.taskrc:
     ~/.tigrc:
