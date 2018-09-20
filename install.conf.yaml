@@ -31,7 +31,7 @@
     ~/.config/redshift.conf: redshift/redshift.conf
     ~/.config/redshift-darker.conf: redshift/redshift-darker.conf
     ~/.config/redshift/hooks/brightness.sh: redshift/brightness.sh
-    # ~/.config/rtv/rtv.cfg: rtv
+    ~/.config/rofi-pass/config: rofi-pass.conf
     ~/.config/surfraw/conf: surfraw
     # ~/.config/termite/config: termite.conf
     ~/.gitconfig:
