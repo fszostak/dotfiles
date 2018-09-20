@@ -399,9 +399,10 @@ assign [class="Termite"] $w1
 assign [class="URxvt"] $w1
 assign [title="(?i)rambox"] $w8
 assign [title="(?i)spotify"] $w10
+assign [class="gcr-prompter"] $w10
 # }}}
 # assign all other clients to default workspace {{{
-assign [class="$"] $w7
+assign [class="^(?!Gcr-prompter)"] $w7
 # }}}
 # }}}
 # Window layouts {{{
