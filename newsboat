@@ -37,3 +37,7 @@ macro p set browser "dmenuhandler"; open-in-browser ; set browser qutebrowser
 # c copies the link to the clipboard.
 # The line below is probably the skiddiest line I've ever written.
 macro c set browser "copy(){ echo $1 | xclip ;}; copy "; open-in-browser ; set browser qutebrowser
+
+download-path "~/Downloads/%h/%n"
+max-downloads 3
+player "mpv"
