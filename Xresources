@@ -60,7 +60,7 @@ URxvt.clipboard.pastecmd:       xsel -ob
 URxvt.keysym.F11:		perl:fullscreen:switch
 
 
-URxvt.url-select.launcher:      qutebrowser
+URxvt.url-select.launcher:      firefox
 URxvt.url-select.underline:     true
 
 URxvt.keysym.M-u:               perl:url-select:select_next

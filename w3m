@@ -61,7 +61,7 @@ use_lessopen 0
 bgextviewer 1
 extbrowser3 
 extbrowser2 
-extbrowser /usr/bin/qutebrowser
+extbrowser /usr/bin/firefox
 mailer 
 mailto_options 1
 editor /usr/bin/vim

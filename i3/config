@@ -254,9 +254,6 @@ bindsym $mod+control+b split h
 # split in vertical orientation
 bindsym $mod+control+v split v
 # }}}
-# Start a qutebrowser {{{
-bindsym $mod+shift+Return exec qutebrowser
-# }}}
 # Start a Terminal {{{
 bindsym $mod+Return exec kitty
 # bindsym $mod+Return exec termite
@@ -384,11 +381,11 @@ bindsym $mod+Shift+9 move container to workspace $w9
 bindsym $mod+Shift+0 move container to workspace $w10
 # }}}
 # assign clients to workspaces{{{
-assign [class="Chromium"] $w4
+assign [class="Chromium"] $w3
 assign [class="cool-retro-term"] $w1
 assign [class="Dwarf_Fortress"] $w6
 assign [class="Evince"] $w1
-assign [class="Firefox"] $w3
+assign [class="Firefox"] $w2
 assign [class="kitty"] $w1
 assign [class="Minecraft"] $w6
 assign [class="Postman"] $w5
