@@ -390,11 +390,11 @@ assign [class="kitty"] $w1
 assign [class="Minecraft"] $w6
 assign [class="Postman"] $w5
 assign [class="qutebrowser"] $w2
-assign [class="Slack"] $w9
+assign [class="Slack"] $w8
 assign [class="(?s)team"] $w6
 assign [class="Termite"] $w1
 assign [class="URxvt"] $w1
-assign [title="(?i)rambox"] $w8
+assign [title="(?i)rambox"] $w9
 assign [title="(?i)spotify"] $w10
 assign [class="gcr-prompter"] $w10
 # }}}
