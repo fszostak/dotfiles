@@ -7,7 +7,7 @@ bold_font Fira Code Bold
 italic_font Fira Code Italic
 bold_italic_font Fira Code Italic Bold
 
-font_size 12.0
+font_size 9
 
 # You can get a list of full family names available on your computer by running
 # kitty list-fonts
