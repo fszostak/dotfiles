@@ -19,6 +19,7 @@
     ~/.config/polybar/launch.sh: polybar/launch.sh
     ~/.config/polybar/mpris.sh: polybar/mpris.sh
     ~/.config/polybar/pkg.sh: polybar/pkg.sh
+    ~/.config/polybar/player-cmus.sh: polybar/player-cmus.sh
     ~/.config/polybar/redshift.sh: polybar/redshift.sh
     ~/.config/qutebrowser/config.py: qutebrowser/config.py
     ~/.config/qutebrowser/keys.conf: qutebrowser/keys.conf
