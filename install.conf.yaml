@@ -36,6 +36,7 @@
     ~/.gnupg/gpg-agent.conf: gpg-agent.conf
     ~/.i3/config: i3/config
     ~/.i3/i3lock.sh: i3/i3lock.sh
+    ~/.vim/syntax/todos.vim: todos.vim
     ~/.keychain.sh:
     ~/.ledgerrc:
     ~/.newsboat/config: newsboat
