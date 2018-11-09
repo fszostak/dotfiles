@@ -308,9 +308,11 @@ nnoremap fms :set foldmethod=syntax<CR>
 nnoremap fmm :set foldmethod=manual<CR>
 " }}}
 " Macros {{{
+let @d="A @done j"
+let @h="I[Hotfix] "
+let @l="A @cancelled j"
 let @r="3j0wy$3kP"
 let @s="I[Ship] "
-let @h="I[Hotfix] "
 let @t="I:rocket: "
 " }}}
 " Ranger {{{
