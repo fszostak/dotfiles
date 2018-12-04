@@ -1,0 +1,84 @@
+show-git-status() {
+  if [ ! -d .git ]; then
+      echo $fg[red]".git not found!"
+  else
+    #STATUS=$(git status --short )
+    UPSTREAM=${1:-'@{u}'}
+    LOCAL=$(git rev-parse @)
+    REMOTE=$(git rev-parse "$UPSTREAM")
+    BASE=$(git merge-base @ "$UPSTREAM")
+
+    if [ $LOCAL = $REMOTE ]; then
+	printf "\033[90m%s\033[0m\n" "Up-to-date"
+    elif [ $LOCAL = $BASE ]; then
+	printf "\033[36m%s\033[0m\n" "⭭ Need to pull"
+    elif [ $REMOTE = $BASE ]; then
+	printf "\033[90m%s\033[0m\n" "⇡ Need to push"
+    else
+	printf "\033[36m%s\033[0m\n" "Diverged"
+    fi
+    #printf "\033[90m%s\033[0m\n" $STATUS
+  fi
+}
+
+show-version() {
+  if [ ! -f package.json ]; then
+      echo $fg[red]"package.json not found!"
+  else
+    PACKAGE_VERSION=$(cat package.json \
+    | grep version \
+    | head -1 \
+    | awk -F: '{ print $2 }' \
+    | sed 's/[",]//g' \
+    | tr -d '[[:space:]]')
+
+    PACKAGE_NAME=$(cat package.json \
+    | grep name \
+    | head -1 \
+    | awk -F: '{ print $2 }' \
+    | sed 's/[",]//g' \
+    | tr -d '[[:space:]]')
+
+    printf "\033[36m%s\033[0m \033[90m%s\033[0m\n" $PACKAGE_NAME "$PACKAGE_VERSION"
+  fi
+}
+
+show-node() {
+  if [ ! -f package.json ]; then
+      echo $fg[red]"package.json not found!"
+  else
+    PACKAGE_VERSION=$(cat package.json \
+    | grep node \
+    | head -1 \
+    | awk -F: '{ print $2 }' \
+    | sed 's/[",]//g' \
+    | tr -d '[[:space:]]')
+
+    echo ${PACKAGE_VERSION} | grep --quiet "node"
+
+    if [ $? = 1 ]
+    then
+      printf "\033[36m%s\033[0m \033[90m%s\033[0m\n" "node" "$PACKAGE_VERSION ($(node --version))"
+    fi
+  fi
+}
+
+chpwd () {
+  local PKG
+  local GIT
+
+  PKG=$PWD/package.json
+  if [ -f "$PKG" ] && [ "$NODE_LAST_DIR" != "$PWD" ]; then
+    show-version
+    show-node
+    NODE_LAST_DIR=$PWD
+  fi
+
+  GIT=$PWD/.git
+  if [ -d "$GIT" ] && [ "$GIT_LAST_DIR" != "$PWD" ]; then
+    show-git-status 2>& /dev/null
+    GIT_LAST_DIR=$PWD
+  fi
+}
+
+# vim:syntax=zsh

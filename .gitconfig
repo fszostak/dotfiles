@@ -1,0 +1,17 @@
+[user]
+	email = tonietto@gmail.com
+	name = Gustavo Tonietto
+[push]
+	default = simple
+[core]
+	editor = vim
+[merge]
+	tool = vimdiff
+	conflictstyle = diff3
+[mergetool]
+	prompt = false
+[help]
+	autocorrect = -1
+[alias]
+	pushup = push --set-upstream origin
+	c = commit

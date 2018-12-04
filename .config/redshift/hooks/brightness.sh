@@ -1,0 +1,1 @@
+/home/gustavo/code/tonietto/dotfiles/redshift/brightness.sh

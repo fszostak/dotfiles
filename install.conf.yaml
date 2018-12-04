@@ -6,55 +6,83 @@
       relink: true
 
 - link:
-    ~/.bashrc:
-    ~/code/.tern-project: tern-project.js
-    ~/.config/cava/config: cava
-    ~/.config/compton.conf: compton.conf
-    ~/.config/conky/conky.conf: conky/conky.conf
-    ~/.config/dunst/dunstrc: dunstrc
-    ~/.config/htop/htoprc: htoprc
-    ~/.config/kitty/kitty.conf: kitty
-    ~/.config/neofetch/config.conf: neofetch.conf
-    ~/.config/polybar/config: polybar/polybar.conf
-    ~/.config/polybar/launch.sh: polybar/launch.sh
-    ~/.config/polybar/mpris.sh: polybar/mpris.sh
-    ~/.config/polybar/pkg.sh: polybar/pkg.sh
-    ~/.config/polybar/player-cmus.sh: polybar/player-cmus.sh
-    ~/.config/polybar/redshift.sh: polybar/redshift.sh
-    ~/.config/qutebrowser/config.py: qutebrowser/config.py
-    ~/.config/qutebrowser/keys.conf: qutebrowser/keys.conf
-    ~/.config/qutebrowser/qutebrowser.conf: qutebrowser/qutebrowser.conf
-    ~/.config/ranger/rc.conf: ranger/rc.conf
-    ~/.config/ranger/rifle.conf: ranger/rifle.conf
-    ~/.config/ranger/scope.sh: ranger/scope.sh
-    ~/.config/redshift.conf: redshift/redshift.conf
-    ~/.config/redshift-darker.conf: redshift/redshift-darker.conf
-    ~/.config/redshift/hooks/brightness.sh: redshift/brightness.sh
-    ~/.config/rofi-pass/config: rofi-pass.conf
-    ~/.config/surfraw/conf: surfraw
-    ~/.gitconfig:
-    ~/.gnupg/gpg-agent.conf: gpg-agent.conf
-    ~/.i3/config: i3/config
-    ~/.i3/i3lock.sh: i3/i3lock.sh
-    ~/.vim/syntax/todos.vim: todos.vim
-    ~/.keychain.sh:
-    ~/.ledgerrc:
-    ~/.newsboat/config: newsboat
-    ~/.Rprofile:
-    ~/.taskrc:
-    ~/.tigrc:
-    ~/.tmux.conf:
-    ~/.vimrc:
-    ~/.wallpaper.jpg:
-    ~/.w3m/config: w3m
-    ~/.Xresources:
-    ~/.zshrc:
+    ~/.aliases: .aliases
+    # ~/.profile: .bash_profile
+    ~/.bashrc: .bashrc
+    ~/.chpwd: .chpwd
+    ~/.config: .config
+    ~/.emoji: .emoji
+    ~/.fzf.zsh: .fzf.zsh
+    ~/.gitconfig: .gitconfig
+    ~/.git-flow-completion.zsh: .git-flow-completion.zsh
+    ~/.gtkrc-2.0: .gtkrc-2.0
+    ~/.icons: .icons
+    ~/.inputrc: .inputrc
+    ~/.k: .k
+    ~/.key_directories: .key_directories
+    ~/.key_files: .key_files
+    ~/.lazynvm: .lazynvm
+    ~/.ledgerrc: .ledgerrc
+    ~/.profile: .profile
+    ~/.Renviron: .Renviron
+    ~/.Rprofile: .Rprofile
+    ~/.scripts: .scripts
+    ~/.tigrc: .tigrc
+    ~/.tmux.conf: .tmux.conf
+    ~/.urlview: .urlview
+    ~/.vim: .vim
+    ~/.vimrc: .vimrc
+    ~/.Xdefaults: .Xdefaults
+    ~/.xinitrc: .xinitrc
+    # ~/.profile: .xprofile
+    # ~/.profile: .zprofile
+    ~/.zsh-autosuggestions.zsh: .zsh-autosuggestions.zsh
+    ~/.zshrc: .zshrc
+    ~/.zshrc.local: .zshrc.local
+    ~/.zshrc.pre: .zshrc.pre
+    ~/.zsh-syntax-highlighting: .zsh-syntax-highlighting
+    # ~/.bashrc:
+    # ~/code/.tern-project: tern-project.js <-------------------------------------
+    # ~/.config/cava/config: cava
+    # ~/.config/compton.conf: compton.conf
+    # ~/.config/conky/conky.conf: conky/conky.conf
+    # ~/.config/dunst/dunstrc: dunstrc
+    # ~/.config/htop/htoprc: htoprc
+    # ~/.config/kitty/kitty.conf: kitty
+    # ~/.config/neofetch/config.conf: neofetch.conf
+    # ~/.config/polybar/config: polybar/polybar.conf
+    # ~/.config/polybar/launch.sh: polybar/launch.sh
+    # ~/.config/polybar/mpris.sh: polybar/mpris.sh
+    # ~/.config/polybar/pkg.sh: polybar/pkg.sh
+    # ~/.config/polybar/player-cmus.sh: polybar/player-cmus.sh
+    # ~/.config/polybar/redshift.sh: polybar/redshift.sh
+    # ~/.config/qutebrowser/config.py: qutebrowser/config.py
+    # ~/.config/qutebrowser/keys.conf: qutebrowser/keys.conf
+    # ~/.config/qutebrowser/qutebrowser.conf: qutebrowser/qutebrowser.conf
+    # ~/.config/ranger/rc.conf: ranger/rc.conf
+    # ~/.config/ranger/rifle.conf: ranger/rifle.conf
+    # ~/.config/ranger/scope.sh: ranger/scope.sh
+    # ~/.config/redshift.conf: redshift/redshift.conf
+    # ~/.config/redshift-darker.conf: redshift/redshift-darker.conf
+    # ~/.config/redshift/hooks/brightness.sh: redshift/brightness.sh
+    # ~/.config/rofi-pass/config: rofi-pass.conf
+    # ~/.config/surfraw/conf: surfraw
+    # ~/.gitconfig:
+    # ~/.gnupg/gpg-agent.conf: gpg-agent.conf <---------------------------------------------
+    # ~/.i3/config: i3/config
+    # ~/.i3/i3lock.sh: i3/i3lock.sh
+    # ~/.vim/syntax/todos.vim: todos.vim
+    ~/.keychain.sh: .keychain.sh
+    # ~/.ledgerrc:
+    # ~/.newsboat/config: newsboat
+    # ~/.Rprofile:
+    # ~/.taskrc:
+    # ~/.tigrc:
+    # ~/.vimrc:
+    # ~/.wallpaper.jpg:
+    # ~/.w3m/config: w3m
+    # ~/.Xresources:
+    # ~/.zshrc:
 
 - shell:
   - [git submodule update --init --recursive, Installing submodules]
-  - [ranger --copy-config=scope, Configurating ranger]
-  # - [sudo cp ~/dotfiles/gnome-shell-theme.gresource /usr/share/gnome-shell, Configuring GDM theme]
-  - command: echo Note
-    description: --> Edit and copy the file bars.sh under polybar/ directory to ~/.config/polybar/, or polybar will not work!
-  # Configure before uncommenting
-  # - [sudo cp ~/dotfiles/keychain.sh ~/.keychain.sh, Copying .keychain.sh]

@@ -1,0 +1,141 @@
+# Keychain {{{
+alias ssh='kiss && ssh'
+alias rsync='kiss && rsync'
+# }}}
+# System Maintainence {{{
+alias mw="~/.config/mutt/mutt-wizard.sh"
+alias muttwizard="~/.config/mutt/mutt-wizard.sh"
+alias sdn="sudo shutdown now"
+alias psref="gpg-connect-agent RELOADAGENT /bye" # Refresh gpg
+# }}}
+# Some aliases {{{
+alias p="sudo pacman"
+alias SS="sudo systemctl"
+alias v="vim"
+alias sv="sudo vim"
+alias r="ranger"
+alias sr="sudo ranger"
+alias ka="killall"
+alias g="git"
+alias trem="transmission-remote"
+alias mkd="mkdir -pv"
+alias ref="shortcuts.sh && source ~/.bashrc" # Refresh shortcuts manually and reload bashrc
+alias bw="wal -i ~/.config/wall.png" # Rerun pywal
+alias pi="bash ~/.larbs/wizard/wizard.sh"
+function gi() { curl -L -s https://www.gitignore.io/api/$@ ; } # gitignore.io
+# }}}
+# Adding color {{{
+alias ls='ls -hN --color=auto --group-directories-first'
+alias grep="grep --color=auto" # Color grep - highlight desired sequence.
+alias ccat="highlight --out-format=ansi" # Color cat - print file with syntax highlighting.
+# }}}
+# Internet {{{
+alias yt="youtube-dl --add-metadata -ic" # Download video link
+alias yta="yt -x -f bestaudio/best" # Download only audio
+alias YT="youtube-viewer"
+alias ethspeed="speedometer -r enp0s25"
+alias wifispeed="speedometer -r wlp3s0"
+alias starwars="telnet towel.blinkenlights.nl"
+# }}}
+# TeX {{{
+alias Txa="cp ~/Documents/LaTeX/article.tex"
+alias Txs="cp ~/Documents/LaTeX/beamer.tex"
+alias Txh="cp ~/Documents/LaTeX/handout.tex"
+# }}}
+
+# Dotfiles {{{
+gdots() {
+  APPS=(~/.calcurse ~/ledger ~/.newsboat ~/notes ~/.tmuxinator);
+  for APP in $APPS; do
+  echo "git $*"ing $APP.. && \
+  git -C $APP "$*" || notify-send gdots "$APP had an error"
+  ; done ;
+  echo "git $*"ing pass.. && \
+  pass git "$*" || notify-send gdots "$APP had an error"
+  echo Done!
+}
+#}}}
+# Docker aliases {{{
+alias dcomp="docker-compose"
+alias dcu="docker-compose up"
+alias dcud="docker-compose up -d"
+alias dclf="docker-compose logs -f"
+function dsul() { docker-compose stop $* && docker-compose up -d $* && docker-compose logs -f --tail 300 $* }
+#}}}
+# Fun {{{
+alias neo='clear && neofetch --config ~/.config/neofetch/config.conf'
+alias alohaine="fortune | cowsay | lolcat"
+alias aloha="clear && figlet ALOHA! | lolcat"
+#}}}
+# Git {{{
+alias gcb='git checkout master'
+alias gcd='git checkout dev'
+alias glo='git checkout master && git pull origin master && git checkout dev && git pull origin dev'
+alias gcb='git checkout -b'
+alias gco='git checkout'
+alias gst='git status --short'
+alias gST='git status'
+alias ga='git add'
+alias gp='git push'
+alias gl='git pull'
+alias gc='git commit'
+alias gc!='git commit --amend'
+alias gd='git diff'
+alias gb='git branch'
+alias gbd='git branch -d'
+alias gbD='git branch -D'
+alias gm='git merge --no-ff'
+alias gM='git merge'
+#}}}
+# Git Flow {{{
+alias gfli='git flow init'
+alias gflhs='git flow hotfix start'
+alias gflhf='git flow hotfix finish'
+alias gflrs='git flow release start'
+alias gflrf='git flow release finish'
+alias gflfs='git flow feature start'
+alias gflff='git flow feature finish'
+# gflbs() { git checkout -b bugfix/$1 }
+#}}}
+# Navigation {{{
+alias c='clear'
+alias cb='xclip -selection clipboard'
+alias cl='cd ~/.calcurse && c && figlet CALENDAR | lolcat && echo ----------------- && echo Today is $(date +%m/%d/%y) && echo ----------------- && echo "" && calcurse -r3 && notify-send "Appointments for today" "$(calcurse -r1)"'
+alias cs='clear && show-version'
+alias ds='du -h ./ | sort -rh | head -n 1' # show this directory size
+#}}}
+# Notes {{{
+n() { $EDITOR ~/notes/"$*" }
+nls() { ls -c ~/notes/ | grep "$*" }
+ntree() { tree --noreport ~/notes/ }
+nsearch() { tree --noreport -P "*$**" ~/notes/ }
+nr() { ranger ~/notes/ }
+ngit() { git -C ~/notes/ "$*" }
+
+compdef '_path_files -W ~/notes && return 0 || return 1' n
+#}}}
+# Shortcuts {{{
+alias ra='ranger'
+alias R='R --quiet'
+alias showip="ipconfig getifaddr en0"
+alias ts='tasks'
+alias vat='vimcat'
+alias pue='pass unlock && exit'
+alias pul='pass unlock && encfs -i 60 ~/.ledger ~/ledger'
+alias pu='pass unlock'
+alias S='show-version && show-node && show-git-status 2&> /dev/null'
+#}}}
+# Suspend and exit {{{
+alias suspend='xset dpms force off' # Ubuntu specific
+alias bye="clear && figlet BYE! | lolcat && revolver -s arrow2 start && sleep 5 && exit"
+#}}}
+# Tmux/tmuxinator {{{
+alias ta='tmux attach -t'
+alias tnew='tmux new -s'
+alias tls='tmux ls'
+alias tkill='tmux kill-session -t'
+alias tlay='tmux-layout'
+alias mux='tmuxinator'
+#}}}
+
+# vim:foldmethod=marker:foldlevel=0:syntax=zsh

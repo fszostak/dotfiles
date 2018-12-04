@@ -1,0 +1,34 @@
+# You can add comments to these files with #
+# home dirs
+h	~/
+cc	~/code
+d	~/Documents
+D	~/Downloads
+ld	~/ledger
+m	~/Music
+nt      ~/notes
+pp	~/Pictures
+vv	~/Videos
+cf	~/.config
+sc	~/.scripts
+
+# code dirs
+M	~/code/montacasa
+ma      ~/code/montacasa/adapter-front
+mc      ~/code/montacasa/crawler-php
+md	~/code/montacasa/mc-dev
+me	~/code/montacasa/elasticsearch
+me      ~/code/montacasa/envoyer
+mf	~/code/montacasa/montacasa-front
+mg	~/code/montacasa/graphql
+mhf	~/code/montacasa/hub-front/
+mx      ~/code/montacasa/nginx
+mp	~/code/montacasa/montacasa-products
+ms      ~/code/montacasa/sitemap-generator/
+T	~/code/tonietto
+td	~/code/tonietto/dotfiles
+tv	~/code/tonietto/voidrice
+
+# root dirs
+mn	/mnt
+e	/etc

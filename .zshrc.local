@@ -1,0 +1,71 @@
+#          _
+#  _______| |__  _ __ ___
+# |_  / __| '_ \| '__/ __|
+#  / /\__ \ | | | | | (__
+# /___|___/_| |_|_|  \___|
+#
+
+# Load zsh plugins
+[[ -e ~/.zsh-syntax-highlighting/zsh-syntax-highlighting.plugin.zsh ]] && source ~/.zsh-syntax-highlighting/zsh-syntax-highlighting.plugin.zsh
+[[ -e ~/.git-flow-completion.zsh ]] && source ~/.git-flow-completion.zsh
+[[ -e ~/.zsh-autosuggestions.zsh  ]] && source ~/.zsh-autosuggestions.zsh
+[[ -e ~/.k  ]] && source ~/.k
+
+# Load custom files
+[[ -e ~/.shortcuts  ]] && source ~/.shortcuts
+[[ -e ~/.aliases  ]] && source ~/.aliases
+[[ -e ~/.lazynvm  ]] && source ~/.lazynvm
+[[ -e ~/.chpwd  ]] && source ~/.chpwd
+
+# Customize prompt
+grml_theme_add_token shortpath '%B%(2~|%1~|%~)%b '
+grml_theme_add_token arrow '➔ '
+grml_theme_add_token space ' '
+autoload -U colors && colors
+zstyle ':vcs_info:*' enable git
+zstyle ':vcs_info:*' check-for-changes true
+zstyle ':vcs_info:*' unstagedstr '!'
+zstyle ':vcs_info:*' stagedstr '+'
+zstyle ':vcs_info:git*' formats "%{${fg[cyan]}%}[%{${fg[blue]}%}%b%{${fg[yellow]}%}%m%u%c%{${fg[cyan]}%}]%{$reset_color%}"
+zstyle ':prompt:grml:left:setup' items arrow change-root rc shortpath vcs space percent
+
+
+# User configuration
+export PATH="/home/gustavo/.gem/ruby/2.5.0/bin:/usr/local/heroku/bin:/Library/Frameworks/Python.framework/Versions/3.4/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/bin:/usr/games:`yarn global bin`"
+
+# nodengine and show-version
+cd () { builtin cd "$@" && chpwd; }
+pushd () { builtin pushd "$@" && chpwd; }
+popd () { builtin popd "$@" && chpwd; }
+
+# fix term variable type not accepted in ssh servers
+export TERM=xterm-256color
+
+# keychain
+function kiss(){
+  source ~/.keychain.sh
+}
+
+# vi controls in command line
+set -o vi
+set noerrorbells
+set showmatch
+set matchtime=8
+set tabstop=2
+set shiftwidth=2
+set nowrapscan
+set ignorecase
+set autoindent
+set cindent
+
+bindkey -M vicmd v edit-command-line
+
+# fasd
+eval "$(fasd --init auto)"
+
+# Setting fd as the default source for fzf
+export FZF_DEFAULT_COMMAND='(git ls-tree -r --name-only HEAD || fd --type f --follow --exclude .git,node_modules)'
+export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
+
+# fzf
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

@@ -1,0 +1,82 @@
+command=/usr/lib/i3blocks/$BLOCK_NAME
+separator_block_width=15
+markup=pango
+
+[window title]
+command=xdotool getactivewindow getwindowname
+interval=5
+
+#[news]
+#command=cat ~/.newsup
+#interval=once
+#signal=6
+
+#[record]
+#command=cat ~/.recordingicon
+#interval=once
+#signal=9
+
+[mpd]
+command=i3mpd
+interval=5
+signal=11
+
+[pymodoro]
+command=/usr/bin/pymodoro-i3blocks --daemon
+interval=persist
+format=json
+
+#[pacman]
+#label=📦
+#command=i3pacman
+#interval=once
+#signal=8
+
+#[torrents]
+#command=i3torrent
+#interval=20
+#signal=7
+
+[docker]
+command=~/.scripts/statusbar/i3docker
+label=🐳
+color=#0db7ed
+interval=10
+
+[weather]
+command=i3weather
+interval=3600
+
+#[mail]
+#label=📬
+#command=i3mail
+#interval=180
+#signal=12
+
+[volume]
+interval=once
+command=i3volume
+signal=10
+
+[battery]
+command=i3battery BAT1
+interval=5
+
+[battery]
+command=i3battery BAT0
+interval=5
+
+#[memory]
+#command=i3memory
+#interval=30
+
+[time]
+label=📅
+command=i3date
+interval=30
+
+[internet]
+command=i3internet
+interval=10
+
+# vim:syntax=conf
