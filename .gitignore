@@ -1,4 +1,13 @@
 /.vim/plugged/*
+/.vim/plugged/
+/.vim/swap/
+/.vim/swap/*
+/.vim/undo/
+/.vim/undo/*
+/.vim/backup/
+/.vim/backup/*
+
+/.config/configstore
 
 # Created by https://www.gitignore.io/api/vim,linux
 # Edit at https://www.gitignore.io/?templates=vim,linux
