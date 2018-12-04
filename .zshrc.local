@@ -20,14 +20,13 @@
 # Customize prompt
 grml_theme_add_token shortpath '%B%(2~|%1~|%~)%b '
 grml_theme_add_token arrow '➔ '
-grml_theme_add_token space ' '
 autoload -U colors && colors
 zstyle ':vcs_info:*' enable git
 zstyle ':vcs_info:*' check-for-changes true
 zstyle ':vcs_info:*' unstagedstr '!'
 zstyle ':vcs_info:*' stagedstr '+'
 zstyle ':vcs_info:git*' formats "%{${fg[cyan]}%}[%{${fg[blue]}%}%b%{${fg[yellow]}%}%m%u%c%{${fg[cyan]}%}]%{$reset_color%}"
-zstyle ':prompt:grml:left:setup' items arrow change-root rc shortpath vcs space percent
+zstyle ':prompt:grml:left:setup' items arrow change-root rc shortpath vcs percent
 
 
 # User configuration
