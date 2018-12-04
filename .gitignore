@@ -8,6 +8,7 @@
 /.vim/backup/*
 
 /.config/configstore
+/.config/yarn
 
 # Created by https://www.gitignore.io/api/vim,linux
 # Edit at https://www.gitignore.io/?templates=vim,linux
