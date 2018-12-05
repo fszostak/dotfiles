@@ -180,17 +180,11 @@ call plug#end()
 " Navigating with guides
 	" inoremap <Tab><Tab> <Esc>/<++><Enter>"_c4l
 	" vnoremap <Tab><Tab> <Esc>/<++><Enter>"_c4l
-	" map <Space><Tab> <Esc>/<++><Enter>"_c4l
+	" map <Tab><Tab> <Esc>/<++><Enter>"_c4l
+" }}}
 
-" TODO: analise:
- "____        _                  _
-"/ ___| _ __ (_)_ __  _ __   ___| |_ ___
-"\___ \| '_ \| | '_ \| '_ \ / _ \ __/ __|
- "___) | | | | | |_) | |_) |  __/ |_\__ \
-"|____/|_| |_|_| .__/| .__/ \___|\__|___/
-              "|_|   |_|
-
-"""LATEX
+" Snippets {{{
+"""LATEX {{{
 	" Word count:
 	autocmd FileType tex map <F3> :w !detex \| wc -w<CR>
 	autocmd FileType tex inoremap <F3> <Esc>:w !detex \| wc -w<CR>
@@ -233,8 +227,8 @@ call plug#end()
 	autocmd FileType tex inoremap ,nu $\varnothing$
 	autocmd FileType tex inoremap ,col \begin{columns}[T]<Enter>\begin{column}{.5\textwidth}<Enter><Enter>\end{column}<Enter>\begin{column}{.5\textwidth}<Enter><++><Enter>\end{column}<Enter>\end{columns}<Esc>5kA
 	autocmd FileType tex inoremap ,rn (\ref{})<++><Esc>F}i
-
-"""HTML
+" }}}
+"""HTML {{{
 	autocmd FileType html inoremap ,b <b></b><Space><++><Esc>FbT>i
 	autocmd FileType html inoremap ,it <em></em><Space><++><Esc>FeT>i
 	autocmd FileType html inoremap ,1 <h1></h1><Enter><Enter><++><Esc>2kf<i
@@ -278,14 +272,13 @@ call plug#end()
 	autocmd FileType html inoremap ì &igrave;
 	autocmd FileType html inoremap ò &ograve;
 	autocmd FileType html inoremap ù &ugrave;
-
-
-""".bib
+" }}}
+""".bib {{{
 	autocmd FileType bib inoremap ,a @article{<Enter><tab>author<Space>=<Space>"<++>",<Enter><tab>year<Space>=<Space>"<++>",<Enter><tab>title<Space>=<Space>"<++>",<Enter><tab>journal<Space>=<Space>"<++>",<Enter><tab>volume<Space>=<Space>"<++>",<Enter><tab>pages<Space>=<Space>"<++>",<Enter><tab>}<Enter><++><Esc>8kA,<Esc>i
 	autocmd FileType bib inoremap ,b @book{<Enter><tab>author<Space>=<Space>"<++>",<Enter><tab>year<Space>=<Space>"<++>",<Enter><tab>title<Space>=<Space>"<++>",<Enter><tab>publisher<Space>=<Space>"<++>",<Enter><tab>}<Enter><++><Esc>6kA,<Esc>i
 	autocmd FileType bib inoremap ,c @incollection{<Enter><tab>author<Space>=<Space>"<++>",<Enter><tab>title<Space>=<Space>"<++>",<Enter><tab>booktitle<Space>=<Space>"<++>",<Enter><tab>editor<Space>=<Space>"<++>",<Enter><tab>year<Space>=<Space>"<++>",<Enter><tab>publisher<Space>=<Space>"<++>",<Enter><tab>}<Enter><++><Esc>8kA,<Esc>i
-
-"MARKDOWN
+" }}}
+"MARKDOWN {{{
 	autocmd Filetype markdown,rmd map <leader>w yiWi[<esc>Ea](<esc>pa)
 	autocmd Filetype markdown,rmd inoremap ,n ---<Enter><Enter>
 	autocmd Filetype markdown,rmd inoremap ,b ****<++><Esc>F*hi
@@ -301,10 +294,11 @@ call plug#end()
 	autocmd Filetype rmd inoremap ,r ```{r}<CR>```<CR><CR><esc>2kO
 	autocmd Filetype rmd inoremap ,p ```{python}<CR>```<CR><CR><esc>2kO
 	autocmd Filetype rmd inoremap ,c ```<cr>```<cr><cr><esc>2kO
-
-""".xml
+" }}}
+""".xml {{{
 	autocmd FileType xml inoremap ,e <item><Enter><title><++></title><Enter><guid<space>isPermaLink="false"><++></guid><Enter><pubDate><Esc>:put<Space>=strftime('%a, %d %b %Y %H:%M:%S %z')<Enter>kJA</pubDate><Enter><link><++></link><Enter><description><![CDATA[<++>]]></description><Enter></item><Esc>?<title><enter>cit
 	autocmd FileType xml inoremap ,a <a href="<++>"><++></a><++><Esc>F"ci"
+" }}}
 
 vmap <expr> ++ VMATH_YankAndAnalyse()
 nmap ++ vip++
@@ -315,7 +309,7 @@ vnoremap L >gv
 vnoremap H <gv
 
 map <enter><enter> yi[:e <c-r>"<cr>
-"}}}
+" }}}
 
 " MISC {{{
 " Buffers
