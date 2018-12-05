@@ -7,10 +7,19 @@
 /.vim/backup/
 /.vim/backup/*
 
+/.config/autostart
+/.config/autostart/*
 /.config/configstore
-/.config/yarn
+/.config/dconf
+/.config/dconf/*
+/.config/mpd/state
 /.config/Rambox
 /.config/Rambox/*
+/.config/yarn
+/.config/yarn
+/.config/yarn
+/.config/yay
+/.config/yay/*
 
 # Created by https://www.gitignore.io/api/vim,linux
 # Edit at https://www.gitignore.io/?templates=vim,linux
