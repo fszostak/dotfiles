@@ -16,8 +16,8 @@ syn match todoGroup	/^>.\+:/ contains=todoContext
 syn match todoImportant	/^!.\+:/ contains=todoContext
 syn match todoListItem	/^.*\s\\_\(\(\s\|([^)]*)\).*\)\?$/ contains=todoContext,todoComment
 syn match todoContext	/\s\zs@[^ \t(]\+\(([^)]*)\)\?/
-syn match todoDone	  /^.*\s@done\(\(\s\|([^)]*)\).*\)\?$/ contains=todoProject,todoComment
-syn match todoCancelled  /^.*\s@cancelled\(\(\s\|([^)]*)\).*\)\?$/ contains=todoProject,todoComment
+syn match todoDone	  /^.*\s!done\(\(\s\|([^)]*)\).*\)\?$/ contains=todoProject,todoComment,todoContext
+syn match todoCancelled  /^.*\s!cancelled\(\(\s\|([^)]*)\).*\)\?$/ contains=todoProject,todoComment,todoContext
 
 syn sync fromstart
 
