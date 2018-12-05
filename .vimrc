@@ -31,7 +31,8 @@ Plug 'jbgutierrez/vim-better-comments'   " Better comments UI (coloes)
 Plug 'edkolev/tmuxline.vim'
 " }}}
 " Completion {{{
-" Plug 'Valloric/YouCompleteMe' " Autocompletion feature. Follow installation instructions in github
+Plug 'SirVer/ultisnips'
+Plug 'Valloric/YouCompleteMe' " Autocompletion feature. Follow installation instructions in github
 " Plug 'honza/vim-snippets'     " Snippets for multiple languages TODO: remove
 " Plug 'mattn/emmet-vim'        " Emmet TODO: remove
 Plug 'jiangmiao/auto-pairs'   " Auto pairs
@@ -693,8 +694,18 @@ let g:UltiSnipsExpandTrigger="<c-j>"
 let g:UltiSnipsEditSplit="vertical"
 " }}}
 " YouCompleteMe {{{
-" let g:ycm_complete_in_comments = 1                          " Use ycm in comments
-" let g:ycm_collect_identifiers_from_comments_and_strings = 1 " Get words from comments and strings
+" YouCompleteMe and UltiSnips compatibility, with the helper of supertab
+" (via http://stackoverflow.com/a/22253548/1626737)
+let g:SuperTabDefaultCompletionType    = '<C-n>'
+let g:SuperTabCrMapping                = 0
+let g:UltiSnipsExpandTrigger           = '<tab>'
+let g:UltiSnipsJumpForwardTrigger      = '<tab>'
+let g:UltiSnipsJumpBackwardTrigger     = '<s-tab>'
+let g:ycm_key_list_select_completion   = ['<C-j>', '<C-n>', '<Down>']
+let g:ycm_key_list_previous_completion = ['<C-k>', '<C-p>', '<Up>']
+
+let g:ycm_complete_in_comments = 1                          " Use ycm in comments
+let g:ycm_collect_identifiers_from_comments_and_strings = 1 " Get words from comments and strings
 " }}}
 " }}}
 
