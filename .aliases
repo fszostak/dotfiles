@@ -62,11 +62,6 @@ alias dcud="docker-compose up -d"
 alias dclf="docker-compose logs -f"
 function dsul() { docker-compose stop $* && docker-compose up -d $* && docker-compose logs -f --tail 300 $* }
 #}}}
-# Fun {{{
-alias neo='clear && neofetch --config ~/.config/neofetch/config.conf'
-alias alohaine="fortune | cowsay | lolcat"
-alias aloha="clear && figlet ALOHA! | lolcat"
-#}}}
 # Git {{{
 alias gcb='git checkout master'
 alias gcd='git checkout dev'
