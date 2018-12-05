@@ -9,8 +9,8 @@
     ~/.aliases: .aliases
     ~/.bashrc: .bashrc
     ~/.chpwd: .chpwd
-    ~/code/.tern-project: tern-project.js
-    ~/.config: .config
+    ~/code/jsconfig.json: jsconfig.json
+    ~/.confi: .config
     ~/.emoji: .emoji
     ~/.fzf.zsh: .fzf.zsh
     ~/.gitconfig: .gitconfig
@@ -26,8 +26,6 @@
     ~/.ledgerrc: .ledgerrc
     ~/.profile: .bash_profile
     ~/.profile: .profile
-    ~/.profile: .xprofile
-    ~/.profile: .zprofile
     ~/.Renviron: .Renviron
     ~/.Rprofile: .Rprofile
     ~/.scripts: .scripts
@@ -46,3 +44,4 @@
 
 - shell:
   - [git submodule update --init --recursive, Installing submodules]
+  - [echo "install vim plugins and exec cd ~/.vim/plugged/YouCompleteMe && ./install --ts-completer"]
