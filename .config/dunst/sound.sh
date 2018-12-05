@@ -1,3 +1,3 @@
 #!/bin/sh -e
 
-play -q ~/.config/dunst/open-ended.ogg
+play -v .7 -q ~/.config/dunst/open-ended.ogg
