@@ -2,6 +2,12 @@ GRML_DISPLAY_BATTERY=1
 HISTSIZE=100000
 MAILCHECK=0
 
-EDITOR='vim'
-BROWSER='firefox'
-PAGER='less'
+export PATH="$(du $HOME/.scripts/ | cut -f2 | tr '\n' ':')$PATH"
+export EDITOR="vim"
+export TERMINAL="kitty"
+export BROWSER="linkhandler"
+export TRUEBROWSER="firefox"
+export PAGER="less"
+export READER="zathura"
+export BIB="$HOME/Documents/LaTeX/uni.bib"
+export REFER="$HOME/.referbib"
