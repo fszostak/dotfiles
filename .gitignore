@@ -21,6 +21,8 @@
 /.config/yay
 /.config/yay/*
 
+/.keychain.sh
+
 # Created by https://www.gitignore.io/api/vim,linux
 # Edit at https://www.gitignore.io/?templates=vim,linux
 
