@@ -24,10 +24,10 @@
     ~/.k: .k
     ~/.lazynvm: .lazynvm
     ~/.ledgerrc: .ledgerrc
-    # ~/.profile: .bash_profile
+    ~/.profile: .bash_profile
     ~/.profile: .profile
-    # ~/.profile: .xprofile
-    # ~/.profile: .zprofile
+    ~/.profile: .xprofile
+    ~/.profile: .zprofile
     ~/.Renviron: .Renviron
     ~/.Rprofile: .Rprofile
     ~/.scripts: .scripts
