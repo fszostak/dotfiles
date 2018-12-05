@@ -9,6 +9,8 @@
 
 /.config/configstore
 /.config/yarn
+/.config/Rambox
+/.config/Rambox/*
 
 # Created by https://www.gitignore.io/api/vim,linux
 # Edit at https://www.gitignore.io/?templates=vim,linux
