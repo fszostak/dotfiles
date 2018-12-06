@@ -15,7 +15,6 @@ Plug 'jreybert/vimagit'
 " Plug 'dylanaraps/wal.vim'
 "}}}
 " Vim UX {{{
-" Plug 'SirVer/ultisnips'                " TODO: remove
 Plug 'airblade/vim-gitgutter'            " git-gutter
 Plug 'Yggdroot/indentLine'               " indent-line
 Plug 'flazz/vim-colorschemes'            " for powerline and dracula
