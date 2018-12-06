@@ -10,7 +10,7 @@
     ~/.bashrc: .bashrc
     ~/.chpwd: .chpwd
     ~/code/jsconfig.json: jsconfig.json
-    ~/.confi: .config
+    ~/.config: .config
     ~/.emoji: .emoji
     ~/.fzf.zsh: .fzf.zsh
     ~/.gitconfig: .gitconfig
