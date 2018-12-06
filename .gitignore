@@ -18,6 +18,8 @@
 /.config/yarn
 /.config/yarn
 /.config/yarn
+/.config/pulse
+/.config/pulse/*
 /.config/yay
 /.config/yay/*
 
