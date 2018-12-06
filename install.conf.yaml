@@ -44,4 +44,4 @@
 
 - shell:
   - [git submodule update --init --recursive, Installing submodules]
-  - [echo "install vim plugins and exec cd ~/.vim/plugged/YouCompleteMe && ./install --ts-completer"]
+  - [echo "install vim plugins and exec cd ~/.vim/plugged/YouCompleteMe && ./install.py --ts-completer"]
