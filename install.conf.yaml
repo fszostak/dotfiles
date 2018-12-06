@@ -14,6 +14,7 @@
     ~/.emoji: .emoji
     ~/.fzf.zsh: .fzf.zsh
     ~/.gitconfig: .gitconfig
+    ~/.docker-completion.zsh: .docker-completion.zsh
     ~/.git-flow-completion.zsh: .git-flow-completion.zsh
     ~/.gtkrc-2.0: .gtkrc-2.0
     ~/.icons: .icons

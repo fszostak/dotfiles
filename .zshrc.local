@@ -7,6 +7,7 @@
 
 # Load zsh plugins
 [[ -e ~/.zsh-syntax-highlighting/zsh-syntax-highlighting.plugin.zsh ]] && source ~/.zsh-syntax-highlighting/zsh-syntax-highlighting.plugin.zsh
+[[ -e ~/.docker-completion.zsh ]] && source ~/.docker-completion.zsh
 [[ -e ~/.git-flow-completion.zsh ]] && source ~/.git-flow-completion.zsh
 [[ -e ~/.zsh-autosuggestions.zsh  ]] && source ~/.zsh-autosuggestions.zsh
 [[ -e ~/.k  ]] && source ~/.k
