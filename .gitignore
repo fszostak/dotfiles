@@ -12,14 +12,22 @@
 /.config/configstore
 /.config/dconf
 /.config/dconf/*
+/.config/mpd/database
+/.config/mpd/log
+/.config/mpd/pid
 /.config/mpd/state
+/.config/mpd/sticker.sql
+/.config/mps-youtube/
+/.config/mps-youtube/*
+/.config/Postman/
+/.config/Postman/*
+/.config/pulse
+/.config/pulse/*
 /.config/Rambox
 /.config/Rambox/*
 /.config/yarn
 /.config/yarn
 /.config/yarn
-/.config/pulse
-/.config/pulse/*
 /.config/yay
 /.config/yay/*
 
