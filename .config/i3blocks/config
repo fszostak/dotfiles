@@ -6,10 +6,10 @@ markup=pango
 command=xdotool getactivewindow getwindowname
 interval=5
 
-#[news]
-#command=cat ~/.newsup
-#interval=once
-#signal=6
+[news]
+command=cat ~/.newsup
+interval=once
+signal=6
 
 #[record]
 #command=cat ~/.recordingicon
@@ -26,16 +26,16 @@ command=/usr/bin/pymodoro-i3blocks --daemon
 interval=persist
 format=json
 
-#[pacman]
-#label=📦
-#command=i3pacman
-#interval=once
-#signal=8
+[pacman]
+label=📦
+command=i3pacman
+interval=once
+signal=8
 
-#[torrents]
-#command=i3torrent
-#interval=20
-#signal=7
+[torrents]
+command=i3torrent
+interval=20
+signal=7
 
 [docker]
 command=~/.scripts/statusbar/i3docker
@@ -66,12 +66,11 @@ interval=5
 command=i3battery BAT0
 interval=5
 
-#[memory]
-#command=i3memory
-#interval=30
+[memory]
+command=i3memory
+interval=30
 
 [time]
-label=📅
 command=i3date
 interval=30
 
