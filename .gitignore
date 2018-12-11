@@ -13,13 +13,17 @@
 /.config/dconf
 /.config/dconf/*
 /.config/mpd/state
-/.config/Rambox
-/.config/Rambox/*
-/.config/yarn
-/.config/yarn
-/.config/yarn
 /.config/pulse
 /.config/pulse/*
+/.config/Rambox
+/.config/Rambox/*
+/.config/ranger/plugins/__pycache__/*
+/.config/ranger/plugins/__pycache__/*
+/.config/ranger/__pycache__/*
+/.config/user-dirs.dirs
+/.config/yarn
+/.config/yarn
+/.config/yarn
 /.config/yay
 /.config/yay/*
 
