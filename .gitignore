@@ -1,3 +1,4 @@
+# .vim
 /.vim/plugged/*
 /.vim/plugged/
 /.vim/swap/
@@ -7,18 +8,28 @@
 /.vim/backup/
 /.vim/backup/*
 
+# .config
 /.config/autostart
 /.config/autostart/*
 /.config/configstore
 /.config/dconf
 /.config/dconf/*
+/.config/mpd/database
+/.config/mpd/log
+/.config/mpd/pid
 /.config/mpd/state
+/.config/mpd/sticker.sql
+/.config/mps-youtube/
+/.config/mps-youtube/*
+/.config/Postman/
+/.config/Postman/*
 /.config/pulse
 /.config/pulse/*
 /.config/Rambox
 /.config/Rambox/*
+/.config/ranger/plugins/__pycache__/
 /.config/ranger/plugins/__pycache__/*
-/.config/ranger/plugins/__pycache__/*
+/.config/ranger/__pycache__/
 /.config/ranger/__pycache__/*
 /.config/user-dirs.dirs
 /.config/yarn

@@ -10,10 +10,11 @@
     ~/.bashrc: .bashrc
     ~/.chpwd: .chpwd
     ~/code/jsconfig.json: jsconfig.json
-    ~/.confi: .config
+    ~/.config: .config
     ~/.emoji: .emoji
     ~/.fzf.zsh: .fzf.zsh
     ~/.gitconfig: .gitconfig
+    ~/.docker-completion.zsh: .docker-completion.zsh
     ~/.git-flow-completion.zsh: .git-flow-completion.zsh
     ~/.gtkrc-2.0: .gtkrc-2.0
     ~/.icons: .icons

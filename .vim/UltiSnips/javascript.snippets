@@ -148,7 +148,7 @@ endsnippet
 
 # tests
 
-snippet des "describe('...', () => { ...  });" b
+snippet describe "describe('...', () => { ...  });" b
 describe('${1}', () => {
 	${0:${VISUAL}}
 });
@@ -160,11 +160,11 @@ it('should ${1}', () => {
 });
 endsnippet
 
-snippet exp "expect() assertion" b
+snippet expect "expect() assertion" b
 expect(${1})${2}.to${3}(${0:${VISUAL}});
 endsnippet
 
-snippet ass "assert() assertion" b
+snippet assert "assert() assertion" b
 assert.${1}(${2}, ${0:${VISUAL}});
 endsnippet
 

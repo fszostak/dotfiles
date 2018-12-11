@@ -36,7 +36,7 @@ Plug 'Valloric/YouCompleteMe' " Autocompletion feature. Follow installation inst
 " Plug 'mattn/emmet-vim'        " Emmet TODO: remove
 Plug 'jiangmiao/auto-pairs'   " Auto pairs
 Plug 'tpope/vim-surround'     " Shortcuts to change brackets, quotes, etc in pairs
-" Plug 'tpope/vim-unimpaired'   " I use this one only for the {/} + space shortcut
+Plug 'tpope/vim-unimpaired'   " I use this one only for the {/} + space shortcut
 Plug 'heavenshell/vim-jsdoc'  " jsdoc
 Plug 'ctrlpvim/ctrlp.vim'     " Ctrl+p
 " }}}

@@ -7,6 +7,7 @@
 
 # Load zsh plugins
 [[ -e ~/.zsh-syntax-highlighting/zsh-syntax-highlighting.plugin.zsh ]] && source ~/.zsh-syntax-highlighting/zsh-syntax-highlighting.plugin.zsh
+[[ -e ~/.docker-completion.zsh ]] && source ~/.docker-completion.zsh
 [[ -e ~/.git-flow-completion.zsh ]] && source ~/.git-flow-completion.zsh
 [[ -e ~/.zsh-autosuggestions.zsh  ]] && source ~/.zsh-autosuggestions.zsh
 [[ -e ~/.k  ]] && source ~/.k
@@ -18,14 +19,14 @@
 [[ -e ~/.chpwd  ]] && source ~/.chpwd
 
 # Customize prompt
-grml_theme_add_token shortpath '%B%(2~|%1~|%~)%b '
-grml_theme_add_token arrow '➔ '
 autoload -U colors && colors
 zstyle ':vcs_info:*' enable git
 zstyle ':vcs_info:*' check-for-changes true
 zstyle ':vcs_info:*' unstagedstr '!'
 zstyle ':vcs_info:*' stagedstr '+'
 zstyle ':vcs_info:git*' formats "%{${fg[cyan]}%}[%{${fg[blue]}%}%b%{${fg[yellow]}%}%m%u%c%{${fg[cyan]}%}]%{$reset_color%}"
+grml_theme_add_token shortpath '%B%(2~|%1~|%~)%b '
+grml_theme_add_token arrow '➔ '
 zstyle ':prompt:grml:left:setup' items arrow change-root rc shortpath vcs percent
 
 
