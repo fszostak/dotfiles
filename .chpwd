@@ -1,7 +1,5 @@
 show-git-status() {
-  if [ ! -d .git ]; then
-      echo $fg[red]".git not found!"
-  else
+  if [ -d .git ]; then
     #STATUS=$(git status --short )
     UPSTREAM=${1:-'@{u}'}
     LOCAL=$(git rev-parse @)
@@ -22,9 +20,7 @@ show-git-status() {
 }
 
 show-version() {
-  if [ ! -f package.json ]; then
-      echo $fg[red]"package.json not found!"
-  else
+  if [ -f package.json ]; then
     PACKAGE_VERSION=$(cat package.json \
     | grep version \
     | head -1 \
@@ -44,9 +40,7 @@ show-version() {
 }
 
 show-node() {
-  if [ ! -f package.json ]; then
-      echo $fg[red]"package.json not found!"
-  else
+  if [ -f package.json ]; then
     PACKAGE_VERSION=$(cat package.json \
     | grep node \
     | head -1 \
