@@ -11,9 +11,13 @@
 # .config
 /.config/autostart
 /.config/autostart/*
+/.config/chromium/
+/.config/chromium/*
 /.config/configstore
 /.config/dconf
 /.config/dconf/*
+/.config/menus/
+/.config/menus/*
 /.config/mpd/database
 /.config/mpd/log
 /.config/mpd/pid
@@ -37,6 +41,7 @@
 /.config/yarn
 /.config/yay
 /.config/yay/*
+
 
 /.keychain.sh
 
