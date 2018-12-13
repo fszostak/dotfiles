@@ -23,7 +23,6 @@
     ~/.key_directories: .key_directories
     ~/.key_files: .key_files
     ~/.k: .k
-    ~/.lazynvm: .lazynvm
     ~/.ledgerrc: .ledgerrc
     ~/.profile: .bash_profile
     ~/.profile: .profile
