@@ -15,7 +15,6 @@
 # Load custom files
 [[ -e ~/.shortcuts  ]] && source ~/.shortcuts
 [[ -e ~/.aliases  ]] && source ~/.aliases
-[[ -e ~/.lazynvm  ]] && source ~/.lazynvm
 [[ -e ~/.chpwd  ]] && source ~/.chpwd
 
 # Customize prompt
