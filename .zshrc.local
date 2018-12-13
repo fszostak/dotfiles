@@ -10,7 +10,6 @@
 [[ -e ~/.docker-completion.zsh ]] && source ~/.docker-completion.zsh
 [[ -e ~/.git-flow-completion.zsh ]] && source ~/.git-flow-completion.zsh
 [[ -e ~/.zsh-autosuggestions.zsh  ]] && source ~/.zsh-autosuggestions.zsh
-[[ -e ~/.k  ]] && source ~/.k
 
 # Load custom files
 [[ -e ~/.shortcuts  ]] && source ~/.shortcuts

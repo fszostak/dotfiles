@@ -22,7 +22,6 @@
     ~/.keychain.sh: .keychain.sh
     ~/.key_directories: .key_directories
     ~/.key_files: .key_files
-    ~/.k: .k
     ~/.ledgerrc: .ledgerrc
     ~/.profile: .bash_profile
     ~/.profile: .profile

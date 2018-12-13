@@ -110,7 +110,6 @@ ngit() { git -C ~/notes/ "$*" }
 compdef '_path_files -W ~/notes && return 0 || return 1' n
 #}}}
 # Shortcuts {{{
-alias k='k -h'
 alias l='ledger'
 alias ra='ranger'
 alias R='R --quiet'
