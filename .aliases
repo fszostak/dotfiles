@@ -111,6 +111,8 @@ compdef '_path_files -W ~/notes && return 0 || return 1' n
 #}}}
 # Shortcuts {{{
 alias l='ledger'
+alias lr='ledger r'
+alias lb='ledger b'
 alias ra='ranger'
 alias R='R --quiet'
 alias showip="ipconfig getifaddr en0"
