@@ -1,6 +1,7 @@
 {
   "compilerOptions": {
     "checkJs": true,
-    "lib": ["es6"]
+    "lib": ["es6"],
+    "jsx": "react"
   }
 }
