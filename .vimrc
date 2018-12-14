@@ -155,9 +155,9 @@ call plug#end()
 	:noremap ,, :w<Home>silent <End> !urlscan<CR>
 
 " Goyo plugin makes text more readable when writing prose:
-	map <F10> :Goyo<CR>
-	map <leader>f :Goyo \| set linebreak<CR>
-	inoremap <F10> <esc>:Goyo<CR>a
+	map <F10> :Goyo \| set wrap!<CR>
+	map <leader>f :Goyo \| set linebreak \| set wrap!<CR>
+	inoremap <F10> <esc>:Goyo \| set nowrap<CR>a
 
 " Enable Goyo by default for mutt writting
 	" Goyo's width will be the line limit in mutt.
@@ -717,5 +717,10 @@ set path+=**
 
 " Display all matching files when we tab complete
 set wildmenu
+
+highlight SpellBad      ctermfg=Red         term=Reverse        guisp=Red gui=undercurl   ctermbg=Black
+highlight SpellCap      ctermfg=Green       term=Reverse        guisp=Green gui=undercurl   ctermbg=Black
+highlight SpellLocal    ctermfg=Cyan        term=Underline      guisp=Cyan gui=undercurl   ctermbg=Black
+highlight SpellRare     ctermfg=Magenta     term=underline      guisp=Magenta gui=undercurl   ctermbg=Black
 
 " vim:foldmethod=marker:foldlevel=0
