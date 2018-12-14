@@ -45,7 +45,7 @@ alias Txh="cp ~/Documents/LaTeX/handout.tex"
 
 # Dotfiles {{{
 gdots() {
-  APPS=(~/.calcurse ~/ledger ~/.newsboat ~/notes ~/.tmuxinator);
+  APPS=(~/.calcurse ~/ledger ~/.newsboat ~/notes ~/.tmuxinator ~/code/dotfiles);
   for APP in $APPS; do
   echo "git $*"ing $APP.. && \
   git -C $APP "$*" || notify-send gdots "$APP had an error"
