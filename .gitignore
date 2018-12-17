@@ -16,6 +16,8 @@
 /.config/configstore
 /.config/dconf
 /.config/dconf/*
+/.config/gtk-2.0/
+/.config/gtk-2.0/*
 /.config/menus/
 /.config/menus/*
 /.config/mpd/database
@@ -41,7 +43,6 @@
 /.config/yarn
 /.config/yay
 /.config/yay/*
-
 
 /.keychain.sh
 
