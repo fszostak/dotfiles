@@ -5,6 +5,9 @@
 # /___|___/_| |_|_|  \___|
 #
 
+# nvm
+source /usr/share/nvm/init-nvm.sh
+
 # Load zsh plugins
 [[ -e ~/.zsh-syntax-highlighting/zsh-syntax-highlighting.plugin.zsh ]] && source ~/.zsh-syntax-highlighting/zsh-syntax-highlighting.plugin.zsh
 [[ -e ~/.docker-completion.zsh ]] && source ~/.docker-completion.zsh
@@ -67,6 +70,3 @@ export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 
 # fzf
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-
-# nvm
-source /usr/share/nvm/init-nvm.sh
