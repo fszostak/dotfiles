@@ -413,8 +413,9 @@ au BufNewFile,BufRead *.mjs set filetype=javascript
 " Emoji autocomplete {{{
 set completefunc=emoji#complete
 " }}}
-" Syntaxes for unknown file extensions {{{
+" Syntaxes for unknown or new file extensions {{{
 autocmd BufNewFile,BufRead *.php set syntax=php
+autocmd BufNewFile,BufRead *.todos set syntax=todos
 " }}}
 " }}}
 " UX {{{
@@ -460,6 +461,12 @@ set linebreak
 " }}}
 " Hide mode since airline already shows it {{{
 set noshowmode
+" }}}
+" Spell visual config {{{
+highlight SpellBad      ctermfg=Red         term=Reverse        guisp=Red gui=undercurl   ctermbg=Black
+highlight SpellCap      ctermfg=Green       term=Reverse        guisp=Green gui=undercurl   ctermbg=Black
+highlight SpellLocal    ctermfg=Cyan        term=Underline      guisp=Cyan gui=undercurl   ctermbg=Black
+highlight SpellRare     ctermfg=Magenta     term=underline      guisp=Magenta gui=undercurl   ctermbg=Black
 " }}}
 " }}}
 "Colors {{{
@@ -717,10 +724,5 @@ set path+=**
 
 " Display all matching files when we tab complete
 set wildmenu
-
-highlight SpellBad      ctermfg=Red         term=Reverse        guisp=Red gui=undercurl   ctermbg=Black
-highlight SpellCap      ctermfg=Green       term=Reverse        guisp=Green gui=undercurl   ctermbg=Black
-highlight SpellLocal    ctermfg=Cyan        term=Underline      guisp=Cyan gui=undercurl   ctermbg=Black
-highlight SpellRare     ctermfg=Magenta     term=underline      guisp=Magenta gui=undercurl   ctermbg=Black
 
 " vim:foldmethod=marker:foldlevel=0
