@@ -45,6 +45,7 @@ Plug 'editorconfig/editorconfig-vim'
 Plug 'flowtype/vim-flow'
 " }}}
 " Languages and libraries support {{{
+Plug 'davidhalter/jedi-vim'
 Plug 'jparise/vim-graphql'
 Plug 'sheerun/vim-polyglot'
 Plug 'othree/javascript-libraries-syntax.vim'
@@ -435,7 +436,7 @@ nnoremap n\ :set number relativenumber<CR>
 nnoremap n/ :set nonumber norelativenumber<CR>
 " }}}
 " Show vertical line {{{
-set colorcolumn=120
+set colorcolumn=80
 " }}}
 " Indent line {{{
 let g:indentLine_color_term = 239
@@ -706,6 +707,17 @@ let g:ycm_key_list_previous_completion = ['<C-k>', '<C-p>', '<Up>']
 
 let g:ycm_complete_in_comments = 1                          " Use ycm in comments
 let g:ycm_collect_identifiers_from_comments_and_strings = 1 " Get words from comments and strings
+
+let g:ycm_confirm_extra_conf = 0 " Don't ask to load  .ycm_extra_conf.py  evety time
+" }}}
+" Jedi {{{
+let g:jedi#goto_command = "<leader>D"
+let g:jedi#goto_assignments_command = "<leader>G"
+let g:jedi#goto_definitions_command = ""
+let g:jedi#documentation_command = "K"
+let g:jedi#usages_command = "<leader>N"
+let g:jedi#completions_command = "<C-Space>"
+let g:jedi#rename_command = "<leader>R"
 " }}}
 " }}}
 
