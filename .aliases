@@ -19,7 +19,9 @@ alias ka="killall"
 alias g="git"
 alias trem="transmission-remote"
 alias mkd="mkdir -pv"
-alias ref="shortcuts.sh && source ~/.bashrc" # Refresh shortcuts manually and reload bashrc
+alias take="mkcd"
+# alias ref="~/shortcuts.sh && source ~/.zshrc" # Refresh shortcuts manually and reload bashrc
+alias ref="source ~/.zshrc" # Refresh shortcuts manually and reload bashrc
 alias bw="wal -i ~/.config/wall.png" # Rerun pywal
 alias pi="bash ~/.larbs/wizard/wizard.sh"
 function gi() { curl -L -s https://www.gitignore.io/api/$@ ; } # gitignore.io
