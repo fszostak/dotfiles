@@ -36,6 +36,7 @@
     ~/.Xdefaults: .Xdefaults
     ~/.xinitrc: .xinitrc
     ~/.zsh-autosuggestions.zsh: .zsh-autosuggestions.zsh
+    ~/.autoswitch_virtualenv.zsh: .autoswitch_virtualenv.zsh
     ~/.zshrc.local: .zshrc.local
     ~/.zshrc.pre: .zshrc.pre
     ~/.zshrc: .zshrc
