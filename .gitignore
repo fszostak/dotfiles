@@ -7,6 +7,8 @@
 /.vim/undo/*
 /.vim/backup/
 /.vim/backup/*
+/.vim/black
+/.vim/black/*
 
 # .config
 /.config/autostart

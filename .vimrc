@@ -45,6 +45,7 @@ Plug 'editorconfig/editorconfig-vim'
 Plug 'flowtype/vim-flow'
 " }}}
 " Languages and libraries support {{{
+Plug 'ambv/black'
 Plug 'nvie/vim-flake8'
 Plug 'davidhalter/jedi-vim'
 Plug 'jparise/vim-graphql'
@@ -419,9 +420,6 @@ set completefunc=emoji#complete
 autocmd BufNewFile,BufRead *.php set syntax=php
 autocmd BufNewFile,BufRead *.todos set syntax=todos
 " }}}
-" Python {{{
-nmap <silent> <C-b> :!black --line-length=79 %<CR>
-" }}}
 " UX {{{
 " General {{{
 set encoding=utf-8
@@ -721,6 +719,12 @@ let g:jedi#documentation_command = "K"
 let g:jedi#usages_command = "<leader>N"
 let g:jedi#completions_command = "<C-Space>"
 let g:jedi#rename_command = "<leader>R"
+" }}}
+" Black {{{
+nmap <silent> <C-b> :Black<CR>
+let g:black_linelength = 79
+" g:black_skip_string_normalization (defaults to 0)
+" g:black_virtualenv (defaults to ~/.vim/black)
 " }}}
 " }}}
 " }}}
