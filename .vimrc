@@ -608,6 +608,7 @@ let g:airline#extensions#ale#enabled = 1
 " BetterComments {{{
 hi! def link TodoBetterComments Todo
 hi! def link ErrorBetterComments Error
+hi! def link StrikeoutBetterComments String " fix python docstring comments
 let g:bettercomments_skipped = ['html']
 " }}}
 " CtrlP {{{
