@@ -106,10 +106,11 @@ n() { $EDITOR ~/notes/"$*" }
 nls() { ls -c ~/notes/ | grep "$*" }
 ntree() { tree --noreport ~/notes/ }
 nsearch() { tree --noreport -P "*$**" ~/notes/ }
-nr() { ranger ~/notes/ }
+nr() { ranger ~/notes/"$*" }
 ngit() { git -C ~/notes/ "$*" }
 
 compdef '_path_files -W ~/notes && return 0 || return 1' n
+compdef '_path_files -W ~/notes && return 0 || return 1' nr
 #}}}
 # Shortcuts {{{
 alias k='ls -lh'
