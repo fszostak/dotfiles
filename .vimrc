@@ -124,7 +124,7 @@ call plug#end()
 	set splitright
 
 " Check file in shellcheck:
-	map <leader>s :!clear && shellcheck %<CR>
+	" map <leader>s :!clear && shellcheck %<CR> " validate it
 
 " View an image for a suckless sent presentation: TODO: verify
 	map <leader>v $F@ly$:!feh --scale-down --auto-zoom --image-bg black <c-r>" &<CR><CR>
@@ -745,5 +745,9 @@ set path+=**
 
 " Display all matching files when we tab complete
 set wildmenu
+
+
+" Replace line is aliased to leader R:
+nnoremap T :s//g<Left><Left>
 
 " vim:foldmethod=marker:foldlevel=0
