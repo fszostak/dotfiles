@@ -23,6 +23,9 @@ source /usr/share/nvm/init-nvm.sh
 [[ -e ~/.chpwd  ]] && source ~/.chpwd
 
 # Customize prompt
+function virtual_env_prompt () {
+  REPLY=${VIRTUAL_ENV+(${VIRTUAL_ENV:t}) }
+}
 autoload -U colors && colors
 zstyle ':vcs_info:*' enable git
 zstyle ':vcs_info:*' check-for-changes true
@@ -31,8 +34,9 @@ zstyle ':vcs_info:*' stagedstr '+'
 zstyle ':vcs_info:git*' formats "%{${fg[cyan]}%}[%{${fg[blue]}%}%b%{${fg[yellow]}%}%m%u%c%{${fg[cyan]}%}]%{$reset_color%} "
 grml_theme_add_token shortpath '%B%(2~|%1~|%~)%b '
 grml_theme_add_token arrow '➔ '
+grml_theme_add_token virtualenv -f virtual_env_prompt '%F{magenta}' '%f'
 zstyle ':prompt:grml:left:setup' items arrow change-root rc shortpath vcs
-
+zstyle ':prompt:grml:right:setup' items virtualenv battery
 
 # User configuration
 export PATH="/home/gustavo/.gem/ruby/2.5.0/bin:/usr/local/heroku/bin:/Library/Frameworks/Python.framework/Versions/3.4/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/bin:/usr/games:`yarn global bin`"

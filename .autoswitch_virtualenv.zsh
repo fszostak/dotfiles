@@ -1,3 +1,7 @@
+# Read the documentation @ https://github.com/MichaelAquilina/zsh-autoswitch-virtualenv
+# use mkvenv to generate .venv
+# use rmvenv to remove it
+
 export AUTOSWITCH_VERSION='1.2.1'
 
 RED="\e[31m"
