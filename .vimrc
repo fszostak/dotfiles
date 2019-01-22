@@ -33,7 +33,7 @@ Plug 'edkolev/tmuxline.vim'
 Plug 'SirVer/ultisnips'
 Plug 'Valloric/YouCompleteMe' " Autocompletion feature. Follow installation instructions in github
 " Plug 'honza/vim-snippets'     " Snippets for multiple languages TODO: remove
-" Plug 'mattn/emmet-vim'        " Emmet TODO: remove
+Plug 'mattn/emmet-vim'        " Emmet
 Plug 'jiangmiao/auto-pairs'   " Auto pairs
 Plug 'tpope/vim-surround'     " Shortcuts to change brackets, quotes, etc in pairs
 Plug 'tpope/vim-unimpaired'   " I use this one only for the {/} + space shortcut
@@ -58,6 +58,7 @@ Plug 'suan/vim-instant-markdown'
 Plug 'lepture/vim-jinja'
 Plug 'ledger/vim-ledger'
 Plug 'xuhdev/vim-latex-live-preview'
+Plug 'styled-components/vim-styled-components', { 'branch': 'main'  }
 Plug 'mitermayer/vim-prettier', {
   \ 'do': 'npm install --no-save',
   \ 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql'] }
@@ -418,6 +419,7 @@ set completefunc=emoji#complete
 " }}}
 " Syntaxes for unknown or new file extensions {{{
 autocmd BufNewFile,BufRead *.php set syntax=php
+autocmd BufNewFile,BufRead *.prisma set syntax=graphql
 autocmd BufNewFile,BufRead *.todos set syntax=todos
 " }}}
 " UX {{{
@@ -616,6 +618,11 @@ let g:bettercomments_skipped = ['html']
 " }}}
 " Emmet {{{
 let g:user_emmet_leader_key='<C-E>' " c-e-,
+let g:user_emmet_settings = {
+\  'javascript.jsx' : {
+\      'extends' : 'jsx',
+\  },
+\}
 " }}}
 " Flow {{{
 let g:flow#showquickfix = 0
