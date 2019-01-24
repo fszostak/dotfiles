@@ -8,10 +8,10 @@ show-git-status() {
 
     if [ $LOCAL = $REMOTE ]; then
 	printf "\033[90m%s\033[0m\n" "Up-to-date"
-    elif [ $LOCAL = $BASE ]; then
-	printf "\033[36m%s\033[0m\n" "⭭ Need to pull"
     elif [ $REMOTE = $BASE ]; then
-	printf "\033[90m%s\033[0m\n" "⇡ Need to push"
+	printf "\033[90m%s\033[0m\n" "↑ Need to push"
+    elif [ $LOCAL = $BASE ]; then
+	printf "\033[36m%s\033[0m\n" "↓ Need to pull"
     else
 	printf "\033[36m%s\033[0m\n" "Diverged"
     fi
