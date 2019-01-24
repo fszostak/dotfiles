@@ -1,50 +1,42 @@
 # .vim
-/.vim/plugged/*
 /.vim/plugged/
 /.vim/swap/
-/.vim/swap/*
 /.vim/undo/
-/.vim/undo/*
 /.vim/backup/
-/.vim/backup/*
 /.vim/black
-/.vim/black/*
 
 # .config
 /.config/autostart
-/.config/autostart/*
 /.config/chromium/
-/.config/chromium/*
 /.config/configstore
 /.config/dconf
-/.config/dconf/*
 /.config/gtk-2.0/
-/.config/gtk-2.0/*
 /.config/menus/
-/.config/menus/*
 /.config/mpd/database
 /.config/mpd/log
 /.config/mpd/pid
 /.config/mpd/state
 /.config/mpd/sticker.sql
 /.config/mps-youtube/
-/.config/mps-youtube/*
 /.config/Postman/
-/.config/Postman/*
 /.config/pulse
-/.config/pulse/*
 /.config/Rambox
-/.config/Rambox/*
 /.config/ranger/plugins/__pycache__/
-/.config/ranger/plugins/__pycache__/*
 /.config/ranger/__pycache__/
-/.config/ranger/__pycache__/*
 /.config/user-dirs.dirs
 /.config/yarn
 /.config/yarn
 /.config/yarn
 /.config/yay
-/.config/yay/*
+/.config/Slack/
+/.config/dleyna-renderer-service.conf
+/.config/dleyna-server-service.conf
+/.config/evince/
+/.config/evolution/
+/.config/gtk-3.0/bookmarks
+/.config/ibus/
+/.config/totem/
+/.vim/view/
 
 /.keychain.sh
 
