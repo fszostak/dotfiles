@@ -420,6 +420,7 @@ set completefunc=emoji#complete
 " Syntaxes for unknown or new file extensions {{{
 autocmd BufNewFile,BufRead *.php set syntax=php
 autocmd BufNewFile,BufRead *.prisma set syntax=graphql
+autocmd BufNewFile,BufRead *.mdx set syntax=markdown
 autocmd BufNewFile,BufRead *.todos set syntax=todos
 " }}}
 " UX {{{
