@@ -1,21 +1,19 @@
 show-git-status() {
   if [ -d .git ]; then
-    #STATUS=$(git status --short )
     UPSTREAM=${1:-'@{u}'}
     LOCAL=$(git rev-parse @)
     REMOTE=$(git rev-parse "$UPSTREAM")
     BASE=$(git merge-base @ "$UPSTREAM")
 
     if [ $LOCAL = $REMOTE ]; then
-	printf "\033[90m%s\033[0m\n" "Up-to-date"
-    elif [ $REMOTE = $BASE ]; then
-	printf "\033[90m%s\033[0m\n" "↑ Need to push"
+	printf "\033[90m%s\033[0m\n" "🗸 Up-to-date (but do remember to fetch!)"
     elif [ $LOCAL = $BASE ]; then
 	printf "\033[36m%s\033[0m\n" "↓ Need to pull"
+    elif [ $REMOTE = $BASE ]; then
+	printf "\033[90m%s\033[0m\n" "↑ Need to push"
     else
 	printf "\033[36m%s\033[0m\n" "Diverged"
     fi
-    #printf "\033[90m%s\033[0m\n" $STATUS
   fi
 }
 
@@ -70,7 +68,7 @@ chpwd () {
 
   GIT=$PWD/.git
   if [ -d "$GIT" ] && [ "$GIT_LAST_DIR" != "$PWD" ]; then
-    show-git-status 2>& /dev/null
+    show-git-status
     GIT_LAST_DIR=$PWD
   fi
 }
