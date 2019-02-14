@@ -11,8 +11,6 @@ call plug#begin('~/.vim/plugged')
 Plug 'junegunn/goyo.vim'
 Plug 'PotatoesMaster/i3-vim-syntax'
 Plug 'jreybert/vimagit'
-" Plug 'vimwiki/vimwiki'
-" Plug 'dylanaraps/wal.vim'
 "}}}
 " Vim UX {{{
 Plug 'airblade/vim-gitgutter'            " git-gutter
@@ -32,7 +30,6 @@ Plug 'edkolev/tmuxline.vim'
 " Completion {{{
 Plug 'SirVer/ultisnips'
 Plug 'Valloric/YouCompleteMe' " Autocompletion feature. Follow installation instructions in github
-" Plug 'honza/vim-snippets'     " Snippets for multiple languages TODO: remove
 Plug 'mattn/emmet-vim'        " Emmet
 Plug 'jiangmiao/auto-pairs'   " Auto pairs
 Plug 'tpope/vim-surround'     " Shortcuts to change brackets, quotes, etc in pairs
