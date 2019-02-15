@@ -10,7 +10,14 @@
 /.config/chromium/
 /.config/configstore
 /.config/dconf
+/.config/dleyna-renderer-service.conf
+/.config/dleyna-server-service.conf
+/.config/evince/
+/.config/evolution/
 /.config/gtk-2.0/
+/.config/gtk-3.0/bookmarks
+/.config/ibus/
+/.config/Insomnia/
 /.config/menus/
 /.config/mpd/database
 /.config/mpd/log
@@ -23,19 +30,13 @@
 /.config/Rambox
 /.config/ranger/plugins/__pycache__/
 /.config/ranger/__pycache__/
+/.config/Slack/
+/.config/totem/
 /.config/user-dirs.dirs
 /.config/yarn
 /.config/yarn
 /.config/yarn
 /.config/yay
-/.config/Slack/
-/.config/dleyna-renderer-service.conf
-/.config/dleyna-server-service.conf
-/.config/evince/
-/.config/evolution/
-/.config/gtk-3.0/bookmarks
-/.config/ibus/
-/.config/totem/
 /.vim/view/
 
 /.keychain.sh
