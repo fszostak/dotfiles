@@ -83,7 +83,7 @@ alias gbd='git branch -d'
 alias gbD='git branch -D'
 alias gm='git merge --no-ff'
 alias gM='git merge'
-alias gf='git fetch & S'
+alias gf='git fetch'
 alias gfb='git fetch $(git rev-parse --symbolic-full-name --abbrev-ref @{upstream} | sed "s!/! !")'
 #}}}
 # Git Flow {{{
