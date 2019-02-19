@@ -18,6 +18,7 @@
 /.config/gtk-3.0/bookmarks
 /.config/ibus/
 /.config/Insomnia/
+/.config/libreoffice/
 /.config/menus/
 /.config/mpd/database
 /.config/mpd/log
@@ -32,11 +33,13 @@
 /.config/ranger/__pycache__/
 /.config/Slack/
 /.config/totem/
+/.config/Unknown Organization/
 /.config/user-dirs.dirs
 /.config/yarn
 /.config/yarn
 /.config/yarn
 /.config/yay
+/.config/zoomus.conf
 /.vim/view/
 
 /.keychain.sh
