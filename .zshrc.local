@@ -16,6 +16,7 @@ source /usr/share/nvm/init-nvm.sh
 [[ -e ~/.git-flow-completion.zsh ]] && source ~/.git-flow-completion.zsh
 [[ -e ~/.zsh-autosuggestions.zsh  ]] && source ~/.zsh-autosuggestions.zsh
 [[ -e ~/.autoswitch_virtualenv.zsh ]] && source ~/.autoswitch_virtualenv.zsh
+[[ -e ~/.vi-mode.zsh ]] && source ~/.vi-mode.zsh
 
 # Load custom files
 [[ -e ~/.shortcuts  ]] && source ~/.shortcuts
@@ -35,7 +36,8 @@ zstyle ':vcs_info:git*' formats "%{${fg[cyan]}%}[%{${fg[blue]}%}%b%{${fg[yellow]
 grml_theme_add_token shortpath '%B%(2~|%1~|%~)%b '
 grml_theme_add_token arrow '➔ '
 grml_theme_add_token virtualenv -f virtual_env_prompt '%F{magenta}' '%f'
-zstyle ':prompt:grml:left:setup' items arrow change-root rc shortpath vcs
+grml_theme_add_token vi-mode '%1v' '%F{magenta}(' ')%f%k '
+zstyle ':prompt:grml:left:setup' items vi-mode change-root rc shortpath vcs
 zstyle ':prompt:grml:right:setup' items virtualenv battery
 
 # User configuration
@@ -53,20 +55,6 @@ export TERM=xterm-256color
 function kiss(){
   source ~/.keychain.sh
 }
-
-# vi controls in command line
-set -o vi
-set noerrorbells
-set showmatch
-set matchtime=8
-set tabstop=2
-set shiftwidth=2
-set nowrapscan
-set ignorecase
-set autoindent
-set cindent
-
-bindkey -M vicmd v edit-command-line
 
 # fasd
 eval "$(fasd --init auto)"

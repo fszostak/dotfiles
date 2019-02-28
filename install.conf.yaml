@@ -13,8 +13,9 @@
     ~/.config: .config
     ~/.emoji: .emoji
     ~/.fzf.zsh: .fzf.zsh
-    ~/.gitconfig: .gitconfig
+    ~/.autoswitch_virtualenv.zsh: .autoswitch_virtualenv.zsh
     ~/.docker-completion.zsh: .docker-completion.zsh
+    ~/.gitconfig: .gitconfig
     ~/.git-flow-completion.zsh: .git-flow-completion.zsh
     ~/.gtkrc-2.0: .gtkrc-2.0
     ~/.icons: .icons
@@ -31,12 +32,12 @@
     ~/.tigrc: .tigrc
     ~/.tmux.conf: .tmux.conf
     ~/.urlview: .urlview
+    ~/.vi-mode.zsh: .vi-mode.zsh
     ~/.vimrc: .vimrc
     ~/.vim: .vim
     ~/.Xdefaults: .Xdefaults
     ~/.xinitrc: .xinitrc
     ~/.zsh-autosuggestions.zsh: .zsh-autosuggestions.zsh
-    ~/.autoswitch_virtualenv.zsh: .autoswitch_virtualenv.zsh
     ~/.zshrc.local: .zshrc.local
     ~/.zshrc.pre: .zshrc.pre
     ~/.zshrc: .zshrc
