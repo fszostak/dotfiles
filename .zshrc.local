@@ -80,3 +80,5 @@ export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 
 # Prevent shell from exiting with C-d
 setopt ignoreeof
+
+export PATH="$(du $HOME/.scripts/ | cut -f2 | tr '\n' ':')$PATH"
